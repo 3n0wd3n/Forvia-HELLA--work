@@ -8,10 +8,10 @@
 
 ## Components State
 
--   [ ] Alert
--   [ ] Badge
+-   [x] Alert
+-   [x] Badge
 -   [x] Button
--   [ ] ButtonGroup
+-   [x] ButtonGroup
 -   [x] Chip
 -   [x] Dialog
 -   [x] Divider
