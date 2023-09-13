@@ -1,0 +1,355 @@
+// include styles without js
+// Icons
+@import "icons.scss";
+// Components
+@import "../Components/Alert/alert.scss";
+@import "../Components/Badge/badge.scss";
+@import "../Components/Button/button.scss";
+@import "../Components/ButtonGroup/buttonGroup.scss";
+@import "../Components/Divider/divider.scss";
+@import "../Components/Icon/icon.scss";
+@import "../Components/Form/form.scss";
+@import "../Components/Spinner/spinner.scss";
+@import "../GlobalStyles/variables.scss";
+@import "../GlobalStyles/dist.scss";
+@import "../Components/Text/text.scss";
+// Footer
+@import "../SystemModules/Footer/footer.scss";
+@import "grid.scss";
+
+:root {
+	--text-color: $color-text-primary;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text-color: $color-text-dark-mode-primary;
+	}
+}
+
+/* Reset styles */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html,
+body {
+	font-family: $font, sans-serif;
+	font-size: $font-base-size;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	background-color: $color-neutral-primary-background;
+	color: var(--text-color);
+	::selection {
+		background: $color-neutral-base-background; /* WebKit/Blink Browsers */
+	}
+	::-moz-selection {
+		background: $color-neutral-base-background; /* Gecko Browsers */
+	}
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+	text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+p {
+	margin: 0;
+	line-height: 150%;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+.webRoot {
+	width: 100%;
+	@media only screen and (min-width: $max-content-mobile-min-width) {
+		margin-bottom: 100px;
+	}
+	@media only screen and (min-width: $max-content-width) {
+		margin-bottom: 140px;
+	}
+
+	@media only screen and (min-width: $max-content-tablet-width) {
+		padding: 0;
+	}
+
+	.root {
+		padding: 0 $grid-padding-mobile 0 $grid-padding-mobile;
+		@include transition(all 0.3s);
+		margin: 0 auto;
+		max-width: $max-content-xl-width;
+		@media only screen and (min-width: $max-content-mobile-min-width) {
+			margin-top: 20px;
+		}
+		@media only screen and (min-width: $max-content-width) {
+			margin-top: 36px;
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 400;
+	color: $color-text-primary-2;
+	line-height: 130%;
+
+	&.h--medium {
+		font-weight: 700;
+	}
+}
+
+h1 {
+	font-size: $font-h1;
+	letter-spacing: 0.17px;
+}
+
+h2 {
+	font-size: $font-h2;
+	letter-spacing: 0.26px;
+}
+
+h3 {
+	font-size: $font-h3;
+	letter-spacing: 0.2px;
+}
+
+h4 {
+	font-size: $font-h4;
+	letter-spacing: 0.15px;
+}
+
+// Floats
+// -------------------------
+
+.clearfix {
+	&:before,
+	&:after {
+		content: " "; // 1
+		display: table; // 2
+	}
+	&:after {
+		clear: both;
+	}
+}
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pull-right {
+	float: right !important;
+}
+
+.pull-left {
+	float: left !important;
+}
+
+// Toggling content
+// -------------------------
+.hide {
+	display: none !important;
+}
+.show {
+	display: block !important;
+}
+.invisible {
+	visibility: hidden;
+}
+
+.hidden-xs {
+	display: block;
+	@media only screen and (max-width: $max-content-tablet-width) {
+		display: none !important;
+	}
+}
+
+.hidden-sm {
+	display: block;
+	@media only screen and (min-width: $max-content-tablet-width) and (max-width: $max-content-width) {
+		display: none !important;
+	}
+}
+.hidden-md {
+	display: block;
+	@media only screen and (min-width: $max-content-width) {
+		display: none !important;
+	}
+}
+
+.bread-crumb,
+.page-tools {
+	height: 16px;
+	margin-bottom: 48px;
+
+	a {
+		font-size: 14px;
+		line-height: 21px;
+		color: $color-primary-default;
+	}
+}
+
+.bread-crumb {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+
+	a::after {
+		content: "";
+		@include icon;
+		width: 16px;
+		height: 16px;
+		-webkit-mask-image: url("icons/chevronRight.svg");
+		mask-image: url("icons/chevronRight.svg");
+		-webkit-mask-position: left;
+		position: relative;
+		top: 3px;
+	}
+
+	span {
+		font-size: 14px;
+		line-height: 21px;
+		color: $color-primary-default;
+	}
+}
+
+.page-tools {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	gap: 40px;
+
+	a {
+		position: relative;
+	}
+
+	a.share::before {
+		content: "";
+		@include icon;
+		-webkit-mask-image: url("icons/share.svg");
+		mask-image: url("icons/share.svg");
+		position: absolute;
+		left: -25px;
+	}
+
+	a.print::before {
+		content: "";
+		@include icon;
+		-webkit-mask-image: url("icons/print.svg");
+		mask-image: url("icons/print.svg");
+		position: absolute;
+		left: -25px;
+	}
+}

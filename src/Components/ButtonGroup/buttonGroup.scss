@@ -1,0 +1,76 @@
+.com-button-group {
+
+	display: flex;
+	width: 100%;	
+	align-items: flex-start;
+	flex-shrink: 0;
+	border-radius: fromPxToRem(8);
+	height: fromPxToRem(50);
+	border: 1px solid $color-primary-default;	
+
+	button {
+		background-color: white;
+		display: flex;
+		padding: fromPxToRem(12) fromPxToRem(16);
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+		flex: 1 0 0;
+		align-self: stretch;		
+		color: $color-primary-default;
+		border: 0;
+		border-left: 1px solid $color-primary-default;
+		cursor: pointer;
+
+		&:nth-child(1) {
+			border: 0;
+			border-bottom-left-radius: fromPxToRem(8);
+			border-top-left-radius: fromPxToRem(8);
+		}
+
+		&:nth-last-child(1){
+			border-bottom-right-radius: fromPxToRem(8);
+			border-top-right-radius: fromPxToRem(8);
+		}
+
+		&:hover {
+			background-color: $color-primary-background;				
+		}
+
+		&:active, &--active {
+			background-color: #030714; //TODO:is this correct color??
+			color: white;			
+
+			.com-icon {
+				background-color: white;
+			}
+		}
+	}
+
+	&.com-button-group--dark {
+		border: 0;
+		color: white;
+
+		button {
+			background-color: $color-primary-default;
+			color: white;
+			border-left: 1px solid white;
+			
+			.com-icon {
+				background-color: white;
+			}
+
+			&:hover {
+				background-color: $color-primary-hover;									
+			}
+
+			&:active, &--active {
+				background-color: #030714; //TODO:is this correct color??
+			}
+		}
+	}
+
+	&.com-button-group--small {
+		height: fromPxToRem(42);
+	}
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRoot</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+
+    <style>
+        /* test */
+
+        .grid-container div {
+            background-color: #14ffcc;
+        }
+
+        .grid-container .nested-grid div {
+            min-height: 1vmax;
+            background-color: #619eff;
+        }
+
+        .grid-container .secondary-nested-grid div {
+            min-height: 0.2vmax;
+            background-color: #4882ce;
+        }
+
+        /* eof test */
+    </style>
+</head>
+
+<body>
+    <!-- Main content level -->
+    <main class="webRoot">
+        <!-- Navigation -->
+        <nav></nav>
+        <!-- Root -->
+        <div class="root grid-container">
+            <!--- one col -->
+            <div class="col-xs-2 col-sm-8 col-md-12">one col</div>
+            <!--- two cols -->
+            <div class="col-xs-1 col-sm-4 col-md-6">two cols</div>
+            <div class="col-xs-1 col-sm-4 col-md-6">two cols</div>
+            <!--- four cols -->
+            <div class="col-xs-2 col-sm-2 col-md-3">four cols</div>
+            <div class="col-xs-2 col-sm-2 col-md-3">four cols</div>
+            <div class="col-xs-2 col-sm-2 col-md-3">four cols</div>
+            <div class="col-xs-2 col-sm-2 col-md-3">four cols</div>
+            <!--- six cols -->
+            <div class="col-xs-2 col-sm-4 col-md-2">six cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-2">six cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-2">six cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-2">six cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-2">six cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-2">six cols</div>
+            <!--- twelve cols -->
+            <div class="col-xs-2 col-sm-4 col-md-1">twelve cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-1">twelve cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-1">twelve cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-1">twelve cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-1">twelve cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-1">twelve cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-1">twelve cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-1">twelve cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-1">twelve cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-1">twelve cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-1">twelve cols</div>
+            <div class="col-xs-2 col-sm-4 col-md-1">twelve cols</div>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <!-- Content level/ Structure level 
+            <div class="logo col-xs-3 col-md-1"></div>
+            <div class="header col-xs-9 col-md-11"></div>
+            <div class="main-section col-xs-12 col-md-8 grid-container nested-grid">
+                <div class="col-xs-12 col-md-5"></div>
+                <div class="col-xs-12 col-md-7"></div>
+                <div class="col-xs-12 col-md-9 grid-container secondary-nested-grid">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-8"></div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <div class="col-xs-12 col-md-3"></div>
+            </div>
+            <div class="secondary-section col-xs-12 col-md-4"></div>
+            <div class="terciary-section col-xs-8 col-md-2"></div>
+            <div class="terciary-section col-xs-8 col-md-2"></div>
+            <div class="small-section col-xs-4 col-md-1"></div>
+            <div class="small-section col-xs-4 col-md-1"></div>
+            <div class="small-section col-xs-4 col-md-1"></div>
+            <div class="small-section col-xs-4 col-md-1"></div>
+            <div class="secondary-section col-xs-12 col-md-4"></div>
+            <div class="terciary-section col-xs-8 col-md-2"></div>
+            <div class="small-section col-xs-4 col-md-1"></div>
+            <div class="terciary-section col-xs-8 col-md-2"></div>
+            <div class="small-section col-xs-4 col-md-1"></div>
+            <div class="terciary-section col-xs-8 col-md-2"></div>
+            <div class="small-section col-xs-4 col-md-1"></div>
+            <div class="secondary-section col-xs-12 col-md-4"></div>
+            <div class="small-section col-xs-4 col-md-1"></div>
+            <div class="terciary-section col-xs-8 col-md-2"></div>
+            <div class="secondary-section col-xs-12 col-md-4"></div>
+            <div class="small-section col-xs-4 col-md-1"></div>
+            <div class="terciary-section col-xs-8 col-md-2"></div>
+            <div class="small-section col-xs-4 col-md-1"></div>
+            <div class="terciary-section col-xs-8 col-md-2"></div>
+            <div class="terciary-section col-xs-8 col-md-2"></div>
+            <div class="small-section col-xs-4 col-md-1"></div>
+            <div class="small-section col-xs-4 col-md-1"></div>
+            <div class="terciary-section col-xs-12 col-md-2"></div>
+            <div class="footer col-xs-12"></div>
+            -->
+        </div>
+    </main>
+    <!-- Footer :D -->
+    <footer></footer>
+</body>
+
+</html>

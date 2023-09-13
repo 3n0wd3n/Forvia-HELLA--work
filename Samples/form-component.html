@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+    <title>Form Components</title>
+</head>
+<!-- 
+Where I get inspired:
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
+https://developer.mozilla.org/en-US/docs/Web/CSS/:checked
+https://www.youtube.com/shorts/BZgoXeKKR88
+https://www.w3schools.com/css/tryit.asp?filename=trycss_form_border
+https://www.w3schools.com/css/css_form.asp
+https://stackoverflow.com/questions/43427993/change-the-color-of-a-input-field-when-selected
+https://www.w3schools.com/css/tryit.asp?filename=trycss_forms
+https://stackoverflow.com/questions/63192157/html-change-the-background-color-of-a-checked-checkbox
+-->
+<body>
+    <div class="form__main-container">
+        <h1>Form Components</h1>
+        <form class="com-form">
+            <!-- Checkboxes -->
+            <div class="com-form__checkbox-container">
+                <input checked class="checkbox" type="checkbox" id="checkbox-1" name="checkbox-1" value="Checkbox">
+                <label for="checkbox-1"></label>
+            </div>
+
+            <div class="com-form__checkbox-container">
+                <input checked class="checkbox checkbox--blue" type="checkbox" id="checkbox-2" name="checkbox-2" value="Checkbox">
+                <label for="checkbox-2"></label>
+            </div>
+
+            <hr>
+
+            <!-- Checkboxes large-->
+            <div class="com-form__checkbox-container">
+                <input checked class="checkbox checkbox--large" type="checkbox" id="checkbox-1" name="checkbox-1" value="Checkbox">
+                <label for="checkbox-1"></label>
+            </div>
+            <div class="com-form__checkbox-container">
+                <input checked class="checkbox checkbox--blue checkbox--large" type="checkbox" id="checkbox-2" name="checkbox-2" value="Checkbox">
+                <label for="checkbox-2"></label>
+            </div>
+
+            <hr>
+
+            <!-- Checkboxes with text in right-->
+            <div class="com-form__checkbox-container">
+                <input checked class="checkbox" type="checkbox" id="checkbox-1" name="checkbox-1" value="Checkbox">
+                <label for="checkbox-1">Content</label>
+            </div>
+            <div class="com-form__checkbox-container">
+                <input checked class="checkbox checkbox--blue" type="checkbox" id="checkbox-2" name="checkbox-2" value="Checkbox">
+                <label for="checkbox-2">Content</label>
+            </div>
+
+            <hr>
+
+            <!-- Large checkboxes with text in right-->
+            <div class="com-form__checkbox-container">
+                <input checked class="checkbox checkbox--large" type="checkbox" id="checkbox-1" name="checkbox-1" value="Checkbox">
+                <label for="checkbox-1">Content</label>
+            </div>
+            <div class="com-form__checkbox-container">
+                <input checked class="checkbox checkbox--blue checkbox--large" type="checkbox" id="checkbox-2" name="checkbox-2" value="Checkbox">
+                <label for="checkbox-2">Content</label>
+            </div>
+
+            <hr>
+
+            <!-- Checkboxes with text in left-->
+            <div class="com-form__checkbox-container com-form__checkbox-container--left">
+                <input checked class="checkbox" type="checkbox" id="checkbox-1" name="checkbox-1" value="Checkbox">
+                <label for="checkbox-1">Content</label>
+            </div>
+            <div class="com-form__checkbox-container com-form__checkbox-container--left">
+                <input checked class="checkbox checkbox--blue" type="checkbox" id="checkbox-2" name="checkbox-2" value="Checkbox">
+                <label for="checkbox-2">Content</label>
+            </div>
+
+            <hr>
+
+            <!-- Large checkboxes with text in left-->
+            <div class="com-form__checkbox-container com-form__checkbox-container--left">
+                <input checked class="checkbox checkbox--large" type="checkbox" id="checkbox-1" name="checkbox-1" value="Checkbox">
+                <label for="checkbox-1">Content</label>
+            </div>
+            <div class="com-form__checkbox-container com-form__checkbox-container--left">
+                <input checked class="checkbox checkbox--blue checkbox--large" type="checkbox" id="checkbox-2" name="checkbox-2" value="Checkbox">
+                <label for="checkbox-2">Content</label>
+            </div>
+
+            <hr>
+
+            <!-- Radiobuttons normal color-->
+            <input class="radio" type="radio" name="content" checked>
+            <input class="radio" type="radio" name="content">
+
+            <hr>
+
+            <!-- Large radiobuttons normal color-->
+            <input class="radio radio--large" type="radio" name="content_" checked>
+            <input class="radio radio--large" type="radio" name="content_">
+
+
+            <hr>
+
+            <!-- Radiobuttons blue color-->
+            <input class="radio radio--blue" type="radio" name="content__" checked>
+            <input class="radio radio--blue" type="radio" name="content__">
+
+            <hr>
+
+            <!-- Large radiobuttons blue color-->
+            <input class="radio radio--blue radio--large" type="radio" name="content___" checked>
+            <input class="radio radio--blue radio--large" type="radio" name="content___">
+
+            <hr>
+
+            <!-- Radiobuttons with text in right normal color-->
+            <div>
+                <div class="com-form__radio-container">
+                    <input checked class="radio" type="radio" id="content-1" name="content-" value="content-1" checked />
+                    <label for="content-1">Content</label>
+                </div>
+                
+                <div class="com-form__radio-container">
+                    <input checked class="radio" type="radio" id="content-2" name="content-" value="content-2" />
+                    <label for="content-2">Content</label>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Large radiobuttons with text in right normal color-->
+            <div>
+                <div class="com-form__radio-container">
+                    <input checked class="radio" type="radio" id="content-1" name="content--" value="content-1" checked />
+                    <label for="content-1">Content</label>
+                </div>
+                
+                <div class="com-form__radio-container">
+                    <input checked class="radio radio--large" type="radio" id="content-2" name="content--" value="content-2" />
+                    <label for="content-2">Content</label>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Radiobuttons with text in right blue color-->
+            <div>
+                <div class="com-form__radio-container">
+                    <input checked class="radio radio--blue" type="radio" id="content-1" name="content---" value="content-1" checked />
+                    <label for="content-1">Content</label>
+                </div>
+                
+                <div class="com-form__radio-container">
+                    <input checked class="radio radio--blue" type="radio" id="content-2" name="content---" value="content-2" />
+                    <label for="content-2">Content</label>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Large radiobuttons with text in right blue color-->
+            <div>
+                <div class="com-form__radio-container">
+                    <input checked class="radio radio--blue radio--large" type="radio" id="content-1" name="content----" value="content-1" checked />
+                    <label for="content-1">Content</label>
+                </div>
+                
+                <div class="com-form__radio-container">
+                    <input checked class="radio radio--blue radio--large" type="radio" id="content-2" name="content----" value="content-2" />
+                    <label for="content-2">Content</label>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Radiobuttons with text in left normal color-->
+            <div>
+                <div class="com-form__radio-container com-form__radio-container--left">
+                    <input checked class="radio" type="radio" id="content-1" name="content-----" value="content-1" checked />
+                    <label for="content-1">Content</label>
+                </div>
+                
+                <div class="com-form__radio-container com-form__radio-container--left">
+                    <input checked class="radio" type="radio" id="content-2" name="content-----" value="content-2" />
+                    <label for="content-2">Content</label>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Large radiobuttons with text in left normal color-->
+            <div>
+                <div class="com-form__radio-container com-form__radio-container--left">
+                    <input checked class="radio radio--large" type="radio" id="content-1" name="content------" value="content-1" checked />
+                    <label for="content-1">Content</label>
+                </div>
+                
+                <div class="com-form__radio-container com-form__radio-container--left">
+                    <input checked class="radio radio--large" type="radio" id="content-2" name="content------" value="content-2" />
+                    <label for="content-2">Content</label>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Radiobuttons with text in left blue color-->
+            <div>
+                <div class="com-form__radio-container com-form__radio-container--left">
+                    <input checked class="radio radio--blue" type="radio" id="content-1" name="content-------" value="content-1" checked />
+                    <label for="content-1">Content</label>
+                </div>
+                
+                <div class="com-form__radio-container com-form__radio-container--left">
+                    <input checked class="radio radio--blue" type="radio" id="content-2" name="content-------" value="content-2" />
+                    <label for="content-2">Content</label>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Large radiobuttons with text in left blue color-->
+            <div>
+                <div class="com-form__radio-container com-form__radio-container--left">
+                    <input checked class="radio radio--blue radio--large" type="radio" id="content-1" name="content--------" value="content-1" checked />
+                    <label for="content-1">Content</label>
+                </div>
+                
+                <div class="com-form__radio-container com-form__radio-container--left">
+                    <input checked class="radio radio--blue radio--large" type="radio" id="content-2" name="content--------" value="content-2" />
+                    <label for="content-2">Content</label>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Default toggle switch -->
+            <fieldset class="com-form__switch">
+                <label class="switch_container">
+                    <input class="toggle-switch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="com-form__switch">
+                <label class="switch_container">
+                    <input checked class="toggle-switch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </fieldset>
+
+            <hr>
+
+            <!-- Blue toggle switch -->  
+            <fieldset class="com-form__switch">
+                <label class="switch_container">
+                    <input class="toggle-switch" type="checkbox" >
+                    <span class="slider round slider--blue"></span>
+                </label>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="com-form__switch">
+                <label class="switch_container">
+                    <input checked class="toggle-switch" type="checkbox">
+                    <span class="slider round slider--blue"></span>
+                </label>
+            </fieldset>
+
+            <hr>
+
+            <!-- Large default toggle switch -->
+            <fieldset class="com-form__switch">
+                <label class="switch_container switch_container--large">
+                    <input class="toggle-switch" type="checkbox">
+                    <span class="slider slider--large round"></span>
+                </label>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="com-form__switch">
+                <label class="switch_container switch_container--large">
+                    <input checked class="toggle-switch" type="checkbox">
+                    <span class="slider slider--large round"></span>
+                </label>
+            </fieldset>
+
+            <hr>
+
+            <!-- Large blue toggle switch -->  
+            <fieldset class="com-form__switch">
+                <label class="switch_container switch_container--large">
+                    <input class="toggle-switch" type="checkbox" >
+                    <span class="slider slider--large round slider--blue"></span>
+                </label>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="com-form__switch">
+                <label class="switch_container switch_container--large">
+                    <input checked class="toggle-switch" type="checkbox">
+                    <span class="slider slider--large round slider--blue"></span>
+                </label>
+            </fieldset>
+
+            <hr>
+
+            <fieldset class="com-form__switch">
+                <label>Content</label>
+                <label class="switch_container">
+                    <input class="toggle-switch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </fieldset>
+
+            <fieldset class="com-form__switch">
+                <label>Content</label>
+                <label class="switch_container">
+                    <input checked class="toggle-switch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </fieldset>
+
+            <hr>
+
+            <!-- Blue toggle switch with text -->
+            <fieldset class="com-form__switch">
+                <label>Content</label>
+                <label class="switch_container">
+                    <input class="toggle-switch" type="checkbox">
+                    <span class="slider round slider--blue"></span>
+                </label>
+            </fieldset>
+
+            <fieldset class="com-form__switch">
+                <label>Content</label>
+                <label class="switch_container">
+                    <input checked class="toggle-switch" type="checkbox">
+                    <span class="slider round slider--blue"></span>
+                </label>
+            </fieldset>
+
+            <hr>
+
+            <!-- Large default toggle switch with text -->
+            <fieldset class="com-form__switch">
+                <label>Content</label>
+                <label class="switch_container switch_container--large">
+                    <input class="toggle-switch" type="checkbox">
+                    <span class="slider slider--large round"></span>
+                </label>
+            </fieldset>
+
+            <fieldset class="com-form__switch">
+                <label>Content</label>
+                <label class="switch_container switch_container--large">
+                    <input checked class="toggle-switch" type="checkbox">
+                    <span class="slider slider--large round"></span>
+                </label>
+            </fieldset>
+
+            <hr>
+
+            <!-- Large blue toggle switch with text -->
+            <fieldset class="com-form__switch">
+                <label>Content</label>
+                <label class="switch_container switch_container--large">
+                    <input class="toggle-switch" type="checkbox">
+                    <span class="slider slider--large round slider--blue"></span>
+                </label>
+            </fieldset>
+
+            <fieldset class="com-form__switch">
+                <label>Content</label>
+                <label class="switch_container switch_container--large">
+                    <input checked class="toggle-switch" type="checkbox">
+                    <span class="slider slider--large round slider--blue"></span>
+                </label>
+            </fieldset>
+
+            <hr>
+
+            <!-- Small default toggle switch with text on left side-->
+            <fieldset class="com-form__switch com-form__switch--left">
+                <label>Content</label>
+                <label class="switch_container">
+                    <input class="toggle-switch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </fieldset>
+
+            <fieldset class="com-form__switch com-form__switch--left">
+                <label>Content</label>
+                <label class="switch_container">
+                    <input checked class="toggle-switch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </fieldset>
+            
+            <hr>
+
+            <!-- Small blue toggle switch with text on left side -->
+            <fieldset class="com-form__switch com-form__switch--left">
+                <label>Content</label>
+                <label class="switch_container">
+                    <input class="toggle-switch" type="checkbox">
+                    <span class="slider round slider--blue"></span>
+                </label>
+            </fieldset>
+
+            <fieldset class="com-form__switch com-form__switch--left">
+                <label>Content</label>
+                <label class="switch_container">
+                    <input checked class="toggle-switch" type="checkbox">
+                    <span class="slider round slider--blue"></span>
+                </label>
+            </fieldset>
+
+            <hr>
+
+            <!-- Large default toggle switch with text on left side -->
+            <fieldset class="com-form__switch com-form__switch--left">
+                <label>Content</label>
+                <label class="switch_container switch_container--large">
+                    <input class="toggle-switch" type="checkbox">
+                    <span class="slider slider--large round "></span>
+                </label>
+            </fieldset>
+
+            <fieldset class="com-form__switch com-form__switch--left">
+                <label>Content</label>
+                <label class="switch_container switch_container--large">
+                    <input checked class="toggle-switch" type="checkbox">
+                    <span class="slider slider--large round "></span>
+                </label>
+            </fieldset>
+
+            <hr>
+
+            <!-- Large blue toggle switch with text on left side -->
+            <fieldset class="com-form__switch com-form__switch--left">
+                <label>Content</label>
+                <label class="switch_container switch_container--large">
+                    <input class="toggle-switch" type="checkbox">
+                    <span class="slider slider--large round slider--blue"></span>
+                </label>
+            </fieldset>
+
+            <fieldset class="com-form__switch com-form__switch--left">
+                <label>Content</label>
+                <label class="switch_container switch_container--large">
+                    <input checked class="toggle-switch" type="checkbox">
+                    <span class="slider slider--large round slider--blue"></span>
+                </label>
+            </fieldset>
+
+            <hr>
+
+            <!-- Input labels -->
+            <div class="com-form__input-label com-form__input-label--error">
+                <span class="com-icon icon-error icon-size--large icon-color--error"></span>
+                <span>Message text</span>
+            </div>
+
+            <br>
+
+            <div class="com-form__input-label com-form__input-label--success">
+                <span class="com-icon icon-done icon-size--large icon-color--done"></span>
+                <span>Message text</span>
+            </div>
+
+            <br>
+
+            <div class="com-form__input-label com-form__input-label--info">
+                <span class="com-icon icon-info icon-size--large icon-color--info"></span>
+                <span>Message text</span>
+            </div>
+
+            <hr>
+
+            <!-- Form input in row -->
+            <div class="com-form__input">
+                <div class="input-container">
+                    <label> label</label>
+                    <input class="input" type="text" placeholder="Content">
+                </div>
+                <div class="input-container">
+                    <label>input label</label>
+                    <input class="input" type="text" placeholder="Content">
+                </div>
+                <div class="input-container">
+                    <label>input label</label>
+                    <input class="input input--error" type="text" placeholder="Content">
+                </div>
+                <div class="input-container">
+                    <label>input label</label>
+                    <input class="input input--error" type="text" placeholder="Content">
+                </div>
+                <div class="input-container">
+                    <label>input label</label>
+                    <input disabled class="input" type="text" placeholder="Content">
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Form input in column -->
+            <div class="com-form__input com-form__input--column">
+                <div class="input-container">
+                    <label>input label</label>
+                    <input class="input input--column" type="text" placeholder="Content">
+                </div>
+                <div class="input-container">
+                    <label>input label</label>
+                    <input class="input input--column" type="text" placeholder="Content">
+                </div>
+                <div class="input-container">
+                    <label>input label</label>
+                    <input class="input input--column input--error" type="text" placeholder="Content">
+                </div>
+                <div class="input-container">
+                    <label>input label</label>
+                    <input class="input input--column input--error" type="text" placeholder="Content">
+                </div>
+                <div class="input-container">
+                    <label>input label</label>
+                    <input disabled class="input input--column" type="text" placeholder="Content">
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Select in row -->
+            <div class="com-form__select">
+                <div class="select-container">
+                    <label>select label</label>
+                    <select class="select">
+                        <option class="select-option" value="" selected disabled hidden>Select..</option>
+                        <option class="select-option" value="value1">value1</option>
+                        <option class="select-option" value="value2">value2</option>
+                        <option class="select-option" value="value3">value3</option>
+                        <option class="select-option" value="value4">value4</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <label>select label</label>
+                    <select class="select">
+                        <option class="select-option" value="" selected disabled hidden>Select..</option>
+                        <option class="select-option" value="value1">value1</option>
+                        <option class="select-option" value="value2">value2</option>
+                        <option class="select-option" value="value3">value3</option>
+                        <option class="select-option" value="value4">value4</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <label>select label</label>
+                    <select class="select select--error">
+                        <option class="select-option" value="" selected disabled hidden>Select..</option>
+                        <option class="select-option" value="value1">value1</option>
+                        <option class="select-option" value="value2">value2</option>
+                        <option class="select-option" value="value3">value3</option>
+                        <option class="select-option" value="value4">value4</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <label>select label</label>
+                    <select class="select select--error">
+                        <option class="select-option" value="" selected disabled hidden>Select..</option>
+                        <option class="select-option" value="value1">value1</option>
+                        <option class="select-option" value="value2">value2</option>
+                        <option class="select-option" value="value3">value3</option>
+                        <option class="select-option" value="value4">value4</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <label>select label</label>
+                    <select disabled class="select">
+                        <option class="select-option" value="" selected disabled hidden>Select..</option>
+                        <option class="select-option" value="value1">value1</option>
+                        <option class="select-option" value="value2">value2</option>
+                        <option class="select-option" value="value3">value3</option>
+                        <option class="select-option" value="value4">value4</option>
+                    </select>
+                </div>
+            </div>
+            
+            <hr>
+
+            <!-- Select in column -->
+            <div class="com-form__select com-form__select--column">
+                <div class="select-container">
+                    <label>select label</label>
+                    <select class="select select--column">
+                        <option class="select-option" value="" selected disabled hidden>Select..</option>
+                        <option class="select-option" value="value1">value1</option>
+                        <option class="select-option" value="value2">value2</option>
+                        <option class="select-option" value="value3">value3</option>
+                        <option class="select-option" value="value4">value4</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <label>select label</label>
+                    <select class="select select--column">
+                        <option class="select-option" value="" selected disabled hidden>Select..</option>
+                        <option class="select-option" value="value1">value1</option>
+                        <option class="select-option" value="value2">value2</option>
+                        <option class="select-option" value="value3">value3</option>
+                        <option class="select-option" value="value4">value4</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <label>select label</label>
+                    <select class="select select--error select--column">
+                        <option class="select-option" value="" selected disabled hidden>Select..</option>
+                        <option class="select-option" value="value1">value1</option>
+                        <option class="select-option" value="value2">value2</option>
+                        <option class="select-option" value="value3">value3</option>
+                        <option class="select-option" value="value4">value4</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <label>select label</label>
+                    <select class="select select--error select--column">
+                        <option class="select-option" value="" selected disabled hidden>Select..</option>
+                        <option class="select-option" value="value1">value1</option>
+                        <option class="select-option" value="value2">value2</option>
+                        <option class="select-option" value="value3">value3</option>
+                        <option class="select-option" value="value4">value4</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <label>select label</label>
+                    <select disabled class="select select--column">
+                        <option class="select-option" value="" selected disabled hidden>Select..</option>
+                        <option class="select-option" value="value1">value1</option>
+                        <option class="select-option" value="value2">value2</option>
+                        <option class="select-option" value="value3">value3</option>
+                        <option class="select-option" value="value4">value4</option>
+                    </select>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- TODO: add eye icon because in google and firefox is missing in default-->
+            <!-- Input (passwd) row -->
+            <div class="com-form__passwd-input">
+                <div class="passwd-input-container">
+                    <label>passwd input label</label>
+                    <input class="passwd-input" type="password" placeholder="Password">
+                </div>
+                <div class="passwd-input-container">
+                    <label>passwd input label</label>
+                    <input class="passwd-input" type="password" placeholder="Password">
+                </div>
+                <div class="passwd-input-container">
+                    <label>passwd input label</label>
+                    <input class="passwd-input passwd-input--error" type="password" placeholder="Password">
+                </div>
+                <div class="passwd-input-container">
+                    <label>passwd input label</label>
+                    <input class="passwd-input passwd-input--error" type="password" placeholder="Password">
+                </div>
+                <div class="passwd-input-container">
+                    <label>passwd input label</label>
+                    <input disabled class="passwd-input" type="password" placeholder="Password">
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Input (passwd) column -->
+            <div class="com-form__passwd-input com-form__passwd-input--column">
+                <div class="passwd-input-container">
+                    <label>passwd input label</label>
+                    <input class="passwd-input passwd-input--column" type="password" placeholder="Password">
+                </div>
+                <div class="passwd-input-container">
+                    <label>passwd input label</label>
+                    <input class="passwd-input passwd-input--column" type="password" placeholder="Password">
+                </div>
+                <div class="passwd-input-container">
+                    <label>passwd input label</label>
+                    <input class="passwd-input passwd-input--error passwd-input--column" type="password" placeholder="Password">
+                </div>
+                <div class="passwd-input-container">
+                    <label>passwd input label</label>
+                    <input class="passwd-input passwd-input--error passwd-input--column" type="password" placeholder="Password">
+                </div>
+                <div class="passwd-input-container">
+                    <label>passwd input label</label>
+                    <input disabled class="passwd-input passwd-input--column" type="password" placeholder="Password">
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Input (date) row -->
+            <div class="com-form__date-input">
+                <div class="date-input-container">
+                    <label>date input label</label>
+                    <input class="date-input" type="date" placeholder="Select date..">
+                </div>
+                <div class="date-input-container">
+                    <label>date input label</label>
+                    <input class="date-input" type="date" placeholder="Select date..">
+                </div>
+                <div class="date-input-container">
+                    <label>date input label</label>
+                    <input class="date-input date-input--error" type="date" placeholder="Select date..">
+                </div>
+                <div class="date-input-container">
+                    <label>date input label</label>
+                    <input class="date-input date-input--error" type="date" placeholder="Select date..">
+                </div>
+                <div class="date-input-container">
+                    <label>date input label</label>
+                    <input disabled class="date-input" type="date" placeholder="Select date..">
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Input (date) column -->
+            <div class="com-form__date-input com-form__date-input--column">
+                <div class="date-input-container">
+                    <label>date input label</label>
+                    <input class="date-input date-input--column" type="date" placeholder="Select date..">
+                </div>
+                <div class="date-input-container">
+                    <label>date input label</label>
+                    <input class="date-input date-input--column" type="date" placeholder="Select date..">
+                </div>
+                <div class="date-input-container">
+                    <label>date input label</label>
+                    <input class="date-input date-input--error date-input--column" type="date" placeholder="Select date..">
+                </div>
+                <div class="date-input-container">
+                    <label>date input label</label>
+                    <input class="date-input date-input--error date-input--column" type="date" placeholder="Select date..">
+                </div>
+                <div class="date-input-container">
+                    <label>date input label</label>
+                    <input disabled class="date-input date-input--column" type="date" placeholder="Select date..">
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Text area row small-->
+            <div class="com-form__text-area">
+                <div class="text-area-container">
+                    <label>text area label</label>
+                    <textarea class="text-area" placeholder="Content.."></textarea>
+                </div>
+                <div class="text-area-container">
+                    <label>text area label</label>
+                    <textarea class="text-area text-area--error" placeholder="Content.."></textarea>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Text area row large-->
+            <div class="com-form__text-area">
+                <div class="text-area-container">
+                    <label>text area label</label>
+                    <textarea class="text-area text-area--large" placeholder="Content.."></textarea>
+                </div>
+                <div class="text-area-container">
+                    <label>text area label</label>
+                    <textarea class="text-area text-area--large text-area--error" placeholder="Content.."></textarea>
+                </div>
+            </div>
+
+            <!-- https://codepen.io/tippingpointdev/pen/WNZbWGe?editors=1100 -->
+
+            <hr>
+
+            <!-- Basic search  -->
+            <div class="com-form__search">
+                <input class="search" type="search" placeholder="Search...">
+            </div>
+            
+            <br>
+
+            <div class="com-form__search">
+                <input class="search search--error" type="search" placeholder="Search..">
+            </div>
+
+            <hr>
+
+            <!-- Search with button -->
+            <div class="com-form__search-group">
+                <div class="search-group-container">
+                    <input class="search-group" type="search" placeholder="Search..">
+                    <div class="icon-container">
+                        <span class="icon-search"></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

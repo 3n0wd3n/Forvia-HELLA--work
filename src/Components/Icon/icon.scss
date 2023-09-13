@@ -1,0 +1,30 @@
+.com-icon {
+	background-color: $color-text-primary;
+	&.icon-color--info {
+		background-color: $color-primary-default;
+	}
+	&.icon-color--done {
+		background-color: $color-success-default;
+	}
+	&.icon-color--warning {
+		background-color: $color-warning-default;
+	}
+	&.icon-color--error {
+		background-color: $color-danger-default;
+	}
+	&.icon-color--white {
+		background-color: white;
+	}
+	&.icon-size--small {
+		height: 16px;
+		width: 16px;
+		-webkit-mask-size: contain;
+		-webkit-mask-repeat: no-repeat;
+	}
+	&.icon-size--large {
+		height: 20px;
+		width: 20px;
+		-webkit-mask-size: contain;
+		-webkit-mask-repeat: no-repeat;
+	}
+}

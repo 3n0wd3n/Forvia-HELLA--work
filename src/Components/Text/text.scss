@@ -1,0 +1,8 @@
+.com-text {
+	text-align: left;
+	color: $black;
+	font-size: $font-base-size;
+	&--gray {
+		color: $color-text-secondary-light;
+	}
+}
