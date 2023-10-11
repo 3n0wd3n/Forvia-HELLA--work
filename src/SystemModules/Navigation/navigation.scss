@@ -1,6 +1,5 @@
 /* TODO: think about media query for mobile it should start at 930px instead of 860px because of breaking */
-/* TODO: solve problem with mabile menu when search input in mobile -> because then everything shots to right and overflow-y */
-/* TODO: solve issue with mobile navigation -> if you click on hamburger mobile menu pops up but if you stay in the mobile menu and try to to extend it to desktop it should disapear but it does not*/
+
 .navigation-menu {
 	width: 100%;
 	display: flex;
@@ -18,14 +17,8 @@
 		top: 0;
 		z-index: 1;
 
-		@media only screen and (max-width: 846px) {
-			width: calc(100% - 32px);
-			margin: 0px 16px;
-		}
-
-		.logo-area {
+		.navigation-menu__logo-container {
 			height: 54px;
-			padding: 0px 14px;
 
 			a.logo-background > .logo {
 				width: 59px;
@@ -33,16 +26,16 @@
 			}
 		}
 
-		.submenu {
+		.navigation-header {
 			display: none;
 		}
 
-		.navbar ul.navigation .dropdown .dropdown-menu {
+		.desktop-navigation ul.desktop-navigation__menu-items .menu-item .dropdown-menu {
 			top: 62px;
 		}
 	}
 
-	.logo-area {
+	&__logo-container {
 		display: flex;
 		width: 232px;
 		height: 100px;
@@ -91,7 +84,7 @@
 		}
 	}
 
-	.nav-wrapper {
+	.navigation-menu__content {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -105,7 +98,7 @@
 		display: flex;
 	}
 
-	.submenu {
+	.navigation-header {
 		display: flex;
 		height: 38px;
 		padding: 6px 24px;
@@ -122,7 +115,7 @@
 			display: none;
 		}
 
-		.project {
+		.navigation-header__title {
 			font-size: 14px;
 			font-weight: 600;
 			line-height: 21px;
@@ -133,7 +126,7 @@
 			}
 		}
 
-		.nav-links {
+		.navigation-header__links {
 			text-transform: uppercase;
 			display: flex;
 			justify-content: flex-end;
@@ -187,7 +180,7 @@
 		}
 	}
 
-	.navbar {
+	.desktop-navigation {
 		display: flex;
 		padding: 0px 24px;
 		align-items: center;
@@ -200,7 +193,7 @@
 			padding: 0;
 		}
 
-		ul.navigation {
+		ul.desktop-navigation__menu-items {
 			display: flex;
 			align-items: center;
 			gap: 28px;
@@ -216,7 +209,7 @@
 				display: none;
 			}
 
-			.dropdown {
+			.menu-item {
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -227,6 +220,8 @@
 
 				&:hover .dropdown-menu {
 					display: flex;
+					justify-content: flex-start;
+					padding: 5vh 0 5vh 20vw;
 				}
 
 				&:hover > a.nav-lvl1::before {
@@ -434,6 +429,10 @@
 			gap: 16px;
 			align-self: stretch;
 
+			.com-btn.btn--small {
+				padding: 0.875rem 1rem 0.875rem 0.75rem;
+			}
+
 			@media only screen and (max-width: 1099px) {
 				position: fixed;
 				bottom: 0px;
@@ -506,7 +505,7 @@
 					padding: 0 16px 0 0;
 				}
 			}
-			ul.navigation {
+			ul.desktop-navigation__menu-items {
 				display: none;
 			}
 		}
@@ -618,6 +617,53 @@
 	display: none;
 }
 
+.language-variant {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	background-color: white;
+	height: auto;
+	padding: 0 16px 0 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	overflow: auto;
+	&__header {
+		display: flex;
+		height: 61px;
+		flex-direction: column;
+		justify-content: center;
+		font-size: 15px;
+		font-weight: 700;
+		color: $color-neutral-line-dark;
+	}
+	&__country {
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+		.country-heading {
+			color: $color-text-primary;
+			font-size: 20px;
+			font-weight: 700;
+			margin: 0 0 20px 0;
+		}
+		.countries-container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			// justify-content: space-between;
+		}
+	}
+	.countries-container__country {
+		display: flex;
+		padding-left: 0px;
+		align-items: center;
+		gap: 12px;
+		margin: 0 200px 24px 0;
+	}
+}
+
 body.hella-gutmann nav {
 	a.logo-background {
 		background-color: $color-neutral-primary-gutmann;
@@ -636,7 +682,7 @@ body.hella-gutmann nav {
 		}
 	}
 
-	.navbar .dropdown::after {
+	.desktop-navigation .menu-item::after {
 		border-bottom: 6px solid $color-neutral-primary-gutmann;
 	}
 }

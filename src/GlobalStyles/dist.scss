@@ -14,11 +14,12 @@
 	align-items: center;
 }
 
-.button__container, .button_group__container {
+.button__container,
+.button_group__container {
 	margin-bottom: 1rem;
 	margin-top: 0.2rem;
 	text-align: center;
-	
+
 	&.ghost {
 		background-color: grey;
 		width: 37.5rem;
@@ -27,13 +28,38 @@
 	}
 }
 
+.module-card__container {
+	width: 16.25rem;
+}
+
+.module-card__container-mobile {
+	width: 21.44rem;
+}
+
+.product-card__container {
+	width: 21.875rem;
+}
+.product-card__container-library {
+	width: 23rem;
+	height: 12.875rem;
+}
+.product-card__container-library-mobile {
+	width: 21.438rem;
+	height: 8.75rem;
+}
+
 .alert__container .com-alert {
 	margin-bottom: 1rem;
+}
+
+.dealer-card-horizontal__container-dst {
+	width: 30rem;
 }
 
 .progress-bar__main-container,
 .button__main-container,
 .button_group__main-container,
+.module__main-container,
 .badge__main-container,
 .alert__main-container,
 .spinner__main-container,
@@ -41,8 +67,26 @@
 .icon__main-container,
 .dialog__main-container,
 .form__main-container,
-.text-container,
-.chip__main-container {
+.text__main-container,
+.chip__main-container,
+.accordion__main-container,
+.spare-parts__main-container,
+.lists__main-container,
+.tab__main-container,
+.dropdown__main-container,
+.search-result__main-container,
+.star__main-container,
+.rating__main-container,
+.counter__main-container,
+.file__main-container,
+.dealer-finder__main-container,
+.carousel__main-container,
+.btn-car-select__main-container,
+.off-screen-menu__main-container,
+.table__main-container,
+.pagination__main-container,
+.instruction-step__main-container,
+.hero-image__main-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;

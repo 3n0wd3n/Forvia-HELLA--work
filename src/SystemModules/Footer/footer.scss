@@ -4,21 +4,23 @@ footer {
 
 	.info-banner {
 		@include padding(5, 6);
-		gap: 8px;
-		min-height: 107px;
+		gap: fromPxToRem(8);
+		min-height: fromPxToRem(107);
 		background-color: $color-neutral-base-background;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		flex: 1 0 0;
+		border-radius: 1rem;
 
 		@media only screen and (max-width: $max-content-tablet-width) {
-			padding: 32px 16px 32px 16px;
+			padding: fromPxToRem(32) fromPxToRem(16) fromPxToRem(32) fromPxToRem(16);
 		}
 
 		.container {
 			display: flex;
 			align-items: flex-start;
-			gap: 80px;
+			gap: fromPxToRem(80);
 			align-self: stretch;
 
 			@media only screen and (max-width: $max-content-width) {
@@ -26,7 +28,7 @@ footer {
 			}
 
 			@media only screen and (max-width: $max-content-tablet-width) {
-				gap: 32px;
+				gap: fromPxToRem(32);
 			}
 
 			.left__container,
@@ -34,13 +36,13 @@ footer {
 				display: flex;
 				flex-direction: column;
 				align-items: flex-start;
-				gap: 24px;
+				gap: fromPxToRem(24);
 				flex: 1 0 0;
 			}
 
 			.left__container h3 .com-icon {
 				vertical-align: top;
-				height: 22px;
+				height: fromPxToRem(22);
 			}
 
 			.left__container p {
@@ -49,7 +51,7 @@ footer {
 			}
 
 			.right__container {
-				gap: 20px;
+				gap: fromPxToRem(20);
 
 				@media only screen and (max-width: $max-content-width) {
 					width: 100%;
@@ -57,7 +59,7 @@ footer {
 
 				.com-form {
 					display: flex;
-					gap: 8px;
+					gap: fromPxToRem(8);
 
 					.com-form__input {
 						width: 70%;
@@ -65,6 +67,11 @@ footer {
 
 					button {
 						width: 30%;
+						margin: fromPxToRem(8) 0;
+
+						.icon-send {
+							background-color: $color-primary-default;
+						}
 					}
 
 					@media only screen and (max-width: $max-content-width) {
@@ -81,10 +88,11 @@ footer {
 			}
 
 			.right__container .links {
-				font-size: 14px;
+				font-size: fromPxToRem(14);
 				font-style: normal;
 				font-weight: 400;
 				line-height: 150%;
+				
 
 				@media only screen and (max-width: $max-content-width) {
 					margin: 0 auto;
@@ -93,6 +101,7 @@ footer {
 				a {
 					color: $color-primary-default;
 					display: inline-block;
+					text-decoration: underline;
 				}
 			}
 		}
@@ -100,19 +109,19 @@ footer {
 
 	.footer {
 		display: flex;
-		padding: 48px;
+		padding: fromPxToRem(48);
 		align-items: flex-start;
-		gap: 104px;
+		gap: fromPxToRem(60);
 
 		@media only screen and (max-width: $max-content-tablet-width) {
-			padding: 32px 16px 32px 16px;
+			padding: fromPxToRem(32) fromPxToRem(16) fromPxToRem(32) fromPxToRem(16);
 		}
 
 		.footer__nav {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-			gap: 28px;
+			gap: fromPxToRem(24);
 			flex: 1 0 0;
 			position: relative;
 
@@ -124,21 +133,52 @@ footer {
 				}
 			}
 
-			&::before {
+			/*&::before {
 				content: "";
 				position: absolute;
 				right: 0;
 				width: 1px;
-				height: 429px;
+				height: fromPxToRem(429);
 				background: $color-neutral-line-light;
 			}
 
 			&:last-of-type::before {
 				display: none;
+			}*/
+
+			.footer-headline {
+
+				font-weight: 700;
+				line-height: 150%;
+				color: $color-btn-primary-dark;
+			}
+
+			.footer-text {
+
+				font-size: fromPxToRem(14);
+				font-style: normal;
+				font-weight: 400;
+				line-height: 150%;
+				color: $color-text-disabled;
+			}
+			
+			.footer-service-link {
+
+				font-weight: 400;
+				line-height: 150%;
+				color: $color-primary-default;
+				display: flex;
+				align-items: center;
+				gap: fromPxToRem(6);
+				align-self: stretch;
+
+				span {
+					background-color: $color-primary-default;	
+				}
 			}
 
 			ul {
-				margin-bottom: 48px;
+				margin-bottom: fromPxToRem(48);
 
 				&:last-of-type {
 					margin-bottom: 0;
@@ -148,22 +188,13 @@ footer {
 			li {
 				display: flex;
 				align-items: center;
-				gap: 10px;
+				gap: fromPxToRem(10);
 				align-self: stretch;
-				margin-bottom: 28px;
-				height: 11px;
+				margin-bottom: fromPxToRem(28);
+				height: fromPxToRem(11);
 
 				&:last-of-type {
 					margin-bottom: 0;
-				}
-
-				&:first-of-type a {
-					color: $color-text-secondary;
-					text-transform: uppercase;
-					font-size: 15px;
-					font-weight: 700;
-					line-height: 150%;
-					letter-spacing: 0.15px;
 				}
 
 				a {
@@ -174,40 +205,39 @@ footer {
 			}
 
 			&.social {
-				gap: 0;
+
 				a.top {
 					color: $color-text-secondary;
 					text-transform: uppercase;
-					font-size: 15px;
+					font-size: fromPxToRem(15);
 					font-weight: 700;
 					line-height: 150%;
 					letter-spacing: 0.15px;
-					margin-bottom: 16px;
+					margin-bottom: fromPxToRem(16);
 				}
 
 				& > p {
-					margin-bottom: 24px;
+					margin-bottom: fromPxToRem(24);
 					color: $color-text-secondary;
 				}
 
 				.icons {
+
 					display: flex;
-					height: 70px;
 					align-items: flex-start;
-					gap: 40px;
-					align-self: stretch;
-					margin-bottom: 76px;
+					gap: fromPxToRem(40);
+					align-self: stretch;					
 
 					&:last-of-type {
 						margin-bottom: 0;
 
 						@media only screen and (max-width: $max-content-tablet-width) {
-							height: 48px;
+							height: fromPxToRem(48);
 						}
 					}
 
 					@media only screen and (max-width: $max-content-tablet-width) {
-						margin-bottom: 24px;
+						margin-bottom: fromPxToRem(24);
 					}
 				}
 
@@ -215,13 +245,13 @@ footer {
 					display: flex;
 					flex-direction: column;
 					align-items: flex-start;
-					gap: 24px;
+					gap: fromPxToRem(24);
 					align-self: stretch;
 
 					p {
 						color: $color-text-secondary;
 						text-transform: uppercase;
-						font-size: 15px;
+						font-size: fromPxToRem(15);
 						font-weight: 700;
 						line-height: 150%;
 						letter-spacing: 0.15px;
@@ -230,16 +260,16 @@ footer {
 					.icons {
 						display: flex;
 						align-items: flex-start;
-						gap: 23px;
+						gap: fromPxToRem(23);
 
 						a {
 							display: flex;
-							width: 48px;
-							height: 48px;
+							width: fromPxToRem(48);
+							height: fromPxToRem(48);
 							justify-content: center;
 							align-items: center;
-							gap: 8px;
-							border-radius: 100px;
+							gap: fromPxToRem(8);
+							border-radius: fromPxToRem(100);
 							background: $color-primary-default;
 
 							.com-icon {
@@ -253,14 +283,14 @@ footer {
 					display: flex;
 					justify-content: flex-end;
 					align-items: flex-end;
-					gap: 4px;
+					gap: fromPxToRem(4);
 					flex: 1 0 0;
 					align-self: stretch;
 
 					a {
 						color: $color-primary-default;
 						text-transform: uppercase;
-						font-size: 15px;
+						font-size: fromPxToRem(15);
 						font-weight: 700;
 						line-height: 150%;
 						letter-spacing: 0.15px;
@@ -268,7 +298,7 @@ footer {
 						span {
 							background-color: $color-primary-default;
 							position: relative;
-							top: 7px;
+							top: fromPxToRem(7);
 						}
 					}
 				}

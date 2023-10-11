@@ -1,29 +1,10 @@
 # HTW 3.0
 
-## Most recent work I have done
-
-[Navigation logic](https://github.com/3n0wd3n/Forvia-HELLA--work/tree/main/src/SystemModules/Navigation)
-
 ## Structure Of The Project
 
 -   Samples folder -> HTML schemes for specific components.
 
 -   SRC folder -> Includes components and global styles for the project.
-
-## Components State
-
--   [x] Alert
--   [x] Badge
--   [x] Button
--   [x] ButtonGroup
--   [x] Chip
--   [x] Dialog
--   [x] Divider
--   [x] Form
--   [x] Icon
--   [x] ProgressBar
--   [x] Spinner
--   [x] Text
 
 ## Useful links
 
@@ -41,6 +22,87 @@
 
     $ npx webpack
     $ npx webpack serve
+
+## Know who is responsible for what
+
+| Name               |      Type      |  Programmed by   |
+| :----------------- | :------------: | :--------------: |
+| Alert Bar          |   component    |     Michael      |
+| Badge              |   component    |      Zdeněk      |
+| Button             |   component    |      Zdeněk      |
+| Button Group       |   component    |      Zdeněk      |
+| Chip               |   component    |     Michael      |
+| Dialog             |   component    |     Michael      |
+| Divider            |   component    |     Michael      |
+| Form               |   component    |     Michael      |
+| Icon               |   component    |     Michael      |
+| Progress Bar       |   component    |     Michael      |
+| Spinner            |   component    |     Michael      |
+| Star               |   component    |     Michael      |
+| Text               |   component    |     Michael      |
+| Accordion          |     module     |     Michael      |
+| Spare Parts        |     module     |     Michael      |
+| List / Bullet List |     module     |     Michael      |
+| Item               |     module     |     Michael      |
+| Tab                |     module     |     Michael      |
+| Rating             |     module     |     Michael      |
+| Search Results     |     module     |     Michael      |
+| Navigation         | system modules | Vojtech, Michael |
+| Footer             | system modules | Vojtech, Zdenek  |
+| Cards              |    modules     |      Zdenek      |
+| Counter            |    modules     |     Michael      |
+| File               |    modules     |     Michael      |
+| Table              |    modules     |     Michael      |
+| Dealer Finder      |    modules     |     Michael      |
+| Footer             |    modules     |      Zdenek      |
+| Bread Crumb        |    modules     |      Vojta       |
+| Button Car Select  |    modules     |     Michael      |
+| Instruction Steps  |    modules     |     Michael      |
+| Hero Images        |    modules     |     Michael      |
+| Dropdown           |    modules     |     Michael      |
+| Carousel           |    modules     |  Michael, Vojta  |
+| Images / Video     |   component    |      Vojta       |
+
+## Components And Modules State
+
+# Components
+
+-   [x] Alert
+-   [x] Badge
+-   [x] Button
+-   [x] ButtonGroup
+-   [x] Chip
+-   [x] Dialog / Action Sheet
+-   [x] Divider
+-   [x] Form
+-   [x] Icon
+-   [x] ProgressBar
+-   [x] Spinner
+-   [x] Text
+-   [x] Images / Video
+
+# Modules
+
+-   [x] Accordion
+-   [x] Bread Crumb
+-   [x] Button Car Select -- dummy version
+-   [x] Cards
+-   [x] Dealer Finder
+-   [x] Carousel _*wip*_
+-   [x] Counter
+-   [ ] Off Screen Menu
+-   [x] Hero Image
+-   [x] Dropdown _*wip*_ (need program horizontal version)
+-   [x] File
+-   [x] Footer
+-   [x] Lists
+-   [x] Instruction Step
+-   [x] Rating
+-   [x] Pagination (Part Of The Master Page)
+-   [x] Search Result
+-   [x] Spare Part Finder
+-   [x] Tab
+-   [x] Table
 
 ## How To Use BEM
 
@@ -136,13 +198,38 @@ Component Variant. Describes visual properties (.block--small), state (.block--d
         }
     }
 
-## CSS Module Naming Conventions
+## HTML File Template
 
-Declare new variable with namen of module:
+Replace **<module-name>** in HTML structure for proper name of the module
 
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Module <module-name></title>
+            <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+        </head>
+        <body>
+            <div class="<module-name>__main-container">
+                <div class="mod- <module-name>">
+                    <h1><module-name> Module</h1>
+                    <!-- TODO: start working on it -->
+                    work in progress
+                </div>
+            </div>
+        </body>
+    </html>
+
+## CSS Module And Components Naming Conventions
+
+Declare new variable with namen of module or component:
+
+-   Component -> com-{name}
 -   Contenct -> con-{name}
 -   Structure -> str-{name}
 -   Form -> frm-{name}
+-   Module -> mod-{name}
 
 ## Import CSS
 

@@ -1,13 +1,39 @@
 import "./navigation.scss";
 
-/* TODO: resolve problem with moving between submenu's -> now it crashes because I removed child in every submenu when I jumped to lower one -> use visibility = hidden */
-
 const navigation = function () {
 	const init = (module) => {
 		sticky(module);
-		displayLvl3(module);
+		desktopSubmenus(module);
 		searchInput(module);
 		mobileMenu(module);
+		languageSelection(module);
+	};
+
+	const languageSelection = (module) => {
+		let languageBtns = module.querySelectorAll(".language");
+		languageBtns.forEach((languageBtn) => {
+			languageBtn.addEventListener("click", (event) => {
+				event.preventDefault();
+				let languageVariantMenu = module.querySelector(".language-variant");
+				if (languageVariantMenu.classList.contains("hide")) {
+					languageVariantMenu.classList.remove("hide");
+
+					// Get the height of the .navigation-menu element
+					let navigationMenuHeight = module.offsetHeight;
+
+					// Calculate the height for .content
+					languageVariantMenu.style.height = "calc(100vh - " + navigationMenuHeight + "px)";
+
+					// Set overflow of the page to hidden
+					document.body.style.overflow = "hidden";
+				} else {
+					document.body.style.overflow = "scroll";
+
+					// Set overflow of the page to scroll
+					languageVariantMenu.classList.add("hide");
+				}
+			});
+		});
 	};
 
 	const mobileMenu = (module) => {
@@ -48,16 +74,18 @@ const navigation = function () {
 		let mobileMenuGroup = module.querySelector(".mobile-navigation-menu__bottom-submenu-container");
 		let mobileMenuSelected = module.querySelector(".mobile-navigation-menu__items");
 		let mobileMenuHeader = module.querySelector(".mobile-header-icons");
-		let desktopNavigation = module.querySelector(".navigation");
+		let desktopNavigation = module.querySelector(".desktop-navigation__menu-items");
 
 		const showFirstLvlNav = (module) => {
 			desktopNavigation.classList.remove("hide");
 
-			// Hide unnecessary submenu
-			desktopNavigation.children[0].children[1].classList.add("hide");
-
 			for (let i = 0; i < desktopNavigation.children.length; i++) {
 				let menuItem = desktopNavigation.children[i].children[0];
+
+				// Hide unnecessary submenus
+				if (desktopNavigation.children[i].children[1]) {
+					desktopNavigation.children[i].children[1].classList.add("hide");
+				}
 
 				// Add styleing class for menu item
 				menuItem.classList.add("mobile-navigation-menu__menu-item");
@@ -77,9 +105,6 @@ const navigation = function () {
 			checkSubMenuClick(module);
 			backToMainMenu(module);
 		};
-
-		// TODO: one mayor todo is to hide/show one particular lvl2 not all of them
-		// TODO: makeing headline from picked menu item for submenu -> make it througt another parametr in function. Just send pure text of picked item and make from him whole span and other spans in submenu add bigger padding
 
 		const showSecondLvlNav = (module, whereToGo, textFromMenuItem) => {
 			console.log("Creating Level 2 Navigation");
@@ -273,13 +298,13 @@ const navigation = function () {
 		let languageIcon = module.querySelector(".sm-device-nav .language");
 		let hamburger = module.querySelector(".sm-device-nav .hamburger");
 		let closeBtn = module.querySelector(".sm-device-nav .close-btn");
-		let menuImg = module.querySelector(".logo-area");
+		let menuImg = module.querySelector(".navigation-menu__logo-container");
 
 		// Selecting stuff for form maniplation
-		let formWrapper = module.querySelector(".navigation-menu .navbar .com-form");
-		let formInput = module.querySelector(".navigation-menu .navbar .com-form .search-group");
+		let formWrapper = module.querySelector(".navigation-menu .desktop-navigation .com-form");
+		let formInput = module.querySelector(".navigation-menu .desktop-navigation .com-form .search-group");
 		let formIcon = module.querySelector(
-			".navigation-menu .navbar .com-form .search-group-container > .icon-container"
+			".navigation-menu .desktop-navigation .com-form .search-group-container > .icon-container"
 		);
 
 		// Adding variables for multiple class adding
@@ -350,30 +375,42 @@ const navigation = function () {
 		};
 	};
 
-	const displayLvl3 = (module) => {
+	const desktopSubmenus = (module) => {
 		// Function for multilevel navigation
+
+		//  Set variables
 		let prevHoverLvl2 = "";
 		let navLvl2All = module.querySelectorAll(".nav-lvl2 ul li a");
 		let navLvl3All = module.querySelectorAll(".nav-lvl3 ul li a");
 
+		// Looping over nav lvl 2 navigation items
 		navLvl2All.forEach((navLvl2) => {
 			navLvl2.addEventListener("mouseenter", (event) => {
 				navLvl2.classList.add("active");
 				let dataSource = navLvl2.dataset.source;
 				let navLvl3Ul = module.querySelector('.nav-lvl3 ul[data-target="' + dataSource + '"]');
+				
+				// Check if navigation lvl 3 is empty or not
 				if (navLvl3Ul !== null) {
+					navLvl3Ul.parentNode.classList.remove("hide");
 					navLvl3Ul.classList.add("visible");
 				} else {
 					module.querySelectorAll(".nav-lvl3 ul").forEach((element) => {
 						element.classList.remove("visible");
+						element.parentNode.classList.add("hide")
 					});
 				}
 
+				// Remove previous subnavigations lvl 3
 				if (prevHoverLvl2 !== "" && prevHoverLvl2 !== event.target) {
-					let navLvl3UlNot = module.querySelector('.nav-lvl3 ul:not([data-target="' + dataSource + '"])');
-					if (navLvl3UlNot !== null) {
-						navLvl3UlNot.classList.remove("visible");
-					}
+					let navLvl3UlNot = module.querySelectorAll('.nav-lvl3 ul:not([data-target="' + dataSource + '"])');
+					navLvl3UlNot.forEach((element) => {
+						if (element !== null) {
+							element.parentNode.classList.add("hide");
+							element.classList.remove("visible");
+						}
+					});
+					// Change active item in subnav lvl 2
 					prevHoverLvl2.classList.remove("active");
 				}
 			});
@@ -384,6 +421,7 @@ const navigation = function () {
 		});
 
 		navLvl3All.forEach((navLvl3) => {
+			// Check if we are in mobile device or not by checking presence of particular class
 			if (Array.from(navLvl3.classList).includes("mobile-item") === false) {
 				return;
 			} else {

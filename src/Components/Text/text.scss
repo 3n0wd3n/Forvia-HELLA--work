@@ -5,4 +5,10 @@
 	&--gray {
 		color: $color-text-secondary-light;
 	}
+	&--ligth-gray {
+		color: $color-neutral-base-background-light;
+	}
+	&.center {
+		text-align: center;
+	}
 }

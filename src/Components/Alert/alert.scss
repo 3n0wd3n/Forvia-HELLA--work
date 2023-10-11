@@ -40,6 +40,11 @@
 
 		.icon-close {
 			cursor: pointer;
+			// @include icon-size(16);
+		}
+
+		.icon-info, .icon-done, .icon-warning, .icon-error {
+			// @include icon-size(20);
 		}
 	}
 	.alert__body {

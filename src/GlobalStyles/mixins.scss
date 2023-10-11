@@ -46,6 +46,14 @@
 	padding: fromPxToRem(calc(8 * $multiplyTopBottom)) fromPxToRem(calc(8 * $multiplyLeftRight));
 }
 
+// TODO: discuse what is the best approach
+@mixin icon-size($size) {
+	height: fromPxToRem($size);
+	width: fromPxToRem($size);
+	-webkit-mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+}
+
 // Convert number from px to Rem
 @function fromPxToRem($size, $base-size: 16) {
 	@return calc($size / $base-size) + rem;

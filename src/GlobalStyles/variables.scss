@@ -14,6 +14,7 @@ $color-neutral-line-light: #ced7de;
 $color-neutral-line-dark: #9ea9b0;
 $color-neutral-secondary-background-dark: #5e707d;
 $color-neutral-primary-background-dark: #353d43;
+$color-neutral-primary-background-ligth: #434446;
 $color-neutral-base-background-dark: hsla(210, 8%, 5%, 0.76);
 
 $color-neutral-base-background-light: #6d6d6e;
@@ -53,13 +54,16 @@ $color-danger-pressed: #981b25;
 
 // Text + icon
 $color-text-primary: hsla(210, 8%, 5%, 0.733);
-$color-text-primary-2: #0b0c0d;
 $color-text-secondary: rgba(11, 12, 13, 0.76);
 $color-text-secondary-light: #454647;
 $color-text-disabled: rgba(11, 12, 13, 0.6);
 $color-text-dark-mode-primary: #ffffff;
 $color-text-dark-mode-secondary: rgba(255, 255, 255, 0.75);
 $color-text-dark-mode-disabled: rgba(255, 255, 255, 0.6);
+
+// Button
+$color-btn-primary-dark: #0b0c0d;
+$color-btn-secondary-dark: #030714;
 
 $black: #000000;
 

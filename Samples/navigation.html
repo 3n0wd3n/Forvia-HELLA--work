@@ -25,7 +25,7 @@
         /* test */
 
         .grid-container div {
-            background-color: #14ffcc;
+            background-color: #e7e7e7;
         }
 
         /* eof test */
@@ -34,21 +34,20 @@
     <script src="vendor.bundle.js"></script>
     <script defer src="index.bundle.js"></script>
 </head>
-<!-- TODO: discuss if BEM methodic is correctly used in here -->
 <body class="">
     <main class="webRoot">
         <!-- Navigation -->
         <nav class="navigation-menu">
-            <div class="logo-area">
+            <div class="navigation-menu__logo-container">
                 <a class="logo-background" href="">
                     <span class="logo"></span>
                 </a>
             </div>
 
-            <div class="nav-wrapper">
-                <div class="submenu">
-                    <div class="project">HELLA TECH WORLD – The Workshop's Friend</div>
-                    <div class="nav-links">
+            <div class="navigation-menu__content">
+                <div class="navigation-header">
+                    <div class="navigation-header__title">HELLA TECH WORLD – The Workshop's Friend</div>
+                    <div class="navigation-header__links">
                         <form class="com-form">
                             <div class="com-form__search-group">
                                 <div class="search-group-container">
@@ -66,93 +65,311 @@
                         <a class="language" href=""><span class="com-icon icon-language"></span> DE</a>
                     </div>
                 </div>
-                <div class="navbar">
-                    <ul class="navigation">
-                        <li class="dropdown">
-                            <!-- <div class="menu-item-container">
-                                <a class="nav-lvl1" href="https://en.wikipedia.org/wiki/Faurecia" >Technical</span></a><span id="to-1.1" class="hide icon-chevronRight com-icon"></span>
-                            </div> -->
+                <div class="desktop-navigation">
+                    <ul class="desktop-navigation__menu-items">
+                        <li class="menu-item">
+                            <!-- TODO: unify ids and data-source -->
                             <a class="nav-lvl1" href="https://en.wikipedia.org/wiki/Faurecia" ><span>Technical</span><span id="to-1.1" class="hide icon-chevronRight com-icon"></span></a>
-                            <div class="dropdown-menu hide">
+                            <div class="dropdown-menu">
                                 <div id="1.1" class="nav-lvl2">
                                     <ul>
                                         <li>
-                                            <a data-source="1123" href="https://en.wikipedia.org/wiki/Faurecia"><span>Automotive lighting</span><span id="to-1.1.1" class="hide icon-chevronRight com-icon"></span></a>
+                                            <a data-source="1.1" href="https://en.wikipedia.org/wiki/Faurecia">
+                                                <span>Automotive lighting</span>
+                                                <span id="to-1.1.1" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
                                         </li>
-                                        <li><a data-source="1" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>Car air conditioning</span><span id="to-1.1.2" class="hide icon-chevronRight com-icon"></span></a></li>
-                                        <li><a data-source="2" href="https://en.wikipedia.org/wiki/Faurecia"><span>Car cooling system</span></a></li>
-                                        <li><a data-source="3" href="https://en.wikipedia.org/wiki/Faurecia"><span>Car electronics and electrics</span></a>
+                                        <li>
+                                            <a data-source="1.2" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>Car air conditioning</span>
+                                                <span id="to-1.1.2" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
                                         </li>
-                                        <li><a data-source="4" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>Sensors and actuators</span><span id="to-1.1.5" class="hide icon-chevronRight com-icon"></span></a></li>
-                                        <li><a data-source="5" href="https://en.wikipedia.org/wiki/Faurecia"><span>Brakes</span></a></li>
-                                        <li><a data-source="6" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>Exhaust technology</span><span id="to-1.1.7" class="hide icon-chevronRight com-icon"></span></a></li>
+                                        <li>
+                                            <a data-source="1.3" href="https://en.wikipedia.org/wiki/Faurecia">
+                                                <span>Car cooling system</span>
+                                                <span id="to-1.1.3" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-source="1.4" href="https://en.wikipedia.org/wiki/Faurecia">
+                                                <span>Car electronics and electrics</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-source="1.5" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>Sensors and actuators</span>
+                                                <span id="to-1.1.5" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-source="1.6" href="https://en.wikipedia.org/wiki/Faurecia">
+                                                <span>Brakes</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-source="1.7" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>Exhaust technology</span>
+                                                <span id="to-1.1.7" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
 
-                                <div id="1.1.1" class="nav-lvl3">
-                                    <ul data-target="1123">
-                                        <li><a href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>1</span></a></li>
-                                        <li><a href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>1 item</span></a></li>
-                                        <li><a href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>1 itemm</span></a></li>
-                                        <li><a href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>1 itemmm</span></a></li>
+                                <div id="1.1.1" class="nav-lvl3 hide">
+                                    <ul data-target="1.1">
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>1</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>1 item</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>1 itemm</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>1 itemmm</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="1.1.2" class="nav-lvl3 hide">
+                                    <ul data-target="1.2">
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>1.2</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>1.2 item</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>1.2 itemm</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>1.2 itemmm</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="1.1.3" class="nav-lvl3 hide">
+                                    <ul data-target="1.3">
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>1.3</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>1.3 item</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>1.3 itemm</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>1.3 itemmm</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
-                        <li class="dropdown">
-                            <a id="to-1.2" class="nav-lvl1" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>Training</span><span id="to-1.2" class="hide icon-chevronRight com-icon"></span></a>
-                            <div class="dropdown-menu hide">
+                        <li class="menu-item">
+                            <a id="to-1.2" class="nav-lvl1" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                <span>Training</span>
+                                <span id="to-1.2" class="hide icon-chevronRight com-icon"></span>
+                            </a>
+                            <div class="dropdown-menu">
                                 <div id="1.2" class="nav-lvl2">
                                     <ul>
                                         <li>
-                                            <a data-source="1123" href="https://en.wikipedia.org/wiki/Faurecia"><span>HELLA Webinars</span><span id="to-1.2.1" class="hide icon-chevronRight com-icon"></span></a>
+                                            <a data-source="2.1" href="https://en.wikipedia.org/wiki/Faurecia">
+                                                <span>HELLA Webinars</span>
+                                                <span id="to-1.2.1" class="hide icon-chevronRight com-icon">
+
+                                                </span>
+                                            </a>
                                         </li>
-                                        <li><a data-source="1" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>Videos Live-Trainings</span><span id="to-1.2.2" class="hide icon-chevronRight com-icon"></span></a></li>
-    
+                                        <li>
+                                            <a data-source="2.2" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>Videos Live-Trainings</span>
+                                                <span id="to-1.2.2" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
     
-                                <div id="1.2.1" class="nav-lvl3">
-                                    <ul data-target="1123">
-                                        <li><a href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>22</span></a></li>
-                                        <li><a href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>22 item</span></a></li>
-                                        <li><a href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>22 itemm</span></a></li>
-                                        <li><a href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>22 itemmm</span></a></li>
+                                <div id="1.2.1" class="nav-lvl3 hide">
+                                    <ul data-target="2.1">
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>22</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>22 item</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>22 itemm</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>22 itemmm</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
-                        <li class="dropdown"><a id="to-1.3" class="nav-lvl1" data-detail="Hella Gutmann" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>Garage Equipment</span></a></li>
-                        <li class="dropdown"><a id="to-1.4" class="nav-lvl1" href="https://en.wikipedia.org/wiki/Faurecia"><span>Car Parts</span><span id="to-1.4" class="hide icon-chevronRight com-icon"></span></a>
-                            <div class="dropdown-menu hide">
+                        <li class="menu-item">
+                            <a id="to-1.3" class="nav-lvl1" data-detail="Hella Gutmann" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                <span>Garage Equipment</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a id="to-1.4" class="nav-lvl1" href="https://en.wikipedia.org/wiki/Faurecia">
+                                <span>Car Parts</span>
+                                <span id="to-1.4" class="hide icon-chevronRight com-icon"></span>
+                            </a>
+                            <div class="dropdown-menu">
                                 <div id="1.4" class="nav-lvl2">
                                     <ul>
                                         <li>
-                                            <a data-source="1123" href="https://en.wikipedia.org/wiki/Faurecia"><span>New products</span><span id="to-1.4.1" class="hide icon-chevronRight com-icon"></span></a>
+                                            <a data-source="4.1" href="https://en.wikipedia.org/wiki/Faurecia">
+                                                <span>New products</span>
+                                                <span id="to-1.4.1" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
                                         </li>
-                                        <li><a data-source="1" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>Auto electronics</span><span id="to-1.4.2" class="hide icon-chevronRight com-icon"></span></a></li>
-                                        <li><a data-source="1" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>Auto electrics</span><span id="to-1.4.3" class="hide icon-chevronRight com-icon"></span></a></li>
-                                        <li><a data-source="1" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>Filters</span><span id="to-1.4.4" class="hide icon-chevronRight com-icon"></span></a></li>
-                                        <li><a data-source="1" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>Exhaust system</span><span id="to-1.4.5" class="hide icon-chevronRight com-icon"></span></a></li>
-                                        <li><a data-source="1" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>ADAS - Transforming the automotive industry</span><span id="to-1.4.6" class="hide icon-chevronRight com-icon"></span></a></li>
-                                        <li><a data-source="1" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>E-Mobility</span><span id="to-1.4.7" class="hide icon-chevronRight com-icon"></span></a></li>
+                                        <li>
+                                            <a data-source="4.2" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>Auto electronics</span><span id="to-1.4.2" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-source="4.3" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>Auto electrics</span>
+                                                <span id="to-1.4.3" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-source="4.4" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>Filters</span>
+                                                <span id="to-1.4.4" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-source="4.5" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>Exhaust system</span>
+                                                <span id="to-1.4.5" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-source="4.6" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>ADAS - Transforming the automotive industry</span>
+                                                <span id="to-1.4.6" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-source="4.7" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>E-Mobility</span>
+                                                <span id="to-1.4.7" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
     
-                                <div id="1.4.1" class="nav-lvl3">
-                                    <ul data-target="1123">
-                                        <li><a href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>44</span></a></li>
-                                        <li><a href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>44 item</span></a></li>
-                                        <li><a href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>44 itemm</span></a></li>
-                                        <li><a href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>44 itemmm</span></a></li>
+                                <div id="1.4.1" class="nav-lvl3 hide">
+                                    <ul data-target="4.1">
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>44</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>44 item</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>44 itemm</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>44 itemmm</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
-                        <li class="dropdown"><a id="to-1.5" class="nav-lvl1" href="https://en.m.wikipedia.org/wiki/Hella_(company)"><span>Services</span></a></li>
+                        <li class="menu-item">
+                            <a id="to-1.5" class="nav-lvl1" href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                <span>Services</span>
+                                <span id="to-1.5" class="hide icon-chevronRight com-icon"></span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div id="1.5" class="nav-lvl2">
+                                    <ul>
+                                        <li>
+                                            <a data-source="5.1" href="https://en.wikipedia.org/wiki/Faurecia">
+                                                <span>Test</span>
+                                                <span id="to-1.5.1" class="hide icon-chevronRight com-icon"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div id="1.5.1" class="nav-lvl3">
+                                    <ul data-target="5.1">
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>55</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>55 item</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>55 itemm</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.m.wikipedia.org/wiki/Hella_(company)">
+                                                <span>55 itemmm</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                     <div class="nav-app">
-                        <button>Find spare part</button>
+                        <button class="com-btn btn btn--small btn-primary"><span class="com-icon icon-color--info icon-sparePartFinder"></span><a href="">Find spare part</a></button>
                     </div>
 
                     <div class="sm-device-nav">
@@ -180,7 +397,6 @@
                         <span class="">Main Menu</span>
                         <span class="hide">Back To Main Menu</span>
                     </div>
-                    <!-- TODO: discuse this little trick that closes the mobile menu withou js just with href -->
                     <a href=""><span class="icon-close com-icon icon-color--white"></span></a>
                 </div>
                 <span class="mobile-navigation-menu__menu-headline hide"></span>
@@ -196,6 +412,93 @@
                         <a href="">Newsletter</a>
                         <a href="">Lounge</a>
                     </div>   
+                </div>
+            </div>
+            <div class="language-variant hide">
+                <span class="language-variant__header">
+                    Choose your country or region
+                </span>
+                <div class="language-variant__country">
+                    <span class="country-heading">Europe</span>
+                    <!-- I think that there will be problem -->
+                    <div class="countries-container">
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                    </div>
+                    <span class="country-heading">America</span>
+                    <!-- I think that there will be problem -->
+                    <div class="countries-container">
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                    </div>
+                    <span class="country-heading">Africa</span>
+                    <!-- I think that there will be problem -->
+                    <div class="countries-container">
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                        <div class="countries-container__country">
+                            <span class="com-icon icon-chevronRight"></span>
+                            <span class="country-name">Country</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>

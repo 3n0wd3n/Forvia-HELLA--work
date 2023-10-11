@@ -1,0 +1,44 @@
+.mod-file {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	padding: 20px 0px;
+	border-bottom: 1px solid $color-neutral-line-light;
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: baseline;
+		align-items: flex-start;
+		gap: 10px;
+		& > span {
+			font-weight: 600;
+			font-size: 18px;
+			color: $color-primary-default;
+		}
+		&__info {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			& > p {
+				border-right: 1px solid $color-neutral-base-background-light;
+				margin: 0 12px 0 0;
+				padding: 0 12px 0 0;
+				font-size: 16px;
+				font-weight: 400;
+				color: $color-text-secondary-light;
+			}
+			& > a:hover,
+			a:visited,
+			a:link,
+			a:active {
+				text-decoration: none;
+				margin: 0 12px 0 0;
+				color: $color-primary-default;
+				font-size: 16px;
+				font-weight: 600;
+			}
+		}
+	}
+}

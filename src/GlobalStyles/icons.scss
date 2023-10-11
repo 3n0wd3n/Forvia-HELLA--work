@@ -3,6 +3,16 @@
 	-webkit-mask-image: url("icons/addOutline.svg");
 	mask-image: url("icons/addOutline.svg");
 }
+.icon-call {
+	@include icon;
+	-webkit-mask-image: url("icons/call.svg");
+	mask-image: url("icons/call.svg");
+}
+.icon-flag {
+	@include icon;
+	-webkit-mask-image: url("icons/flag.svg");
+	mask-image: url("icons/flag.svg");
+}
 .icon-alignCenter {
 	@include icon;
 	-webkit-mask-image: url("icons/alignCenter.svg");

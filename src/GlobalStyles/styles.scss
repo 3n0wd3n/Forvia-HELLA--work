@@ -13,9 +13,28 @@
 @import "../GlobalStyles/variables.scss";
 @import "../GlobalStyles/dist.scss";
 @import "../Components/Text/text.scss";
+@import "../Components/Star/star.scss";
+
 // Footer
 @import "../SystemModules/Footer/footer.scss";
 @import "grid.scss";
+
+// Modules
+@import "../ContentModules/Cards/cards.scss";
+@import "../ContentModules/SparePartsFinder/spareParts.scss";
+@import "../ContentModules/Lists/lists.scss";
+@import "../ContentModules/Tab/tab.scss";
+@import "../ContentModules/Dropdown/dropdown.scss";
+@import "../ContentModules/SearchResults/searchResults.scss";
+@import "../ContentModules/Counter/counter.scss";
+@import "../ContentModules/File/file.scss";
+@import "../ContentModules/DealerFinder/dealerFinder.scss";
+@import "../ContentModules/ButtonCarSelect/buttonCarSelect.scss";
+@import "../ContentModules/OffScreenMenu/offScreenMenu.scss";
+@import "../ContentModules/Table/table.scss";
+@import "../ContentModules/Pagination/pagination.scss";
+@import "../ContentModules/InstructionStep/instructionStep.scss";
+@import "../ContentModules/HeroImage/heroImage.scss";
 
 :root {
 	--text-color: $color-text-primary;
@@ -202,7 +221,7 @@ h2,
 h3,
 h4 {
 	font-weight: 400;
-	color: $color-text-primary-2;
+	color: $color-btn-primary-dark;
 	line-height: 130%;
 
 	&.h--medium {
