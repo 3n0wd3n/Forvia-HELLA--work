@@ -1,0 +1,7 @@
+.mod-slider {
+	display: flex;
+	&__items {
+		display: flex;
+		gap: 24px;
+	}
+}

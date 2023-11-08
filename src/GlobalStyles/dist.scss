@@ -39,10 +39,12 @@
 .product-card__container {
 	width: 21.875rem;
 }
+
 .product-card__container-library {
 	width: 23rem;
 	height: 12.875rem;
 }
+
 .product-card__container-library-mobile {
 	width: 21.438rem;
 	height: 8.75rem;
@@ -54,6 +56,11 @@
 
 .dealer-card-horizontal__container-dst {
 	width: 30rem;
+}
+
+.product-card__container-tibi {
+	width: 268px;
+	height: 344px;
 }
 
 .progress-bar__main-container,
@@ -86,7 +93,13 @@
 .table__main-container,
 .pagination__main-container,
 .instruction-step__main-container,
-.hero-image__main-container {
+.hero-image__main-container,
+.images__main-container,
+.com-article-text__container,
+.com-number-in-circle__container,
+.newsletter__main-container,
+.headline__main-container,
+.instruction-title__main-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -100,12 +113,21 @@
 	}
 	padding: 2rem;
 }
+.off-screen-menu__main-container {
+	@media screen and (max-width: 480px) {
+		padding: 0;
+	}
+}
+
+.images__main-container {
+	background-color: grey;
+}
 
 .com-dialog--open {
 	border: none;
-	border-radius: 8px;
+	border-radius: 6px;
 	// padding: 5px 8px;
-	width: 200px;
+	width: 100%;
 	height: 40px;
 	cursor: pointer;
 	transition: 0.7s;

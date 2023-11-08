@@ -1,0 +1,14 @@
+.mod-instruction-navigation-fs {
+	.mod-off-screen-menu {
+		display: grid;
+	}
+	.mod-off-screen-menu__content.table-of-content {
+		padding: 0;
+	}
+	.mod-off-screen-menu__content .link-item {
+		border-left: 1px solid #f0f2f34f;
+	}
+	&__item {
+		margin: 32px 0;
+	}
+}

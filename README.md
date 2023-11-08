@@ -18,6 +18,8 @@
 
 [How To Use Markdown In GitLab](https://docs.gitlab.com/ee/user/markdown.html)
 
+[HTML Formatter Before Inserting Code To The FS](https://www.freeformatter.com/html-formatter.html#before-output)
+
 ## Commands
 
     $ npx webpack
@@ -25,47 +27,99 @@
 
 ## Know who is responsible for what
 
-| Name               |      Type      |  Programmed by   |
-| :----------------- | :------------: | :--------------: |
-| Alert Bar          |   component    |     Michael      |
-| Badge              |   component    |      Zdeněk      |
-| Button             |   component    |      Zdeněk      |
-| Button Group       |   component    |      Zdeněk      |
-| Chip               |   component    |     Michael      |
-| Dialog             |   component    |     Michael      |
-| Divider            |   component    |     Michael      |
-| Form               |   component    |     Michael      |
-| Icon               |   component    |     Michael      |
-| Progress Bar       |   component    |     Michael      |
-| Spinner            |   component    |     Michael      |
-| Star               |   component    |     Michael      |
-| Text               |   component    |     Michael      |
-| Accordion          |     module     |     Michael      |
-| Spare Parts        |     module     |     Michael      |
-| List / Bullet List |     module     |     Michael      |
-| Item               |     module     |     Michael      |
-| Tab                |     module     |     Michael      |
-| Rating             |     module     |     Michael      |
-| Search Results     |     module     |     Michael      |
-| Navigation         | system modules | Vojtech, Michael |
-| Footer             | system modules | Vojtech, Zdenek  |
-| Cards              |    modules     |      Zdenek      |
-| Counter            |    modules     |     Michael      |
-| File               |    modules     |     Michael      |
-| Table              |    modules     |     Michael      |
-| Dealer Finder      |    modules     |     Michael      |
-| Footer             |    modules     |      Zdenek      |
-| Bread Crumb        |    modules     |      Vojta       |
-| Button Car Select  |    modules     |     Michael      |
-| Instruction Steps  |    modules     |     Michael      |
-| Hero Images        |    modules     |     Michael      |
-| Dropdown           |    modules     |     Michael      |
-| Carousel           |    modules     |  Michael, Vojta  |
-| Images / Video     |   component    |      Vojta       |
+| Name                                            |      Type      |  Programmed by   |
+| :---------------------------------------------- | :------------: | :--------------: |
+| Alert Bar                                       |   component    |     Michael      |
+| Badge                                           |   component    |      Zdeněk      |
+| Button                                          |   component    |      Zdeněk      |
+| Button Group                                    |   component    |      Zdeněk      |
+| Chip                                            |   component    |     Michael      |
+| Dialog                                          |   component    |     Michael      |
+| Divider                                         |   component    |     Michael      |
+| Form                                            |   component    |     Michael      |
+| Icon                                            |   component    |     Michael      |
+| Progress Bar                                    |   component    |     Michael      |
+| Spinner                                         |   component    |     Michael      |
+| Star                                            |   component    |     Michael      |
+| Text                                            |   component    |     Michael      |
+| Accordion                                       |     module     |     Michael      |
+| Spare Parts                                     |     module     |     Michael      |
+| List / Bullet List                              |     module     |     Michael      |
+| Item                                            |     module     |     Michael      |
+| Tab                                             |     module     |     Michael      |
+| Rating                                          |     module     |     Michael      |
+| Search Results                                  |     module     |     Michael      |
+| Navigation                                      | system modules | Vojtech, Michael |
+| Footer                                          | system modules | Vojtech, Zdenek  |
+| Cards                                           |    modules     |      Zdenek      |
+| Counter                                         |    modules     |     Michael      |
+| File                                            |    modules     |     Michael      |
+| Table                                           |    modules     |     Michael      |
+| Dealer Finder                                   |    modules     |     Michael      |
+| Footer                                          |    modules     |      Zdenek      |
+| Bread Crumb                                     |    modules     |      Vojta       |
+| Button Car Select                               |    modules     |     Michael      |
+| Instruction Steps                               |    modules     |     Michael      |
+| Hero Images                                     |    modules     |     Michael      |
+| Dropdown                                        |    modules     |     Michael      |
+| Carousel                                        |    modules     |  Michael, Vojta  |
+| Images / Video                                  |   component    |      Vojta       |
+| Off Screen Menu                                 |    modules     |     Michael      |
+| News Teaser Splited Module                      | modules to FS  |     Michael      |
+| Teaser with Lines Module                        | modules to FS  |      Zdenek      |
+| Product Detail Module                           | modules to FS  |     Michael      |
+| Column Teaser Module                            | modules to FS  |     Michael      |
+| Teaser Item                                     | modules to FS  |     Michael      |
+| Download File Group                             | modules to FS  | Zdenek, Michael  |
+| Rating Module                                   | modules to FS  |     Michael      |
+| Article Text                                    |   component    |     Michael      |
+| Number In Circle                                |   component    |     Michael      |
+| Hero Image                                      | modules to FS  |     Michael      |
+| Notification Banner                             | modules to FS  |     Michael      |
+| Headline And Text Module - dummy                | modules to FS  |     Michael      |
+| Form Module                                     | modules to FS  |     Michael      |
+| Search Result For Products Module               | modules to FS  |     Michael      |
+| Navigation Teaser Module                        | modules to FS  | Michael, Zdenek  |
+| Slider                                          | modules to FS  |  Vojta, Michael  |
+| Image                                           | modules to FS  |     Michael      |
+| Search Result Ti/Bi                             | modules to FS  |     Michael      |
+| Newsletter                                      |    modules     |     Michael      |
+| Newsletter                                      | modules to FS  |     Michael      |
+| Instructuion Title                              |    modules     |     Michael      |
+| Instruction Title                               | modules to FS  |     Michael      |
+| Instruction Navigation Module / Off Screen Menu | modules to FS  |     Michael      |
+| Search Module                                   | modules to FS  |     Michael      |
+
+## Modules To FirstSpirit
+
+[Link To OneNote](https://hella.sharepoint.com/sites/FirstSpiritCMS/_layouts/15/Doc.aspx?sourcedoc={7f4a99b9-8d2e-445e-a4bc-148b62b51167}&action=edit&wd=target%28HTW%203.0.one%7Cf6791fb6-b15f-492f-abcf-1c1ef2946221%2FModules%7Cbf1ba1e8-7a9f-4dcd-ac71-1720dffe0ad4%2F%29&wdorigin=NavigationUrl)
+
+-   [x] Instruction Navigation Module
+-   [x] Rating Module
+-   [x] News Teaser Splited Module
+-   [x] Product Detail Module
+-   [x] Teaser with Lines Module
+-   [x] Download File Group
+-   [ ] Slide Module + Card Module Item _*wip Vojta Michael -> problem with grid overflow*_
+-   [ ] Slide Module + Product Module Item _*wip Vojta, Michael -> same problem as Slide Module With Card*_
+-   [ ] Sperpart Finder Module -> _complex module that needs more time_
+-   [x] Instruction Title Module
+-   [x] Hero Image Module
+-   [x] Image Module
+-   [x] Notification Banner Module
+-   [x] Instruction Step Module + Instruction Step Item
+-   [x] Column Teaser Module + Teaser Item
+-   [x] Navigation Teaser Module
+-   [x] Search Result TI/BI Module
+-   [x] Search Result For Products Module
+-   [ ] Iframe Module -> _*wip Zdenek*_
+-   [x] Headline And Text Module -> _Headline and text are solo components I just created module that I combined them_
+-   [x] Search Module
+-   [x] Form Module
 
 ## Components And Modules State
 
-# Components
+### Components
 
 -   [x] Alert
 -   [x] Badge
@@ -81,16 +135,16 @@
 -   [x] Text
 -   [x] Images / Video
 
-# Modules
+### Modules
 
 -   [x] Accordion
 -   [x] Bread Crumb
 -   [x] Button Car Select -- dummy version
 -   [x] Cards
 -   [x] Dealer Finder
--   [x] Carousel _*wip*_
+-   [x] Carousel
 -   [x] Counter
--   [ ] Off Screen Menu
+-   [x] Off Screen Menu
 -   [x] Hero Image
 -   [x] Dropdown _*wip*_ (need program horizontal version)
 -   [x] File
@@ -103,6 +157,18 @@
 -   [x] Spare Part Finder
 -   [x] Tab
 -   [x] Table
+
+## Projects (components, modules) with JS
+
+-   Rating
+-   Off Screen Menu
+-   Newsletter
+-   Carousel
+-   Accordion
+-   Progress Bar
+-   Image
+-   Dialog
+-   Chip
 
 ## How To Use BEM
 

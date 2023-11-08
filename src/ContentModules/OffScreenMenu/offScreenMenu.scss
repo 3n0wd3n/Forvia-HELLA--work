@@ -1,0 +1,171 @@
+.mod-off-screen-menu {
+	display: flex;
+	flex-direction: column;
+	&.table-of-content {
+		// Styling for table of content
+		gap: 40px;
+		width: 100%;
+	}
+	&.content-item {
+		// Styling for content item
+		width: 100%;
+		cursor: pointer;
+		&.sticky {
+			position: sticky;
+			top: 0;
+		}
+	}
+	&__title {
+		background-color: $color-primary-default;
+		// Should be in 100% but for testing purpose I will make it staticly and we resize this after
+		width: 392px;
+		padding: 8px 12px;
+		color: white;
+		display: flex;
+		font-weight: 600;
+		border-radius: 6px;
+		&.table-of-content {
+			align-items: center;
+			flex-direction: row;
+			gap: 8px;
+			justify-content: flex-start;
+		}
+		&.content-item {
+			align-items: center;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+		}
+		@media screen and (max-width: 480px) {
+			width: 100%;
+			border-radius: 0;
+		}
+	}
+	&__content {
+		&.table-of-content {
+			width: 100%;
+			padding: 0 28px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 26px;
+			@media screen and (max-width: 600px) {
+				padding: 0;
+				flex-direction: column;
+				gap: 0;
+				flex-wrap: unset;
+			}
+		}
+		&.content-item {
+			background-color: white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			overflow-y: scroll;
+			z-index: 2;
+			@media screen and (max-width: 480px) {
+				top: unset;
+				bottom: 0;
+				height: 70%;
+			}
+			.content-title {
+				background-color: $color-primary-default;
+				// Should be in 100% but for testing purpose I will make it staticly and we resize this after
+				width: 100%;
+				padding: 8px 12px;
+				color: white;
+				display: flex;
+				font-weight: 600;
+				align-items: center;
+				flex-direction: row;
+				justify-content: space-between;
+				&__left {
+					display: flex;
+					align-items: center;
+					gap: 8px;
+					.desktop-color-icon {
+						@media screen and (max-width: 480px) {
+							display: none;
+						}
+					}
+					.mobile-color-icon {
+						@media screen and (max-width: 480px) {
+							display: flex;
+						}
+					}
+				}
+				.desktop-color-icon {
+					@media screen and (max-width: 480px) {
+						display: none;
+					}
+				}
+				.mobile-color-icon {
+					display: none;
+					@media screen and (max-width: 480px) {
+						display: flex;
+					}
+				}
+				@media screen and (max-width: 480px) {
+					background-color: white;
+					color: $color-primary-default;
+				}
+			}
+			@media screen and (max-width: 480px) {
+				width: 100%;
+				margin-top: 35%;
+				border-radius: 8px 8px 0 0;
+			}
+		}
+		.link-item {
+			padding: 28px;
+			width: 366px;
+			border-radius: 8px;
+			border-bottom: 1px solid $color-neutral-secondary-background;
+			transition: 0.3s;
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			color: $color-primary-default;
+			font-weight: 600;
+			& > a {
+				color: $color-primary-default;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+			}
+			&:hover {
+				background-color: $color-neutral-base-background;
+			}
+			@media only screen and (max-width: 860px) {
+				&.table-of-content {
+					width: 218px;
+				}
+			}
+			@media only screen and (max-width: 600px) {
+				&.table-of-content {
+					width: 100%;
+				}
+			}
+			@media screen and (max-width: 480px) {
+				width: 100%;
+				padding: 28px;
+			}
+		}
+	}
+}
+
+#overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #0b1946;
+	z-index: 1;
+	cursor: pointer;
+	filter: opacity(0.5);
+}

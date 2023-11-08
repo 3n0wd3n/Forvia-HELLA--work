@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating Module</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+    <script defer src="vendor.bundle.js"></script>
+    <script defer src="index.bundle.js"></script>
+</head>
+<body>
+    <main class="webRoot">
+        <div class="root grid-container">
+            <div class="col-md-12 col-sm-8 col-xs-2">
+                <h1 class="com-headline h1 col-md-12">Rating</h1>
+                <h2 class="com-headline h2">
+                    FS Module
+                </h2>
+            </div>
+            <div class="grid-container col-md-14 col-sm-8 col-xs-2 mod-rating-fs">
+                <div class="mod-rating col-md-offset-2 col-md-12 col-sm-8 mod-rating-fs__item">
+                    <div class="mod-rating__header">
+                        <span class="title">Rate this Article</span>
+                        <span class="text">Your feedback helps us navigate the right course! Rate this article and help us to improve.</span>
+                        <span class="question">Did you find the article helpful?</span>
+                    </div>
+                    <!-- TODO: think about how evaluation will be send to databse -->
+                    <div class="mod-rating__evaluation">
+                        <span class="rating-descr right">Not helpful</span>
+                        <div class="rating">
+                            <div class="rating__container">
+                                <span class="com-icon icon-starFull unrated"></span>
+                                <span>1</span>
+                            </div>
+                            <div class="rating__container">
+                                <span class="com-icon icon-starFull unrated"></span>
+                                <span>2</span>
+                            </div>
+                            <div class="rating__container">
+                                <span class="com-icon icon-starFull unrated"></span>
+                                <span>3</span>
+                            </div>
+                            <div class="rating__container">
+                                <span class="com-icon icon-starFull unrated"></span>
+                                <span>4</span>
+                            </div>
+                            <div class="rating__container">
+                                <span class="com-icon icon-starFull unrated"></span>
+                                <span>5</span>
+                            </div>
+                        </div>
+                        <span class="rating-descr left">Very helpful</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

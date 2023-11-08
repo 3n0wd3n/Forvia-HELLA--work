@@ -18,12 +18,10 @@ const modCarousel = function () {
 			if (n < 1) {
 				slideIndex = slides.length;
 			}
-			// Set dispaly for all slides to none
 			for (i = 0; i < slides.length; i++) {
+				// Set dispaly for all slides to none
 				slides[i].style.display = "none";
-			}
-			// Remove styling for all dots
-			for (i = 0; i < dots.length; i++) {
+				// Remove styling for all dots
 				dots[i].classList.remove("active");
 			}
 
@@ -33,24 +31,25 @@ const modCarousel = function () {
 
 		let slideIndex = 1;
 		let toggleHover = false;
+		let interval = module.getAttribute("data-interval");
 		showSlides(slideIndex);
 
 		// Slideshow
 		let i = 0;
+		// TODO: add -> clean interval
 		setInterval(() => {
 			// Set changing image in rotation inside slideshow
-			let slidesLength = module.querySelectorAll(".mod-carousel__slides").length;
-
-			if (i > slidesLength) {
+			if (i > slides.length) {
 				i = 0;
 			} else {
 				if (toggleHover == false) {
 					showSlides((slideIndex += 1));
 				}
 			}
-			i += 1;
-		}, 4500);
+			i++;
+		}, interval);
 
+		// TODO: refactor -> think about puting all events to one fucntion events
 		// If hover over module than it stops interval
 		module.addEventListener("mouseenter", () => {
 			toggleHover = true;
@@ -127,6 +126,10 @@ const modCarousel = function () {
 		zoomBtns.forEach((zoomBtn) => {
 			zoomBtn.addEventListener("click", () => {
 				module.classList.add("zoomed");
+				if (module.classList.contains("full-width")) {
+					module.classList.remove("full-width");
+					module.classList.add("fw");
+				}
 				zoomBtn.nextElementSibling.classList.remove("hide");
 				zoomBtn.classList.add("hide");
 				document.querySelector(".overlay").style.display = "block";
@@ -140,6 +143,10 @@ const modCarousel = function () {
 			// Zoom out effect with click
 			zoomOutBtn.addEventListener("click", () => {
 				zoomOutImage.classList.remove("zoomed");
+				if (module.classList.contains("fw")) {
+					module.classList.add("full-width");
+					module.classList.remove("fw");
+				}
 				zoomOutBtn.classList.add("hide");
 				document.querySelector(".overlay").style.display = "none";
 				zoomOutBtn.previousElementSibling.classList.remove("hide");
@@ -148,6 +155,10 @@ const modCarousel = function () {
 			document.addEventListener("keydown", (event) => {
 				if (event.key === "Escape" && zoomOutImage.classList.contains("zoomed")) {
 					zoomOutImage.classList.remove("zoomed");
+					if (module.classList.contains("fw")) {
+						module.classList.add("full-width");
+						module.classList.remove("fw");
+					}
 					zoomOutBtn.classList.add("hide");
 					document.querySelector(".overlay").style.display = "none";
 					zoomOutBtn.previousElementSibling.classList.remove("hide");

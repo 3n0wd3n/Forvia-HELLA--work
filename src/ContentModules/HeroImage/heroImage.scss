@@ -5,10 +5,49 @@
 	@media only screen and (max-width: 846px) {
 		display: contents;
 	}
+	&.with-text-on-the-side {
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: row-reverse;
+		@media screen and (max-width: 846px) {
+			flex-direction: column;
+			height: unset;
+		}
+		&.right {
+			justify-content: flex-start;
+			flex-direction: row;
+			@media screen and (max-width: 846px) {
+				flex-direction: column;
+				height: unset;
+			}
+		}
+	}
 	& > img {
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
+		border-radius: 8px;
+		@media only screen and (max-width: 846px) {
+			border-radius: 8px 8px 0 0;
+		}
+		&.with-text-on-the-side {
+			width: 66vw;
+			&.right {
+				border-radius: 8px 0px 0px 8px;
+				@media only screen and (max-width: 846px) {
+					border-radius: 8px 8px 0 0;
+				}
+			}
+			&.left {
+				border-radius: 0px 8px 8px 0px;
+				@media only screen and (max-width: 846px) {
+					border-radius: 8px 8px 0 0;
+				}
+			}
+			@media screen and (max-width: 846px) {
+				width: 100%;
+			}
+		}
 		@media only screen and (max-width: 846px) {
 			height: 375px;
 			width: 100%;
@@ -31,9 +70,36 @@
 		@media only screen and (max-width: 846px) {
 			position: static;
 			width: 100%;
-			border-radius: 0px;
+
 			padding: 32px 24px 24px 24px;
 			gap: 5px;
+			border-radius: 0 0 8px 8px;
+		}
+		&.with-text-on-the-side {
+			position: initial;
+			// width: 33vw;
+			width: 384px;
+			border-radius: unset;
+			justify-content: center;
+			@media screen and (max-width: 846px) {
+				width: 100%;
+			}
+			&.light {
+				color: $color-btn-primary-dark;
+				background-color: $color-neutral-base-background;
+			}
+			&.right {
+				border-radius: 0px 8px 8px 0px;
+				@media only screen and (max-width: 846px) {
+					border-radius: 0 0 8px 8px;
+				}
+			}
+			&.left {
+				border-radius: 8px 0px 0px 8px;
+				@media only screen and (max-width: 846px) {
+					border-radius: 0 0 8px 8px;
+				}
+			}
 		}
 		&.wide {
 			width: 296px;
@@ -49,7 +115,7 @@
 				box-shadow: 2px 2px 40px -15px $color-neutral-base-background-light;
 			}
 		}
-		&.right-handed {
+		&.right {
 			position: absolute;
 			@media only screen and (max-width: 846px) {
 				position: static;

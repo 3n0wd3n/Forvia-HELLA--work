@@ -71,7 +71,7 @@ $black: #000000;
 $grid-gap: 24px;
 $grid-mobile-gap: 16px;
 
-$grid-column-max: 12;
+$grid-column-max: 14;
 $grid-column-tablet-max: 8;
 $grid-column-mobile-max: 2;
 
@@ -84,7 +84,7 @@ $grid-row-sm-mobile: 60px;
 $grid-row-md: 120px;
 $grid-row-md-mobile: 72px;
 
-$grid-self-type: "start", "end", "center", stretch;
+$grid-self-type: "start", "end", "center", "stretch";
 $grid-content-space: "space-around", "space-between", "space-evenly";
 
 // Content max-width

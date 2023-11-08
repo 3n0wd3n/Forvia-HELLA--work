@@ -4,6 +4,7 @@ import "./GlobalStyles/styles.scss";
 importAll(require.context("./Components/", true, /^\.\/.*.*$/));
 importAll(require.context("./SystemModules/", true, /^\.\/.*.*$/));
 importAll(require.context("./ContentModules/", true, /^\.\/.*.*$/));
+importAll(require.context("./SectionTemplates/", true, /^\.\/.*.*$/));
 //importAll(require.context("./FormModules/", true, /^\.\/.*.*$/));
 
 function importAll(r) {

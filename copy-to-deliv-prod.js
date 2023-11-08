@@ -5,6 +5,7 @@ var dest = [
         '/mnt/cms/01/firstspirit/htw',
         '/mnt/cms/02/firstspirit/htw',
         '/mnt/delivfr/s01/firstspirit/htw',
+		'/mnt/delivfr/fs01/firstspirit/htw',
         '/mnt/cms/fs122/firstspirit/htw'
     ]
 

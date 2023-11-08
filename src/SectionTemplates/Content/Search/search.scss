@@ -1,0 +1,29 @@
+.mod-search-fs {
+	&__selection {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 14px;
+		font-weight: 600;
+		color: $color-primary-default;
+		flex-direction: row;
+	}
+	&__content {
+		.content-filter {
+			margin-top: 32px;
+			&__header {
+				font-size: 14px;
+				font-weight: 600;
+			}
+			.com-form {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				margin: 20px 0 0 0;
+			}
+			.com-form__checkbox-container {
+				justify-content: flex-start;
+			}
+		}
+	}
+}

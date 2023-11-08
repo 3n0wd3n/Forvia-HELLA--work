@@ -64,4 +64,10 @@
 		-webkit-mask-size: contain;
 		-webkit-mask-repeat: no-repeat;
 	}
+	&.icon-size--96 {
+		height: 96px;
+		width: 96px;
+		-webkit-mask-size: contain;
+		-webkit-mask-repeat: no-repeat;
+	}
 }

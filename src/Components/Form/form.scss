@@ -64,6 +64,7 @@
 	.date-input[type="date"],
 	.passwd-input[type="password"],
 	.input[type="email"],
+	.input[type="tel"],
 	.text-area,
 	.select,
 	.search[type="search"],
@@ -76,6 +77,9 @@
 		border-radius: 8px;
 		font-size: 16px;
 		line-height: 22px;
+		&.wide {
+			width: 100%;
+		}
 	}
 
 	&__switch {
@@ -193,6 +197,14 @@
 			.input--error[type="text"]:focus {
 				outline: 2px solid $color-danger-default;
 			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
+			}
 		}
 	}
 
@@ -229,6 +241,14 @@
 			}
 			.select--error:focus {
 				outline: 2px solid $color-danger-default;
+			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
 			}
 		}
 	}
@@ -267,6 +287,14 @@
 			.passwd-input--error[type="password"]:focus {
 				outline: 2px solid $color-danger-default;
 			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
+			}
 		}
 	}
 
@@ -299,6 +327,14 @@
 			.date-input--error[type="date"]:focus {
 				outline: 2px solid $color-danger-default;
 			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
+			}
 		}
 	}
 
@@ -315,10 +351,16 @@
 			align-items: flex-start;
 			flex-direction: column;
 			gap: 14px;
+			&.wide {
+				width: 100%;
+			}
 			.text-area {
 				width: 300px;
 				height: 80px;
 				padding: 8px 9px 0px 9px;
+				&.wide {
+					width: 100%;
+				}
 			}
 			.text-area--large {
 				height: 120px;
@@ -331,6 +373,14 @@
 			}
 			.text-area--error:focus {
 				outline: 2px solid $color-danger-default;
+			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
 			}
 		}
 	}
@@ -386,6 +436,14 @@
 			.search-group[type="search"]:focus {
 				outline: 2px solid $color-primary-default;
 			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
+			}
 		}
 	}
 
@@ -405,13 +463,21 @@
 			background: $color-neutral-base-background;
 			border-left: none;
 			&:hover {
-				span:nth-child(2){
-					transition: .7s;
+				span:nth-child(2) {
+					transition: 0.7s;
 					transform: translateY(5px);
 				}
 			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
+			}
 		}
-		.df-icon{
+		.df-icon {
 			position: absolute;
 			top: 12px;
 			left: 9px;
@@ -424,6 +490,27 @@
 			padding: 12px 9px 12px 41px;
 		}
 		.search-df[type="search"]:focus {
+			outline: 1px solid $color-neutral-primary-background-dark;
+		}
+	}
+
+	&__search-group-basic {
+		font-size: 16px;
+		display: flex;
+		position: relative;
+		.search-icon {
+			position: absolute;
+			top: 10px;
+			right: 9px;
+		}
+		.search-basic[type="search"] {
+			font-size: 16px;
+			width: 100%;
+			border-radius: 8px;
+			border: 1px solid $color-neutral-line-light;
+			padding: 12px 9px;
+		}
+		.search-basic[type="search"]:focus {
 			outline: 1px solid $color-neutral-primary-background-dark;
 		}
 	}

@@ -1,3 +1,23 @@
+.icon-frame {
+	@include icon;
+	-webkit-mask-image: url("icons/frame.svg");
+	mask-image: url("icons/frame.svg");
+}
+.icon-car {
+	@include icon;
+	-webkit-mask-image: url("icons/car.svg");
+	mask-image: url("icons/car.svg");
+}
+.icon-userManual {
+	@include icon;
+	-webkit-mask-image: url("icons/userManual.svg");
+	mask-image: url("icons/userManual.svg");
+}
+.icon-computerSupport {
+	@include icon;
+	-webkit-mask-image: url("icons/computerSupport.svg");
+	mask-image: url("icons/computerSupport.svg");
+}
 .icon-addOutline {
 	@include icon;
 	-webkit-mask-image: url("icons/addOutline.svg");
