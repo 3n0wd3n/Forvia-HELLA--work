@@ -89,6 +89,7 @@
 				background-color: $color-neutral-base-background;
 			}
 			&.right {
+				position: initial;
 				border-radius: 0px 8px 8px 0px;
 				@media only screen and (max-width: 846px) {
 					border-radius: 0 0 8px 8px;

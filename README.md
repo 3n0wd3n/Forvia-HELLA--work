@@ -94,69 +94,90 @@
 
 [Link To OneNote](https://hella.sharepoint.com/sites/FirstSpiritCMS/_layouts/15/Doc.aspx?sourcedoc={7f4a99b9-8d2e-445e-a4bc-148b62b51167}&action=edit&wd=target%28HTW%203.0.one%7Cf6791fb6-b15f-492f-abcf-1c1ef2946221%2FModules%7Cbf1ba1e8-7a9f-4dcd-ac71-1720dffe0ad4%2F%29&wdorigin=NavigationUrl)
 
--   [x] Instruction Navigation Module
--   [x] Rating Module
--   [x] News Teaser Splited Module
--   [x] Product Detail Module
--   [x] Teaser with Lines Module
--   [x] Download File Group
--   [ ] Slide Module + Card Module Item _*wip Vojta Michael -> problem with grid overflow*_
--   [ ] Slide Module + Product Module Item _*wip Vojta, Michael -> same problem as Slide Module With Card*_
--   [ ] Sperpart Finder Module -> _complex module that needs more time_
--   [x] Instruction Title Module
--   [x] Hero Image Module
--   [x] Image Module
--   [x] Notification Banner Module
--   [x] Instruction Step Module + Instruction Step Item
--   [x] Column Teaser Module + Teaser Item
--   [x] Navigation Teaser Module
--   [x] Search Result TI/BI Module
--   [x] Search Result For Products Module
--   [ ] Iframe Module -> _*wip Zdenek*_
--   [x] Headline And Text Module -> _Headline and text are solo components I just created module that I combined them_
--   [x] Search Module
--   [x] Form Module
+-   [x] Instruction Navigation Module 🚀
+-   [x] Rating Module 🚀
+-   [x] News Teaser Splited Module 🚀
+-   [x] Product Detail Module 🚀
+-   [x] Teaser with Lines Module 🚀
+-   [x] Download File Group 🚀
+-   [ ] Slide Module + Card Module Item 🛑 **Wip Vojta Michael -> problem with grid overflow**
+-   [ ] Slide Module + Product Module Item 🛑 **Wip Vojta, Michael -> same problem as Slide Module With Card**
+-   [ ] Sperpart Finder Module -> 🛑 _Complex module that needs more time_
+-   [x] Instruction Title Module 🚀
+-   [x] Hero Image Module 🚀
+-   [x] Image Module 🚀
+-   [x] Notification Banner Module 🚀
+-   [x] Instruction Step Module + Instruction Step Item 🚀
+-   [x] Column Teaser Module + Teaser Item 🚀
+-   [x] Navigation Teaser Module 🚀
+-   [x] Search Result TI/BI Module 🚀
+-   [x] Search Result For Products Module 🚀
+-   [ ] Iframe Module -> _*Wip Zdenek*_
+-   [x] Headline And Text Module 🚀 -> _Headline and text are solo components I just created module that I combined them_
+-   [x] Search Module 🚀
+-   [x] Form Module 🚀
+
+## Modules that are costumized for FS
+
+-   [x] Accordion 🚀
+-   [x] Alert 🚀
+-   [x] Carousel 🚀
+-   [x] Column Teaser 🚀
+-   [x] Dialog 🚀
+-   [x] Hero Image 🚀
+-   [x] Instruction Step 🚀
+-   [ ] Newsletter -> 🛑 _It is already in FS but not with variables_
+-   [x] Product Detail 🚀
+-   [x] Teaser with Lines 🚀
+-   [x] Text 🚀
+-   [x] Instruction Title 🚀
+-   [ ] Download File Group
+-   [ ] Image
+-   [ ] Navigation Teaser
+-   [ ] Search 🛑 _It is already in FS but not with variables_
+-   [ ] Search Result Ti/Bi
+-   [ ] Instruction Navigation 🛑 _It is already in FS but not with variables_
 
 ## Components And Modules State
 
 ### Components
 
--   [x] Alert
--   [x] Badge
--   [x] Button
--   [x] ButtonGroup
--   [x] Chip
--   [x] Dialog / Action Sheet
--   [x] Divider
--   [x] Form
--   [x] Icon
--   [x] ProgressBar
--   [x] Spinner
--   [x] Text
--   [x] Images / Video
+-   [x] Alert 🚀
+-   [x] Badge 🚀
+-   [x] Button 🚀
+-   [x] ButtonGroup 🚀
+-   [x] Chip 🚀
+-   [x] Dialog / Action Sheet 🚀
+-   [x] Divider 🚀
+-   [x] Form 🚀
+-   [x] Icon 🚀
+-   [x] ProgressBar 🚀
+-   [x] Spinner 🚀
+-   [x] Text 🚀
+-   [x] Images / Video 🚀
 
 ### Modules
 
--   [x] Accordion
--   [x] Bread Crumb
--   [x] Button Car Select -- dummy version
--   [x] Cards
--   [x] Dealer Finder
--   [x] Carousel
--   [x] Counter
--   [x] Off Screen Menu
--   [x] Hero Image
--   [x] Dropdown _*wip*_ (need program horizontal version)
--   [x] File
--   [x] Footer
--   [x] Lists
--   [x] Instruction Step
--   [x] Rating
--   [x] Pagination (Part Of The Master Page)
--   [x] Search Result
--   [x] Spare Part Finder
--   [x] Tab
--   [x] Table
+-   [x] Accordion 🚀
+-   [x] Bread Crumb 🚀
+-   [x] Button Car Select -- dummy version 🚀
+-   [x] Cards 🚀
+-   [x] Dealer Finder 🚀
+-   [x] Carousel 🚀
+-   [x] Counter 🚀
+-   [x] Off Screen Menu 🚀
+-   [x] Hero Image 🚀
+-   [x] Dropdown 🚀
+-   [x] File 🚀
+-   [x] Footer 🚀
+-   [x] Lists 🚀
+-   [x] Instruction Step 🚀
+-   [x] Rating 🚀
+-   [x] Pagination (Part Of The Master Page) 🚀
+-   [x] Search Result 🚀
+-   [x] Spare Part Finder 🚀
+-   [x] Tab 🚀
+-   [x] Table 🚀
 
 ## Projects (components, modules) with JS
 
