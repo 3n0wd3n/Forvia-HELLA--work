@@ -1,7 +1,26 @@
-.mod-slider {
-	display: flex;
+.mod-slider-fs {
+	display: grid;
+	overflow-x: auto;
+	grid-template-columns: max-content;
+	&__heading {
+		margin: 0 0 24px 0;
+	}
 	&__items {
 		display: flex;
 		gap: 24px;
+		margin-bottom: 32px;
+	}
+
+	&::-webkit-scrollbar {
+		height: 6px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: none;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $color-neutral-line-light;
+		border-radius: 8px;
 	}
 }

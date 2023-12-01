@@ -35,50 +35,58 @@ const modCarousel = function () {
 		showSlides(slideIndex);
 
 		// Slideshow
-		let i = 0;
-		// TODO: add -> clean interval
-		setInterval(() => {
-			// Set changing image in rotation inside slideshow
-			if (i > slides.length) {
-				i = 0;
-			} else {
-				if (toggleHover == false) {
-					showSlides((slideIndex += 1));
+		let intervalId = null;
+		const startSlider = () => {
+			let iterator = 0;
+
+			intervalId = setInterval(() => {
+				if (iterator > slides.length) {
+					iterator = 0;
+				} else {
+					if (!toggleHover) {
+						showSlides((slideIndex += 1), module);
+					}
 				}
-			}
-			i++;
-		}, interval);
+				iterator++;
+			}, interval);
+		};
+
+		const stopSlider = () => {
+			clearInterval(intervalId);
+		};
 
 		// TODO: refactor -> think about puting all events to one fucntion events
+
 		// If hover over module than it stops interval
 		module.addEventListener("mouseenter", () => {
 			toggleHover = true;
+			stopSlider();
 		});
 
 		// If hover over module than it starts interval again
 		module.addEventListener("mouseleave", () => {
 			toggleHover = false;
+			startSlider();
 		});
 
-		// Variables for arrows next/previous
-		let nxtSlideIcon = module.querySelector(".next-slide");
-		let prvSlideIcon = module.querySelector(".previous-slide");
+		startSlider();
+		module.setAttribute("data-interval-id", intervalId);
 
-		// Change icon color on hover
-		nxtSlideIcon.addEventListener("mouseenter", () => {
-			nxtSlideIcon.children[0].classList.add("icon-color--white");
-		});
-		module.querySelector(".previous-slide").addEventListener("mouseenter", () => {
-			module.querySelector(".previous-slide").children[0].classList.add("icon-color--white");
-		});
+		iconColorControls(module);
 
-		// Change icon color on hover
-		nxtSlideIcon.addEventListener("mouseleave", () => {
-			nxtSlideIcon.children[0].classList.remove("icon-color--white");
-		});
-		prvSlideIcon.addEventListener("mouseleave", () => {
-			prvSlideIcon.children[0].classList.remove("icon-color--white");
-		});
+		// Jump to particular slider img using link inside of a text
+		if (module.classList.contains("gallery-mode")) {
+			let galleryModeLinkedTexts = document.querySelectorAll(".com-text");
+			galleryModeLinkedTexts.forEach((item) => {
+				if (module.getAttribute("data-gallery-mode-id") === item.getAttribute("data-gallery-ref-mode-id")) {
+					item.querySelectorAll(".gallery-mode--link").forEach((imgItem) => {
+						imgItem.addEventListener("click", () => {
+							showSlides((slideIndex = parseInt(imgItem.getAttribute("data-order"))));
+						});
+					});
+				}
+			});
+		}
 
 		// Previous slide controls
 		let previousSlide = module.querySelector(".previous-slide");
@@ -99,6 +107,7 @@ const modCarousel = function () {
 			showSlides((slideIndex += 1));
 		});
 
+		// Next slide controls using keydown
 		document.addEventListener("keydown", (event) => {
 			if (event.key === "ArrowRight" && module.classList.contains("zoomed")) {
 				showSlides((slideIndex += 1));
@@ -121,6 +130,32 @@ const modCarousel = function () {
 			});
 		});
 
+		zoomIn(module);
+	};
+
+	const iconColorControls = (module) => {
+		// Variables for arrows next/previous
+		let nxtSlideIcon = module.querySelector(".next-slide");
+		let prvSlideIcon = module.querySelector(".previous-slide");
+
+		// Change icon color on hover
+		nxtSlideIcon.addEventListener("mouseenter", () => {
+			nxtSlideIcon.children[0].classList.add("icon-color--white");
+		});
+		module.querySelector(".previous-slide").addEventListener("mouseenter", () => {
+			module.querySelector(".previous-slide").children[0].classList.add("icon-color--white");
+		});
+
+		// Change icon color on hover
+		nxtSlideIcon.addEventListener("mouseleave", () => {
+			nxtSlideIcon.children[0].classList.remove("icon-color--white");
+		});
+		prvSlideIcon.addEventListener("mouseleave", () => {
+			prvSlideIcon.children[0].classList.remove("icon-color--white");
+		});
+	};
+
+	const zoomIn = (module) => {
 		// Zoom effect
 		let zoomBtns = module.querySelectorAll(".carousel-zoom");
 		zoomBtns.forEach((zoomBtn) => {
@@ -132,39 +167,39 @@ const modCarousel = function () {
 				}
 				zoomBtn.nextElementSibling.classList.remove("hide");
 				zoomBtn.classList.add("hide");
-				document.querySelector(".overlay").style.display = "block";
+				document.querySelector(".overlay-carousel").style.display = "block";
 				zoomOut(module);
 			});
 		});
+	};
 
-		const zoomOut = (zoomOutImage) => {
-			// Zoom out effect
-			let zoomOutBtn = zoomOutImage.querySelector(".carousel-close-icon");
-			// Zoom out effect with click
-			zoomOutBtn.addEventListener("click", () => {
+	const zoomOut = (zoomOutImage) => {
+		// Zoom out effect
+		let zoomOutBtn = zoomOutImage.querySelector(".carousel-close-icon");
+		// Zoom out effect with click
+		zoomOutBtn.addEventListener("click", () => {
+			zoomOutImage.classList.remove("zoomed");
+			if (zoomOutImage.classList.contains("fw")) {
+				zoomOutImage.classList.add("full-width");
+				zoomOutImage.classList.remove("fw");
+			}
+			zoomOutBtn.classList.add("hide");
+			document.querySelector(".overlay-carousel").style.display = "none";
+			zoomOutBtn.previousElementSibling.classList.remove("hide");
+		});
+		// Zoom out effect with keydown
+		document.addEventListener("keydown", (event) => {
+			if (event.key === "Escape" && zoomOutImage.classList.contains("zoomed")) {
 				zoomOutImage.classList.remove("zoomed");
-				if (module.classList.contains("fw")) {
-					module.classList.add("full-width");
-					module.classList.remove("fw");
+				if (zoomOutImage.classList.contains("fw")) {
+					zoomOutImage.classList.add("full-width");
+					zoomOutImage.classList.remove("fw");
 				}
 				zoomOutBtn.classList.add("hide");
-				document.querySelector(".overlay").style.display = "none";
+				document.querySelector(".overlay-carousel").style.display = "none";
 				zoomOutBtn.previousElementSibling.classList.remove("hide");
-			});
-			// Zoom out effect with keydown
-			document.addEventListener("keydown", (event) => {
-				if (event.key === "Escape" && zoomOutImage.classList.contains("zoomed")) {
-					zoomOutImage.classList.remove("zoomed");
-					if (module.classList.contains("fw")) {
-						module.classList.add("full-width");
-						module.classList.remove("fw");
-					}
-					zoomOutBtn.classList.add("hide");
-					document.querySelector(".overlay").style.display = "none";
-					zoomOutBtn.previousElementSibling.classList.remove("hide");
-				}
-			});
-		};
+			}
+		});
 	};
 
 	return {

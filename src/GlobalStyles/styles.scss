@@ -17,6 +17,9 @@
 @import "../Components/Headline/headline.scss";
 @import "../Components/ArticleText/articleText.scss";
 @import "../Components/NumberInCircle/numberInCircle.scss";
+@import "../Components/TrainerInformation/trainerInformation.scss";
+@import "../Components/Filter/filter.scss";
+@import "../Components/InfoBox/infoBox.scss";
 
 // Footer
 @import "../SystemModules/Footer/footer.scss";
@@ -52,7 +55,6 @@
 @import "../SectionTemplates/Content/FormModule/formModule.scss";
 @import "../SectionTemplates/Content/SearchResultForProducts/searchResultForProducts.scss";
 @import "../SectionTemplates/Content/NavigationTeaser/navigationTeaser.scss";
-@import "../SectionTemplates/Content/Slider/slider.scss";
 @import "../SectionTemplates/Content/Image/image.scss";
 @import "../SectionTemplates/Content/SearchResultTiBi/searchResultTiBi.scss";
 @import "../SectionTemplates/Content/InstructionNavigation/instructionNavigation.scss";
@@ -213,6 +215,7 @@ th {
 
 .webRoot {
 	width: 100%;
+	// TODO: This is problem with -> spacer spacer--default
 	@media only screen and (min-width: $max-content-mobile-min-width) {
 		margin-bottom: 100px;
 	}
@@ -342,27 +345,85 @@ h4 {
 	}
 }
 
+.spacer {
+	&--unset {
+		margin-bottom: unset;
+	}
+	&--default {
+		@media only screen and (min-width: $max-content-mobile-min-width) {
+			margin-bottom: $spacer-default-mobile;
+		}
+		@media only screen and (min-width: $max-content-tablet-width) {
+			margin-bottom: $spacer-default;
+		}
+		@media only screen and (min-width: $max-content-width) {
+			margin-bottom: $spacer-default;
+		}
+	}
+	&--small {
+		@media only screen and (min-width: $max-content-mobile-min-width) {
+			margin-bottom: $spacer-small-mobile;
+		}
+		@media only screen and (min-width: $max-content-tablet-width) {
+			margin-bottom: $spacer-small;
+		}
+		@media only screen and (min-width: $max-content-width) {
+			margin-bottom: $spacer-small;
+		}
+	}
+	&--large {
+		@media only screen and (min-width: $max-content-mobile-min-width) {
+			margin-bottom: $spacer-large-mobile;
+		}
+		@media only screen and (min-width: $max-content-tablet-width) {
+			margin-bottom: $spacer-large;
+		}
+		@media only screen and (min-width: $max-content-width) {
+			margin-bottom: $spacer-large;
+		}
+	}
+}
+
 .bread-crumb {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	gap: 4px;
+
+	.home {
+		height: 22px;
+	}
 
 	a::after {
 		content: "";
 		@include icon;
 		width: 16px;
 		height: 16px;
+		-webkit-mask-size: contain;
+		-webkit-mask-repeat: no-repeat;
 		-webkit-mask-image: url("icons/chevronRight.svg");
 		mask-image: url("icons/chevronRight.svg");
 		-webkit-mask-position: left;
 		position: relative;
-		top: 3px;
+		top: 4px;
+	}
+
+	a.home::after {
+		top: 0;
 	}
 
 	span {
 		font-size: 14px;
 		line-height: 21px;
+		color: $color-text-disabled;
+	}
+
+	a:not(.home) span {
+		margin-right: 4px;
 		color: $color-primary-default;
+
+		&:hover {
+			color: $color-btn-secondary-dark;
+		}
 	}
 }
 

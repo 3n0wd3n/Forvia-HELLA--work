@@ -11,3 +11,4 @@ copy_to_devel.bat
 .husky/pre-push
 .vscode/settings.json
 Samples/pdf/default.pdf
+*.mp4

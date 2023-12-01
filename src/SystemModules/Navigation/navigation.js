@@ -6,34 +6,6 @@ const navigation = function () {
 		desktopSubmenus(module);
 		searchInput(module);
 		mobileMenu(module);
-		languageSelection(module);
-	};
-
-	const languageSelection = (module) => {
-		let languageBtns = module.querySelectorAll(".language");
-		languageBtns.forEach((languageBtn) => {
-			languageBtn.addEventListener("click", (event) => {
-				event.preventDefault();
-				let languageVariantMenu = module.querySelector(".language-variant");
-				if (languageVariantMenu.classList.contains("hide")) {
-					languageVariantMenu.classList.remove("hide");
-
-					// Get the height of the .navigation-menu element
-					let navigationMenuHeight = module.offsetHeight;
-
-					// Calculate the height for .content
-					languageVariantMenu.style.height = "calc(100vh - " + navigationMenuHeight + "px)";
-
-					// Set overflow of the page to hidden
-					document.body.style.overflow = "hidden";
-				} else {
-					document.body.style.overflow = "scroll";
-
-					// Set overflow of the page to scroll
-					languageVariantMenu.classList.add("hide");
-				}
-			});
-		});
 	};
 
 	const mobileMenu = (module) => {
@@ -75,6 +47,15 @@ const navigation = function () {
 		let mobileMenuSelected = module.querySelector(".mobile-navigation-menu__items");
 		let mobileMenuHeader = module.querySelector(".mobile-header-icons");
 		let desktopNavigation = module.querySelector(".desktop-navigation__menu-items");
+		let closeMobileMenuBtn = module.querySelector(".closeMobileMenuBtn");
+
+		const closeMobileMenu = () => {
+			closeMobileMenuBtn.addEventListener("click", () => {
+				backToMainMenuLogic(module);
+				mobileMenu[0].classList.remove("showMenu");
+				mobileMenu[0].classList.add("hideMenu");
+			});
+		};
 
 		const showFirstLvlNav = (module) => {
 			desktopNavigation.classList.remove("hide");
@@ -104,6 +85,7 @@ const navigation = function () {
 			mobileMenuSelected.appendChild(desktopNavigation);
 			checkSubMenuClick(module);
 			backToMainMenu(module);
+			closeMobileMenu();
 		};
 
 		const showSecondLvlNav = (module, whereToGo, textFromMenuItem) => {
@@ -167,8 +149,6 @@ const navigation = function () {
 
 			// Adding elements to mobile submenu
 			mobileMenuSelected.appendChild(lvl2MenuItems);
-
-			// backToMainMenu(module);
 		};
 
 		const showThirdLvlNav = (module, whereToGo, textFromMenuItem) => {
@@ -260,31 +240,35 @@ const navigation = function () {
 			}
 		};
 
+		const backToMainMenuLogic = (module) => {
+			let lvl2MobileNavs = module.querySelectorAll(".lvl2");
+			let lvl3MobileNavs = module.querySelectorAll(".lvl3");
+
+			lvl2MobileNavs.forEach((lvl2MobileNav) => {
+				lvl2MobileNav.classList.add("hide");
+			});
+
+			lvl3MobileNavs.forEach((lvl3MobileNav) => {
+				lvl3MobileNav.classList.add("hide");
+			});
+
+			// Hide menu group in the bottom of submenu
+			mobileMenuGroup.classList.remove("hide");
+
+			// Change title of mobile menu header
+			mobileMenuHeader.children[0].classList.add("hide");
+			mobileMenuHeader.children[1].classList.remove("hide");
+			mobileMenuHeader.children[2].classList.add("hide");
+
+			// Hide headline from submenus
+			module.querySelector(".mobile-navigation-menu__menu-headline").classList.add("hide");
+
+			showFirstLvlNav(module);
+		};
+
 		const backToMainMenu = (module) => {
 			mobileMenuHeader.children[0].addEventListener("click", () => {
-				let lvl2MobileNavs = module.querySelectorAll(".lvl2");
-				let lvl3MobileNavs = module.querySelectorAll(".lvl3");
-
-				lvl2MobileNavs.forEach((lvl2MobileNav) => {
-					lvl2MobileNav.classList.add("hide");
-				});
-
-				lvl3MobileNavs.forEach((lvl3MobileNav) => {
-					lvl3MobileNav.classList.add("hide");
-				});
-
-				// Hide menu group in the bottom of submenu
-				mobileMenuGroup.classList.remove("hide");
-
-				// Change title of mobile menu header
-				mobileMenuHeader.children[0].classList.add("hide");
-				mobileMenuHeader.children[1].classList.remove("hide");
-				mobileMenuHeader.children[2].classList.add("hide");
-
-				// Hide headline from submenus
-				module.querySelector(".mobile-navigation-menu__menu-headline").classList.add("hide");
-
-				showFirstLvlNav(module);
+				backToMainMenuLogic(module);
 			});
 		};
 	};
@@ -389,7 +373,7 @@ const navigation = function () {
 				navLvl2.classList.add("active");
 				let dataSource = navLvl2.dataset.source;
 				let navLvl3Ul = module.querySelector('.nav-lvl3 ul[data-target="' + dataSource + '"]');
-				
+
 				// Check if navigation lvl 3 is empty or not
 				if (navLvl3Ul !== null) {
 					navLvl3Ul.parentNode.classList.remove("hide");
@@ -397,7 +381,7 @@ const navigation = function () {
 				} else {
 					module.querySelectorAll(".nav-lvl3 ul").forEach((element) => {
 						element.classList.remove("visible");
-						element.parentNode.classList.add("hide")
+						element.parentNode.classList.add("hide");
 					});
 				}
 

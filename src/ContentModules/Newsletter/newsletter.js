@@ -21,12 +21,12 @@ const modNewsletter = function () {
 
 	const openModal = (module) => {
 		// Logic for opening confirmation modal
-		module.querySelector("#overlay").classList.remove("hide");
+		module.querySelector("#overlay-newsletter").classList.remove("hide");
 	};
 
 	const closeModal = (module) => {
 		// Logic for closing confirmation modal
-		module.querySelector("#overlay").classList.add("hide");
+		module.querySelector("#overlay-newsletter").classList.add("hide");
 	};
 
 	return {

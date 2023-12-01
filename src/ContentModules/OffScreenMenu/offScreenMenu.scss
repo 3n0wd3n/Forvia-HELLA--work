@@ -13,6 +13,7 @@
 		&.sticky {
 			position: sticky;
 			top: 0;
+			z-index: 1000;
 		}
 	}
 	&__title {
@@ -156,7 +157,7 @@
 	}
 }
 
-#overlay {
+#overlay-instruction-nav {
 	position: fixed;
 	width: 100%;
 	height: 100%;

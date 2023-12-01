@@ -18,11 +18,12 @@ const modOffScreenMenu = function () {
 					item.classList.remove("sticky");
 				});
 
-				document.querySelector("#overlay").classList.remove("hide");
+				document.querySelector("#overlay-instruction-nav").classList.remove("hide");
 				zoomOutESC(module);
 				zoomOutClickingAnywhere(module);
 			});
 		});
+
 		// Close Off Screen Menu
 		module.querySelectorAll(".icon-close").forEach((item) => {
 			item.addEventListener("click", () => {
@@ -34,9 +35,10 @@ const modOffScreenMenu = function () {
 					item.classList.add("sticky");
 				});
 
-				document.querySelector("#overlay").classList.add("hide");
+				document.querySelector("#overlay-instruction-nav").classList.add("hide");
 			});
 		});
+
 		// Close Off Screen Menu With Item
 		module.querySelectorAll(".anchor").forEach((item) => {
 			item.addEventListener("click", () => {
@@ -48,9 +50,10 @@ const modOffScreenMenu = function () {
 					item.classList.add("sticky");
 				});
 
-				document.querySelector("#overlay").classList.add("hide");
+				document.querySelector("#overlay-instruction-nav").classList.add("hide");
 			});
 		});
+
 		// Close Off Screen Menu With ESC
 		const zoomOutESC = (zoomOut) => {
 			let contentToggle = zoomOut.querySelector("ul").classList;
@@ -64,14 +67,15 @@ const modOffScreenMenu = function () {
 						item.classList.add("sticky");
 					});
 
-					document.querySelector("#overlay").classList.add("hide");
+					document.querySelector("#overlay-instruction-nav").classList.add("hide");
 				}
 			});
 		};
+
 		// Close Off Screen Menu When Clicking Anywhere outside of the Menu Itself
 		const zoomOutClickingAnywhere = (zoomOut) => {
 			let contentToggle = zoomOut.querySelector("ul").classList;
-			document.querySelector("#overlay").addEventListener("click", () => {
+			document.querySelector("#overlay-instruction-nav").addEventListener("click", () => {
 				if (!contentToggle.contains("hide")) {
 					contentToggle.add("hide");
 				}
@@ -80,7 +84,7 @@ const modOffScreenMenu = function () {
 					item.classList.add("sticky");
 				});
 
-				document.querySelector("#overlay").classList.add("hide");
+				document.querySelector("#overlay-instruction-nav").classList.add("hide");
 			});
 		};
 	};

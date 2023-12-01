@@ -63,6 +63,21 @@
 	height: 344px;
 }
 
+.product-card__container-training {
+	width: 343px;
+	height: 344px;
+}
+
+.product-card__container-training-horizontal {
+	width: 760px;
+	height: 169px;
+}
+
+.module-card__container-lounge {
+	width: 371px;
+	height: 453px;
+}
+
 .progress-bar__main-container,
 .button__main-container,
 .button_group__main-container,
@@ -99,7 +114,12 @@
 .com-number-in-circle__container,
 .newsletter__main-container,
 .headline__main-container,
-.instruction-title__main-container {
+.instruction-title__main-container,
+.trainer__main-container,
+.filter__main-container,
+.date-slider__main-container,
+.moose__main-container,
+.video__main-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;

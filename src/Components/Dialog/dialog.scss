@@ -49,11 +49,14 @@
 	}
 
 	.com-dialog__btns {
+		a {
+			text-decoration: none;
+			color: $color-primary-default;
+		}
 		display: flex;
 		align-items: center;
 		gap: fromPxToRem(8);
 		justify-content: flex-end;
-		/* TODO: This should be components -> we wait until Zdenek styles button componnet. */
 		& > button {
 			color: $color-primary-default;
 			border: none;

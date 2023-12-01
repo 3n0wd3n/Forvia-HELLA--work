@@ -4,12 +4,13 @@
 	align-items: flex-start;
 	position: relative;
 	overflow: hidden;
+	width: 100%;
 	&.teaser {
 		height: 735px;
 		justify-content: flex-end;
 		border-radius: 12px;
 	}
-	&__teaser-img{
+	&__teaser-img {
 		height: 100%;
 		width: 100%;
 		position: relative;
@@ -17,13 +18,13 @@
 		// @media only screen and (max-width: 1248px) {
 		// 	height: 535px;
 		// }
-		
+
 		& > img {
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
 		}
-		.mod-spare-parts__header{
+		.mod-spare-parts__header {
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -37,10 +38,6 @@
 		border-radius: 12px 12px 0 0;
 	}
 
-	@media only screen and (max-width: 1105px) {
-		width: 343px;
-	}
-	width: 100%;
 	&__header {
 		color: white;
 		font-weight: 700;
@@ -136,6 +133,10 @@
 		@media only screen and (max-width: 1105px) {
 			width: 100%;
 			align-items: center;
+		}
+		a {
+			color: $color-primary-default;
+			text-decoration: none;
 		}
 		& > span {
 			text-transform: uppercase;

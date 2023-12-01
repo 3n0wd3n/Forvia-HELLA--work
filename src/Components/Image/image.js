@@ -14,11 +14,11 @@ const comImage = function () {
 				zoomBtn.classList.add("hide");
 				module.querySelector("img").classList.remove("with-caption");
 
-				if (document.querySelector(".overlay") === null) {
+				if (document.querySelector(".overlay-image") === null) {
 					overlay();
 				}
 
-				document.querySelector(".overlay").style.display = "block";
+				document.querySelector(".overlay-image").style.display = "block";
 				zoomOut(module);
 			});
 		});
@@ -30,7 +30,7 @@ const comImage = function () {
 		zoomOutBtn.addEventListener("click", () => {
 			module.children[0].classList.remove("zoomed");
 			zoomOutBtn.classList.add("hide");
-			document.querySelector(".overlay").style.display = "none";
+			document.querySelector(".overlay-image").style.display = "none";
 			zoomOutBtn.previousElementSibling.classList.remove("hide");
 			if (module.querySelector("img").classList.contains("no-caption")) {
 				return;
@@ -42,7 +42,7 @@ const comImage = function () {
 			if (event.key === "Escape" && module.classList.contains("zoomed")) {
 				module.classList.remove("zoomed");
 				zoomOutBtn.classList.add("hide");
-				document.querySelector(".overlay").style.display = "none";
+				document.querySelector(".overlay-image").style.display = "none";
 				zoomOutBtn.previousElementSibling.classList.remove("hide");
 				if (module.querySelector("img").classList.contains("no-caption")) {
 					return;
@@ -54,7 +54,7 @@ const comImage = function () {
 
 	const overlay = () => {
 		const el = document.createElement("div");
-		el.classList.add("overlay");
+		el.classList.add("overlay-image");
 		document.body.appendChild(el);
 	};
 

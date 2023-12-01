@@ -21,6 +21,7 @@ $color-neutral-base-background-light: #6d6d6e;
 
 // Gutmann
 $color-neutral-primary-gutmann: #007d40;
+$color-neutral-secondary-gutmann: #e6f2ec;
 
 // Primary
 $color-primary-background: #cfd3e0;
@@ -93,3 +94,11 @@ $max-content-width: 1152px;
 $max-content-tablet-width: 848px;
 $max-content-mobile-max-width: 398px;
 $max-content-mobile-min-width: 344px;
+
+// Content spacer
+$spacer-default: 100px;
+$spacer-default-mobile: 80px;
+$spacer-small: 80px;
+$spacer-small-mobile: 48px;
+$spacer-large: 120px;
+$spacer-large-mobile: 72px;

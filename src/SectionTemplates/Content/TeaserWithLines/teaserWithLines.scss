@@ -1,6 +1,5 @@
 .mod-teaser-with-lines-fs {
 	display: grid;
-	margin: fromPxToRem(40) 0;
 
 	@media screen and (min-width: 1152px) {
 		&.reverse-order {

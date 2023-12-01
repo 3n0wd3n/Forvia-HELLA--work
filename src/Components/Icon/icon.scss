@@ -18,6 +18,15 @@
 	&.icon-color--black {
 		background-color: $color-btn-primary-dark;
 	}
+	&.icon-color--default {
+		background-color: $color-primary-default;
+		@include variant-gutmann(".com-icon") {
+			background-color: $color-neutral-primary-gutmann;
+		}
+	}
+	&.icon-color--gutmann {
+		background-color: $color-neutral-primary-gutmann;
+	}
 	// For star icons
 	&.icon-color--gray {
 		background-color: $color-text-secondary-light;

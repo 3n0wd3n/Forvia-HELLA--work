@@ -51,48 +51,58 @@
 | Search Results                                  |     module     |     Michael      |
 | Navigation                                      | system modules | Vojtech, Michael |
 | Footer                                          | system modules | Vojtech, Zdenek  |
-| Cards                                           |    modules     |      Zdenek      |
-| Counter                                         |    modules     |     Michael      |
-| File                                            |    modules     |     Michael      |
-| Table                                           |    modules     |     Michael      |
-| Dealer Finder                                   |    modules     |     Michael      |
-| Footer                                          |    modules     |      Zdenek      |
-| Bread Crumb                                     |    modules     |      Vojta       |
-| Button Car Select                               |    modules     |     Michael      |
-| Instruction Steps                               |    modules     |     Michael      |
-| Hero Images                                     |    modules     |     Michael      |
-| Dropdown                                        |    modules     |     Michael      |
-| Carousel                                        |    modules     |  Michael, Vojta  |
+| Cards                                           |     module     |      Zdenek      |
+| Counter                                         |     module     |     Michael      |
+| File                                            |     module     |     Michael      |
+| Table                                           |     module     |     Michael      |
+| Dealer Finder                                   |     module     |     Michael      |
+| Footer                                          |     module     |      Zdenek      |
+| Bread Crumb                                     |     module     |      Vojta       |
+| Button Car Select                               |     module     |     Michael      |
+| Instruction Steps                               |     module     |     Michael      |
+| Hero Images                                     |     module     |     Michael      |
+| Dropdown                                        |     module     |     Michael      |
+| Carousel                                        |     module     |  Michael, Vojta  |
 | Images / Video                                  |   component    |      Vojta       |
-| Off Screen Menu                                 |    modules     |     Michael      |
-| News Teaser Splited Module                      | modules to FS  |     Michael      |
-| Teaser with Lines Module                        | modules to FS  |      Zdenek      |
-| Product Detail Module                           | modules to FS  |     Michael      |
-| Column Teaser Module                            | modules to FS  |     Michael      |
-| Teaser Item                                     | modules to FS  |     Michael      |
-| Download File Group                             | modules to FS  | Zdenek, Michael  |
-| Rating Module                                   | modules to FS  |     Michael      |
+| Off Screen Menu                                 |     module     |     Michael      |
+| News Teaser Splited Module                      |  module to FS  |     Michael      |
+| Teaser with Lines Module                        |  module to FS  |      Zdenek      |
+| Product Detail Module                           |  module to FS  |     Michael      |
+| Column Teaser Module                            |  module to FS  |     Michael      |
+| Teaser Item                                     |  module to FS  |     Michael      |
+| Download File Group                             |  module to FS  | Zdenek, Michael  |
+| Rating Module                                   |  module to FS  |     Michael      |
 | Article Text                                    |   component    |     Michael      |
 | Number In Circle                                |   component    |     Michael      |
-| Hero Image                                      | modules to FS  |     Michael      |
-| Notification Banner                             | modules to FS  |     Michael      |
-| Headline And Text Module - dummy                | modules to FS  |     Michael      |
-| Form Module                                     | modules to FS  |     Michael      |
-| Search Result For Products Module               | modules to FS  |     Michael      |
-| Navigation Teaser Module                        | modules to FS  | Michael, Zdenek  |
-| Slider                                          | modules to FS  |  Vojta, Michael  |
-| Image                                           | modules to FS  |     Michael      |
-| Search Result Ti/Bi                             | modules to FS  |     Michael      |
-| Newsletter                                      |    modules     |     Michael      |
-| Newsletter                                      | modules to FS  |     Michael      |
-| Instructuion Title                              |    modules     |     Michael      |
-| Instruction Title                               | modules to FS  |     Michael      |
-| Instruction Navigation Module / Off Screen Menu | modules to FS  |     Michael      |
-| Search Module                                   | modules to FS  |     Michael      |
+| Hero Image                                      |  module to FS  |     Michael      |
+| Notification Banner                             |  module to FS  |     Michael      |
+| Headline And Text Module - dummy                |  module to FS  |     Michael      |
+| Form Module                                     |  module to FS  |     Michael      |
+| Search Result For Products Module               |  module to FS  |     Michael      |
+| Navigation Teaser Module                        |  module to FS  | Michael, Zdenek  |
+| Slider                                          |  module to FS  |  Vojta, Michael  |
+| Image                                           |  module to FS  |     Michael      |
+| Search Result Ti/Bi                             |  module to FS  |     Michael      |
+| Newsletter                                      |     module     |     Michael      |
+| Newsletter                                      |  module to FS  |     Michael      |
+| Instructuion Title                              |     module     |     Michael      |
+| Instruction Title                               |  module to FS  |     Michael      |
+| Instruction Navigation Module / Off Screen Menu |  module to FS  |     Michael      |
+| Search Module                                   |  module to FS  |     Michael      |
+| Training Card                                   |  module to FS  |     Michael      |
+| Launge Card                                     |  module to FS  |     Michael      |
+| Training Topics                                 |   component    |     Michael      |
+| Training Topics                                 |  module to FS  |     Michael      |
+| Filter                                          |   component    |     Michael      |
+| Filter                                          |  module to FS  |     Michael      |
+| Info Box                                        |   component    |     Michael      |
+| Info Box                                        |  module to FS  |     Michael      |
+| Video Training                                  |   component    |     Michael      |
+| Video Training                                  |  module to FS  |     Michael      |
 
-## Modules To FirstSpirit
+## Module To FirstSpirit
 
-[Link To OneNote](https://hella.sharepoint.com/sites/FirstSpiritCMS/_layouts/15/Doc.aspx?sourcedoc={7f4a99b9-8d2e-445e-a4bc-148b62b51167}&action=edit&wd=target%28HTW%203.0.one%7Cf6791fb6-b15f-492f-abcf-1c1ef2946221%2FModules%7Cbf1ba1e8-7a9f-4dcd-ac71-1720dffe0ad4%2F%29&wdorigin=NavigationUrl)
+[Link To OneNote](https://hella.sharepoint.com/sites/FirstSpiritCMS/_layouts/15/Doc.aspx?sourcedoc={7f4a99b9-8d2e-445e-a4bc-148b62b51167}&action=edit&wd=target%28HTW%203.0.one%7Cf6791fb6-b15f-492f-abcf-1c1ef2946221%2FModule%7Cbf1ba1e8-7a9f-4dcd-ac71-1720dffe0ad4%2F%29&wdorigin=NavigationUrl)
 
 -   [x] Instruction Navigation Module 🚀
 -   [x] Rating Module 🚀
@@ -100,8 +110,8 @@
 -   [x] Product Detail Module 🚀
 -   [x] Teaser with Lines Module 🚀
 -   [x] Download File Group 🚀
--   [ ] Slide Module + Card Module Item 🛑 **Wip Vojta Michael -> problem with grid overflow**
--   [ ] Slide Module + Product Module Item 🛑 **Wip Vojta, Michael -> same problem as Slide Module With Card**
+-   [ ] Slide Module + Card Module Item 🛑 **Wip Vojta Michael -> problem with grid overflow (waiting fot Lucas response) **
+-   [ ] Slide Module + Product Module Item 🛑 **Wip Vojta, Michael -> same problem as Slide Module With Card (waiting fot Lucas response) **
 -   [ ] Sperpart Finder Module -> 🛑 _Complex module that needs more time_
 -   [x] Instruction Title Module 🚀
 -   [x] Hero Image Module 🚀
@@ -117,7 +127,7 @@
 -   [x] Search Module 🚀
 -   [x] Form Module 🚀
 
-## Modules that are costumized for FS
+## Module that are costumized for FS
 
 -   [x] Accordion 🚀
 -   [x] Alert 🚀
@@ -126,19 +136,21 @@
 -   [x] Dialog 🚀
 -   [x] Hero Image 🚀
 -   [x] Instruction Step 🚀
--   [ ] Newsletter -> 🛑 _It is already in FS but not with variables_
+-   [x] Newsletter
 -   [x] Product Detail 🚀
 -   [x] Teaser with Lines 🚀
 -   [x] Text 🚀
 -   [x] Instruction Title 🚀
--   [ ] Download File Group
+-   [x] Headline 🚀
+-   [x] News Teaser Splited 🚀
+-   [x] Download File Group 🚀
 -   [ ] Image
--   [ ] Navigation Teaser
+-   [x] Navigation Teaser 🚀
 -   [ ] Search 🛑 _It is already in FS but not with variables_
--   [ ] Search Result Ti/Bi
--   [ ] Instruction Navigation 🛑 _It is already in FS but not with variables_
+-   [x] Search Result Ti/Bi 🚀
+-   [x] Instruction Navigation 🚀
 
-## Components And Modules State
+## Components And Module State
 
 ### Components
 
@@ -156,7 +168,7 @@
 -   [x] Text 🚀
 -   [x] Images / Video 🚀
 
-### Modules
+### Module
 
 -   [x] Accordion 🚀
 -   [x] Bread Crumb 🚀
@@ -179,7 +191,7 @@
 -   [x] Tab 🚀
 -   [x] Table 🚀
 
-## Projects (components, modules) with JS
+## Projects (components, module) with JS
 
 -   Rating
 -   Off Screen Menu
@@ -308,6 +320,41 @@ Replace **<module-name>** in HTML structure for proper name of the module
         </body>
     </html>
 
+## HTML File Template For FS
+
+Replace **<module_fs-name>** in HTML structure for proper name of the module for FS
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><module_fs-name></title>
+        <link rel="stylesheet" type="text/css" href="../css/styles.min.css" />
+        <script defer src="../vendor.bundle.js"></script>
+        <script defer src="../index.bundle.js"></script>
+    </head>
+
+    <body>
+        <!-- Main content level -->
+        <main class="webRoot">
+            <div class="root grid-container">
+                <div class="col-md-12 col-sm-8 col-xs-2">
+                    <h1 class="com-headline h1 col-md-12"><module_fs-name></h1>
+                </div>
+                <div class="col-md-14 col-sm-8 col-xs-2 grid-container mod-<module_fs-name>-fs spacer spacer--default">
+                    <div class="col-md-12 col-md-offset-2 col-sm-8 col-xs-2 mod-<module_fs-name>-fs__item">
+                        <!-- TODO: start working on it -->
+                        work in progress
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    </html>
+
 ## CSS Module And Components Naming Conventions
 
 Declare new variable with namen of module or component:
@@ -338,10 +385,10 @@ Declare new variable with namen of module or component:
     });
 
     // Export module to be accessible from outside
-    export const modules = '.{module_name}';
+    export const module = '.{module_name}';
     export const loadModule = () => {
-        let modulesArray = document.querySelectorAll(modules);
-        modulesArray.forEach((module) => {
+        let moduleArray = document.querySelectorAll(module);
+        moduleArray.forEach((module) => {
             {module_name}().init(module);
         });
     };
@@ -428,10 +475,10 @@ Useing ids in code to match rigth component with click event.
     };
 
     // Export module to be accessible from outside
-    export const modules = ".icon-cancel";
+    export const module = ".icon-cancel";
     export const loadModule = () => {
-        let modulesArray = document.querySelectorAll(modules);
-        modulesArray.forEach((module) => {
+        let moduleArray = document.querySelectorAll(module);
+        moduleArray.forEach((module) => {
             comChip().init(module);
         });
     };
@@ -456,10 +503,10 @@ Useing scope and parent node to identify right element and use inline styles
     };
 
     // Export module to be accessible from outside
-    export const modules = ".icon-cancel";
+    export const module = ".icon-cancel";
     export const loadModule = () => {
-        let modulesArray = document.querySelectorAll(modules);
-        modulesArray.forEach((module) => {
+        let moduleArray = document.querySelectorAll(module);
+        moduleArray.forEach((module) => {
             comChip().init(module);
         });
     };
@@ -482,10 +529,10 @@ Combine second approach with creating style class with defined opacity and z-ind
     };
 
     // Export module to be accessible from outside
-    export const modules = ".icon-cancel";
+    export const module = ".icon-cancel";
     export const loadModule = () => {
-        let modulesArray = document.querySelectorAll(modules);
-        modulesArray.forEach((module) => {
+        let moduleArray = document.querySelectorAll(module);
+        moduleArray.forEach((module) => {
             comChip().init(module);
         });
     };

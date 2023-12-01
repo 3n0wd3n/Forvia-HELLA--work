@@ -46,12 +46,17 @@
 	padding: fromPxToRem(calc(8 * $multiplyTopBottom)) fromPxToRem(calc(8 * $multiplyLeftRight));
 }
 
-// TODO: discuse what is the best approach
 @mixin icon-size($size) {
 	height: fromPxToRem($size);
 	width: fromPxToRem($size);
 	-webkit-mask-size: contain;
 	-webkit-mask-repeat: no-repeat;
+}
+
+@mixin variant-gutmann($namespace: &) {
+	@at-root body.hella-gutmann #{$namespace} {
+		@content;
+	}
 }
 
 // Convert number from px to Rem

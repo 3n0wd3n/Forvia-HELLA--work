@@ -1,5 +1,13 @@
 .com-form {
 	width: 100%;
+	&--filter-item {
+		display: flex;
+		padding: 8px 0px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+		align-self: stretch;
+	}
 	.checkbox {
 		cursor: pointer;
 		width: 15px;
@@ -8,9 +16,22 @@
 		&--blue {
 			accent-color: $color-primary-default;
 		}
+		&--black {
+			accent-color: black;
+		}
 		&--large {
 			width: 18px;
 			height: 18px;
+		}
+		&--default {
+			accent-color: $color-primary-default;
+		}
+	}
+	@include variant-gutmann(".com-form") {
+		.checkbox {
+			&--default {
+				accent-color: black;
+			}
 		}
 	}
 

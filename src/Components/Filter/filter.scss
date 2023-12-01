@@ -1,0 +1,29 @@
+.com-filter {
+	.mod-accordion {
+		.accordion-element {
+			&__content {
+				.com-form {
+					.number-of-matches {
+						color: $color-neutral-base-background-light;
+					}
+				}
+			}
+			&__header {
+				.heading-of-element {
+					color: $color-primary-default;
+				}
+			}
+		}
+	}
+	@include variant-gutmann(".com-filter") {
+		.mod-accordion {
+			.accordion-element {
+				&__header {
+					.heading-of-element {
+						color: $color-neutral-primary-gutmann;
+					}
+				}
+			}
+		}
+	}
+}

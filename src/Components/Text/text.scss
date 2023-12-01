@@ -11,4 +11,9 @@
 	&.center {
 		text-align: center;
 	}
+	.gallery-mode--link {
+		cursor: pointer;
+		color: $color-primary-default;
+		font-weight: 600;
+	}
 }
