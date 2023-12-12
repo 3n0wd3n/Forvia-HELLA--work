@@ -1,1 +1,0 @@
-pscp -pw brokoli -r dist/ hellaweb@hkg.hella.com@descolfrdlv01sv:/srv/www/htdocs/_resources/developer/hajnmi1/firstspirit/htw
