@@ -1,0 +1,97 @@
+.com-icon {
+	background-color: $color-text-primary;
+	&.icon-color--info {
+		background-color: $color-primary-default;
+		@include variant-gutmann(".com-icon") {
+			&.icon-color--info {
+				background-color: white;
+			}
+		}
+	}
+	&.icon-color--done {
+		background-color: $color-success-default;
+	}
+	&.icon-color--warning {
+		background-color: $color-warning-default;
+	}
+	&.icon-color--error {
+		background-color: $color-danger-default;
+	}
+	&.icon-color--white {
+		background-color: white;
+	}
+	&.icon-color--black {
+		background-color: $color-btn-primary-dark;
+	}
+	&.icon-color--default {
+		background-color: $color-primary-default;
+		@include variant-gutmann(".com-icon") {
+			&.icon-color--default {
+				background-color: $color-neutral-primary-gutmann;
+			}
+		}
+	}
+	&.icon-color--black-default {
+		background-color: $color-primary-default;
+		@include variant-gutmann(".com-icon") {
+			&.icon-color--black-default {
+				background-color: white;
+			}
+		}
+	}
+	&.icon-color--gutmann {
+		background-color: $color-neutral-primary-gutmann;
+	}
+	// For star icons
+	&.icon-color--gray {
+		background-color: $color-text-secondary-light;
+	}
+	&.unrated {
+		background-color: $color-neutral-line-dark;
+	}
+	&.rated {
+		background-color: $color-secondary-default;
+	}
+	&.icon-size--16 {
+		height: 16px;
+		width: 16px;
+		-webkit-mask-size: contain;
+		-webkit-mask-repeat: no-repeat;
+	}
+	&.icon-size--20 {
+		height: 20px;
+		width: 20px;
+		-webkit-mask-size: contain;
+		-webkit-mask-repeat: no-repeat;
+	}
+	&.icon-size--28 {
+		height: 28px;
+		width: 28px;
+		-webkit-mask-size: contain;
+		-webkit-mask-repeat: no-repeat;
+	}
+	&.icon-size--32 {
+		height: 32px;
+		width: 32px;
+		-webkit-mask-size: contain;
+		-webkit-mask-repeat: no-repeat;
+	}
+	&.icon-size--40 {
+		height: 40px;
+		width: 40px;
+		-webkit-mask-size: contain;
+		-webkit-mask-repeat: no-repeat;
+	}
+	&.icon-size--44 {
+		height: 44px;
+		width: 44px;
+		-webkit-mask-size: contain;
+		-webkit-mask-repeat: no-repeat;
+	}
+	&.icon-size--96 {
+		height: 96px;
+		width: 96px;
+		-webkit-mask-size: contain;
+		-webkit-mask-repeat: no-repeat;
+	}
+}

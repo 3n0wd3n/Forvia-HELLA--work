@@ -1,0 +1,18 @@
+/* TODO: change modification name base on usage */
+hr.com-divider {
+	border-top: 2px solid $color-neutral-line-light;
+	width: 100%;
+	&.divider--yellow {
+		border-color: $color-secondary-default;
+	}
+	&.divider--dark-grey {
+		border-color: $color-neutral-secondary-background-dark;
+	}
+	&.thin-width {
+		border-top: 1px solid $color-neutral-line-light;
+	}
+
+	&.thick-width {
+		border-top: 3px solid $color-neutral-line-light;
+	}
+}

@@ -1,0 +1,38 @@
+/* CSS code for pure css variant */
+// .com-progress-bar {
+// 	height: 6px;
+// 	background: $color-primary-default;
+// 	position: fixed;
+// 	bottom: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	border-top-right-radius: 40px;
+// 	transform-origin: 0 50%;
+// 	animation: scaleProgress auto linear;
+// 	animation-timeline: scroll(root);
+// }
+
+// @keyframes scaleProgress {
+// 	0% {
+// 		transform: scaleX(0);
+// 	}
+// 	100% {
+// 		transform: scaleX(1);
+// 	}
+// }
+
+/* CSS code for js variant */
+.com-progress-bar {
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: #f1f1f1;
+}
+
+.bar {
+	height: 6px;
+	background: $color-primary-default;
+	width: 0%;
+	border-top-right-radius: 40px;
+}

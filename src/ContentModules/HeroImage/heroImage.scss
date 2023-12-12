@@ -1,0 +1,149 @@
+.mod-hero-image {
+	position: relative;
+	height: 480px;
+	width: 100%;
+	@media only screen and (max-width: 846px) {
+		display: contents;
+	}
+	&.with-text-on-the-side {
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: row-reverse;
+		@media screen and (max-width: 846px) {
+			flex-direction: column;
+			height: unset;
+		}
+		&.right {
+			justify-content: flex-start;
+			flex-direction: row;
+			@media screen and (max-width: 846px) {
+				flex-direction: column;
+				height: unset;
+			}
+		}
+	}
+	& > img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		border-radius: 8px;
+		@media only screen and (max-width: 846px) {
+			border-radius: 8px 8px 0 0;
+		}
+		&.with-text-on-the-side {
+			width: 66vw;
+			&.right {
+				border-radius: 8px 0px 0px 8px;
+				@media only screen and (max-width: 846px) {
+					border-radius: 8px 8px 0 0;
+				}
+			}
+			&.left {
+				border-radius: 0px 8px 8px 0px;
+				@media only screen and (max-width: 846px) {
+					border-radius: 8px 8px 0 0;
+				}
+			}
+			@media screen and (max-width: 846px) {
+				width: 100%;
+			}
+		}
+		@media only screen and (max-width: 846px) {
+			height: 375px;
+			width: 100%;
+		}
+	}
+	&__content {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		// gap: 20px;
+		gap: 10px;
+		top: 78px;
+		left: 42px;
+		width: 254px;
+		height: auto;
+		padding: 40px;
+		color: white;
+		border-radius: 12px;
+		background-color: $color-primary-default;
+		@media only screen and (max-width: 846px) {
+			position: static;
+			width: 100%;
+
+			padding: 32px 24px 24px 24px;
+			gap: 5px;
+			border-radius: 0 0 8px 8px;
+		}
+		&.with-text-on-the-side {
+			position: initial;
+			// width: 33vw;
+			width: 384px;
+			border-radius: unset;
+			justify-content: center;
+			@media screen and (max-width: 846px) {
+				width: 100%;
+			}
+			&.light {
+				color: $color-btn-primary-dark;
+				background-color: $color-neutral-base-background;
+			}
+			&.right {
+				position: initial;
+				border-radius: 0px 8px 8px 0px;
+				@media only screen and (max-width: 846px) {
+					border-radius: 0 0 8px 8px;
+				}
+			}
+			&.left {
+				border-radius: 8px 0px 0px 8px;
+				@media only screen and (max-width: 846px) {
+					border-radius: 0 0 8px 8px;
+				}
+			}
+		}
+		&.wide {
+			width: 296px;
+			@media only screen and (max-width: 846px) {
+				width: 100%;
+			}
+		}
+		&.bright {
+			opacity: 0.8;
+			background-color: white;
+			color: $color-primary-default;
+			@media only screen and (max-width: 846px) {
+				box-shadow: 2px 2px 40px -15px $color-neutral-base-background-light;
+			}
+		}
+		&.right {
+			position: absolute;
+			@media only screen and (max-width: 846px) {
+				position: static;
+			}
+			top: 78px;
+			left: unset;
+			right: 42px;
+		}
+		.content-heading {
+			font-weight: 700;
+			font-size: 20px;
+			@media only screen and (max-width: 846px) {
+				font-size: 18px;
+			}
+		}
+		.content-text {
+			font-weight: 400;
+			font-size: 16px;
+			margin: 0 0 12px 0;
+			@media only screen and (max-width: 846px) {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+// This is unnecessary in prodcutive
+.hero-image__main-container {
+	gap: 0;
+}

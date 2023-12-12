@@ -1,0 +1,456 @@
+.com-btn {
+	cursor: pointer;
+	border: 0;
+	font-size: 1rem;
+	color: $color-primary-default;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100%;
+	letter-spacing: 0.16px;
+	text-transform: capitalize;
+
+	a:hover,
+	a:visited,
+	a:link,
+	a:active {
+		color: $color-primary-default;
+		text-decoration: none;
+	}
+
+	&.btn {
+		padding: 1.125rem 1rem 1.125rem 1rem;
+		border-radius: 0.5rem;
+		height: 3rem;
+		min-width: 10rem;
+		text-align: center;
+		flex-shrink: 0;
+
+		&.btn-primary {
+			background-color: $color-secondary-default;
+			@include variant-gutmann("") {
+				.com-btn.btn.btn-primary {
+					background-color: $color-neutral-primary-gutmann;
+					color: white;
+				}
+			}
+			&:hover {
+				background-color: $color-secondary-hover;
+			}
+			&:focus {
+				background-color: $color-secondary-default;
+			}
+			&:active,
+			&--active {
+				background-color: $color-secondary-pressed;
+			}
+			&--disabled {
+				background-color: $color-neutral-secondary-background !important;
+				cursor: default;
+				color: $color-text-disabled;
+			}
+		}
+
+		&.btn-secondary {
+			color: white;
+			background-color: $color-primary-default;
+			transition: 0.3s;
+			&:hover {
+				background-color: $color-primary-hover;
+			}
+			&:focus {
+				background-color: $color-primary-default;
+			}
+			&:active,
+			&--active {
+				background-color: $color-btn-secondary-dark;
+			}
+			&--disabled {
+				background-color: $color-neutral-secondary-background !important;
+				cursor: default;
+				color: $color-text-disabled;
+			}
+		}
+
+		@include variant-gutmann(".com-btn") {
+			&.btn-secondary {
+				color: $color-neutral-primary-gutmann;
+				background-color: white;
+				border: 1px solid $color-neutral-primary-gutmann;
+				transition: 0.3s;
+				&:hover {
+					color: white;
+					background-color: $color-neutral-primary-gutmann;
+				}
+			}
+		}
+
+		&.btn-ghost {
+			background-color: white;
+			&:hover {
+				background-color: $color-neutral-base-background;
+			}
+			&:focus {
+				color: $color-primary-default;
+			}
+			&:active,
+			&--active {
+				color: $color-btn-secondary-dark;
+			}
+			&--disabled {
+				background-color: $color-neutral-secondary-background !important;
+				cursor: default;
+				color: $color-text-disabled !important;
+			}
+		}
+
+		&.btn-tertiary {
+			background-color: white;
+			border: 1px solid $color-primary-default;
+			line-height: 0.875rem;
+			&:hover {
+				background-color: $color-neutral-base-background;
+				color: $color-primary-hover;
+				border: 1px solid $color-primary-hover;
+			}
+			&:focus {
+				color: $color-primary-default;
+			}
+			&:active,
+			&--active {
+				color: $color-btn-secondary-dark;
+				border: 1px solid $color-btn-secondary-dark;
+			}
+			&--disabled {
+				background-color: white !important;
+				cursor: default;
+				color: $color-text-disabled !important;
+				border: 1px solid $color-neutral-secondary-background !important;
+			}
+		}
+
+		@include variant-gutmann(".com-btn") {
+			&.btn-tertiary {
+				color: $color-neutral-primary-gutmann;
+				border: 1px solid $color-neutral-primary-gutmann;
+			}
+		}
+
+		&--small {
+			line-height: 0.875rem;
+			font-size: 0.875rem;
+			padding: 0.875rem 0.75rem 0.875rem 0.75rem;
+			height: 2.5rem;
+			gap: 0.25rem;
+			letter-spacing: 0.14px;
+
+			&.btn-tertiary {
+				line-height: 0.75rem;
+			}
+		}
+	}
+
+	&.link {
+		padding: 0.25rem 0 0.25rem 0;
+		background-color: transparent;
+
+		&.link-primary {
+			color: $color-primary-default;
+			border-bottom: 1px solid $color-primary-default;
+
+			&:hover {
+				color: $color-primary-pressed;
+				border-bottom: 0.125rem solid $color-primary-pressed;
+			}
+			&:focus {
+				color: $color-primary-pressed;
+				background-color: $color-neutral-secondary-background;
+				border-bottom: 0.125rem solid $color-primary-pressed;
+			}
+			&:active,
+			&--active {
+				color: $color-btn-secondary-dark;
+				border-bottom: 0.125rem solid $color-btn-secondary-dark;
+			}
+			&--disabled {
+				cursor: default;
+				color: $color-text-disabled;
+				border-bottom: 0;
+
+				&:hover {
+					color: $color-text-disabled;
+					border-bottom: 0;
+				}
+			}
+		}
+
+		&.link-secondary {
+			color: $color-text-secondary;
+			border-bottom: 1px solid $color-text-secondary;
+
+			&:hover {
+				color: $color-neutral-secondary-background-dark;
+				border-bottom: 0.125rem solid $color-neutral-secondary-background-dark;
+			}
+			&:focus {
+				color: #0b0c0d;
+				background-color: $color-neutral-secondary-background;
+				border-bottom: 0.125rem solid $color-btn-primary-dark;
+			}
+			&:active,
+			&--active {
+				color: $color-btn-primary-dark;
+				border-bottom: 0.125rem solid $color-btn-primary-dark;
+			}
+			&--disabled {
+				cursor: default;
+				color: $color-text-disabled;
+				border-bottom: 0;
+
+				&:hover {
+					color: $color-text-disabled;
+					border-bottom: 0;
+				}
+			}
+		}
+
+		&.link-ghost {
+			border-bottom: 1px solid white;
+			color: white;
+
+			&:hover {
+				color: $color-neutral-secondary-background;
+				border-bottom: 0.125rem solid $color-neutral-secondary-background;
+			}
+			&:focus {
+				color: white;
+				background-color: $color-neutral-secondary-background-dark;
+				border-bottom: 0.125rem solid white;
+			}
+			&:active,
+			&--active {
+				color: $color-neutral-line-light;
+				border-bottom: 0.125rem solid $color-neutral-line-light;
+			}
+			&--disabled {
+				cursor: default;
+				color: $color-text-dark-mode-disabled;
+				border-bottom: 0;
+				text-decoration: line-through;
+
+				&:hover {
+					color: $color-text-dark-mode-disabled;
+					border-bottom: 0;
+				}
+			}
+		}
+
+		&.link-tertiary {
+			border-bottom: 1px solid $color-primary-default;
+
+			&:hover {
+				color: $color-primary-hover;
+				border-bottom: 0.125rem solid $color-primary-hover;
+			}
+			&:focus {
+				background-color: $color-neutral-secondary-background;
+			}
+			&:active,
+			&--active {
+				color: $color-btn-secondary-dark;
+				border-bottom: 0.125rem solid $color-btn-secondary-dark;
+			}
+			&--disabled {
+				cursor: default;
+				color: $color-text-disabled;
+				border-bottom: 0;
+
+				&:hover {
+					color: $color-text-disabled;
+					border-bottom: 0;
+				}
+			}
+		}
+
+		&--small {
+			line-height: 0.875rem;
+			font-size: 0.875rem;
+			gap: 0.25rem;
+			letter-spacing: 0.14px;
+
+			&.btn-tertiary {
+				line-height: 0.75rem;
+			}
+		}
+	}
+
+	&.icon {
+		padding: 0.75rem;
+		border-radius: 0.5rem;
+
+		&.icon-primary {
+			background-color: $color-primary-default;
+
+			&:hover {
+				background-color: $color-primary-pressed;
+			}
+
+			&:focus {
+				background-color: $color-primary-pressed;
+			}
+
+			&:active {
+				background-color: $color-btn-secondary-dark;
+			}
+
+			&--disabled {
+				background-color: $color-neutral-secondary-background;
+				cursor: default;
+
+				&:hover {
+					background-color: $color-neutral-secondary-background;
+				}
+
+				span {
+					background-color: $color-text-disabled;
+				}
+			}
+		}
+
+		&.icon-secondary {
+			background-color: white;
+			border: 1px solid $color-neutral-line-light;
+
+			&:hover {
+				background-color: $color-neutral-secondary-background;
+				border: 1px solid $color-neutral-secondary-background-dark;
+			}
+
+			&:focus {
+				background-color: $color-neutral-secondary-background;
+				border: 1px solid $color-neutral-secondary-background-dark;
+			}
+
+			&:active {
+				background-color: $color-btn-secondary-dark;
+				border: 1px solid $color-neutral-secondary-background-dark;
+			}
+
+			span {
+				background-color: $color-btn-primary-dark;
+			}
+
+			&--disabled {
+				background-color: $color-neutral-secondary-background;
+				border: 1px solid $color-neutral-line-light;
+				cursor: default;
+
+				&:hover {
+					background-color: $color-neutral-secondary-background;
+					border: 1px solid $color-neutral-line-light;
+				}
+
+				span {
+					background-color: $color-text-disabled;
+				}
+			}
+		}
+
+		&.icon-tertiary {
+			background-color: white;
+
+			&:hover span {
+				background-color: $color-primary-hover;
+			}
+
+			&:focus span {
+				background-color: $color-primary-default;
+			}
+
+			&:active span {
+				background-color: $color-btn-secondary-dark;
+			}
+
+			span {
+				background-color: $color-btn-primary-dark;
+			}
+
+			&--disabled {
+				cursor: default;
+
+				&:hover span,
+				span {
+					background-color: $color-text-disabled;
+				}
+			}
+		}
+		&.icon-ghost {
+			background-color: white;
+			border: 1px solid $color-primary-default;
+
+			&:hover {
+				border: 1px solid $color-primary-hover;
+
+				span {
+					background-color: $color-primary-hover;
+				}
+			}
+
+			&:focus {
+				border: 1px solid $color-primary-default;
+
+				span {
+					background-color: $color-primary-default;
+				}
+			}
+
+			&:active {
+				border: 1px solid $color-btn-secondary-dark;
+
+				span {
+					background-color: $color-btn-secondary-dark;
+				}
+			}
+
+			span {
+				background-color: $color-primary-default;
+			}
+
+			&--disabled {
+				cursor: default;
+				border: 0;
+
+				&:hover {
+					border: 0;
+				}
+
+				&:hover span,
+				span {
+					background-color: $color-text-disabled;
+					border: 0;
+				}
+			}
+		}
+
+		&--round {
+			border-radius: 6.25rem;
+		}
+
+		&--small {
+			padding: 0.5rem;
+		}
+
+		span {
+			width: 1.5rem;
+			height: 1.5rem;
+			background-color: white;
+		}
+	}
+
+	&:active {
+		transition: 0.8s;
+	}
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+    <script defer src="vendor.bundle.js"></script>
+    <script defer src="index.bundle.js"></script>
+    <title>Dialog</title>
+</head>
+<!-- 
+Where I get inspired: 
+
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal
+-->
+<body>
+    <div class="dialog__main-container">
+        <h1>Dialog Component</h1>
+        <button href="dialog-0" class="com-dialog--open">Open Info Dialog</button>
+        <button href="dialog-1" class="com-dialog--open">Open Success Dialog</button>
+        <button href="dialog-2" class="com-dialog--open">Open Warning Dialog</button>
+        <button href="dialog-3" class="com-dialog--open">Open Danger Dialog</button>
+        <button href="dialog-4" class="com-dialog--open">Open Danger Dialog - Overflow</button>
+        <dialog class="com-dialog" id="dialog-0">
+            <div class="com-dialog__header">
+                <div class="header-container">
+                    <!-- icon -->
+                    <div class="header-container__icon">
+                        <span class="com-icon icon-info icon-size--20 icon-color--info"></span>
+                    </div>
+                    <!-- title -->
+                    <h2>Title</h2>
+                </div>
+                <!-- cross -->
+                <span class="icon-close com-dialog--close" id="dialog-cls-0"></span>
+            </div>
+            <div class="com-dialog__content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                </p>
+            </div>
+            <div class="com-dialog__btns">
+                <button>Cancel</button>
+                <button>
+                    <a href="#">
+                        Select
+                    </a>
+                </button>
+            </div>
+        </dialog>
+
+        <dialog class="com-dialog" id="dialog-1">
+            <div class="com-dialog__header">
+                <div class="header-container">
+                    <!-- icon -->
+                    <div class="header-container__icon header-container__icon--done">
+                        <span class="com-icon icon-done icon-size--20 icon-color--done"></span>
+                    </div>
+                    <!-- title -->
+                    <h2>Title</h2>
+                </div>
+                <!-- cross -->
+                <span class="icon-close com-dialog--close" id="dialog-cls-1"></span>
+            </div>
+            <div class="com-dialog__content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                </p>
+            </div>
+            <div class="com-dialog__btns">
+                <button>Cancel</button>
+                <button>
+                    <a href="#">
+                        Select
+                    </a>
+                </button>
+            </div>
+        </dialog>
+
+        <dialog class="com-dialog" id="dialog-2">
+            <div class="com-dialog__header">
+                <div class="header-container">
+                    <!-- icon -->
+                    <div class="header-container__icon header-container__icon--warning">
+                        <span class="com-icon icon-warning icon-size--20 icon-color--warning"></span>
+                    </div>
+                    <!-- title -->
+                    <h2>Title</h2>
+                </div>
+                <!-- cross -->
+                <span class="icon-close com-dialog--close" id="dialog-cls-2"></span>
+            </div>
+            <div class="com-dialog__content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                </p>
+            </div>
+            <div class="com-dialog__btns">
+                <button>Cancel</button>
+                <button>
+                    <a href="#">
+                        Select
+                    </a>
+                </button>
+            </div>
+        </dialog>
+
+        <dialog class="com-dialog" id="dialog-3">
+            <div class="com-dialog__header">
+                <div class="header-container">
+                    <!-- icon -->
+                    <div class="header-container__icon header-container__icon--error">
+                        <span class="com-icon icon-error icon-size--20 icon-color--error"></span>
+                    </div>
+                    <!-- title -->
+                    <h2>Title</h2>
+                </div>
+                <!-- cross -->
+                <span class="icon-close com-dialog--close" id="dialog-cls-3"></span>
+            </div>
+            <div class="com-dialog__content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                </p>
+            </div>
+            <div class="com-dialog__btns">
+                <button>Cancel</button>
+                <button>
+                    <a href="#">
+                        Select
+                    </a>
+                </button>
+            </div>
+        </dialog>
+
+        <dialog class="com-dialog" id="dialog-4">
+            <div class="com-dialog__header">
+                <div class="header-container">
+                    <!-- icon -->
+                    <div class="header-container__icon header-container__icon--error">
+                        <span class="com-icon icon-error icon-size--20 icon-color--error"></span>
+                    </div>
+                    <!-- title -->
+                    <h2>Title</h2>
+                </div>
+                <!-- cross -->
+                <span class="icon-close com-dialog--close" id="dialog-cls-4"></span>
+            </div>
+            <div class="com-dialog__content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, sit scelerisque vestibulum magnis. Auctor dolor, tincidunt enim pharetra. Ornare amet suspendisse id.
+                </p>
+            </div>
+            <div class="com-dialog__btns">
+                <button>Cancel</button>
+                <button>
+                    <a href="#">
+                        Select
+                    </a>
+                </button>
+            </div>
+        </dialog>
+    </div>
+</body>
+</html>

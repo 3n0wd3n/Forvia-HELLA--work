@@ -1,0 +1,25 @@
+.mod-column-teaser-fs {
+	&__item {
+		&.left {
+			padding: 0 0px 0 24px;
+			@media screen and (max-width: 1151px) {
+				padding: 0;
+			}
+		}
+		&.middle {
+			padding: 0 24px;
+			border-left: 1px solid gray;
+			border-right: 1px solid gray;
+			@media screen and (max-width: 1151px) {
+				border: none;
+				padding: 0;
+			}
+		}
+		&.right {
+			padding: 0 24px 0 0;
+			@media screen and (max-width: 1151px) {
+				padding: 0;
+			}
+		}
+	}
+}

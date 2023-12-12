@@ -1,0 +1,10 @@
+.mod-instruction-step-fs {
+	display: grid;
+	gap: 36px;
+	&__number {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

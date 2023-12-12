@@ -1,0 +1,30 @@
+.com-video-training {
+	display: flex;
+	flex-flow: row;
+	gap: 24px;
+	@media screen and (max-width: $max-content-tablet-width) {
+		flex-flow: column;
+	}
+	&__video-content {
+		width: 100%;
+		& > video {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			border-radius: 8px;
+			@media screen and (max-width: $max-content-tablet-width) {
+				width: 324px;
+				height: 204px;
+			}
+		}
+	}
+	&__text-content {
+		display: flex;
+		gap: 20px;
+		flex-flow: column;
+	}
+	.badge-container {
+		display: flex;
+		gap: 16px;
+	}
+}

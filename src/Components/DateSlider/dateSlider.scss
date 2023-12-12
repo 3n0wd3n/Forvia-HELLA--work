@@ -1,0 +1,86 @@
+.com-date-slider {
+	display: flex;
+	flex-flow: column;
+	gap: 22px;
+	.com-date-slider-container {
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		gap: 20px;
+		width: 100%;
+		&__left-arrow,
+		&__right-arrow {
+			padding: 4px 0px 2px 0px;
+			border: 1px solid $color-neutral-line-light;
+			border-radius: 8px;
+			cursor: pointer;
+		}
+		&__items {
+			display: flex;
+			flex-flow: row;
+			overflow-x: scroll;
+			justify-content: flex-start;
+			gap: 20px;
+			&::-webkit-scrollbar {
+				height: 5px;
+			}
+
+			&::-webkit-scrollbar-track {
+				background: none;
+				border: solid 3px transparent;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background: $color-neutral-line-light;
+				border-radius: 8px;
+			}
+		}
+		.date-item {
+			padding: 45px 8px;
+			display: flex;
+			flex-flow: column;
+			gap: 8px;
+			justify-content: center;
+			align-items: center;
+			border-radius: 8px;
+			border: 2px solid $color-neutral-line-light;
+			color: $color-primary-default;
+			margin-bottom: 20px;
+			min-width: 134px;
+			@include variant-gutmann(".com-date-slider") {
+				.date-item {
+					color: black;
+				}
+			}
+			cursor: pointer;
+			@include variant-gutmann(".com-date-slider") {
+				.date-item:hover {
+					border: 2px solid $color-neutral-primary-gutmann;
+				}
+			}
+			&:hover {
+				border: 2px solid $color-secondary-default;
+			}
+			@include variant-gutmann(".com-date-slider") {
+				.date-item:active {
+					background-color: $color-neutral-secondary-gutmann;
+				}
+			}
+			&:active {
+				background: $color-secondary-background;
+			}
+			&__day {
+				font-size: 32px;
+				font-weight: 700;
+			}
+			&__month {
+				text-transform: uppercase;
+				font-size: 18px;
+				font-weight: 700;
+			}
+			&__year {
+				font-size: 14px;
+			}
+		}
+	}
+}

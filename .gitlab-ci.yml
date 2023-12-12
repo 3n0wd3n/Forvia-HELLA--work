@@ -1,0 +1,21 @@
+image: alpine:latest
+stages:
+  - build
+  - test
+  
+build-code-job:
+  stage: build
+  before_script:
+  - 'command -v ssh-agent >/dev/null || ( apk add --update openssh )' 
+  - eval $(ssh-agent -s)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - ssh-keyscan $VM_IPADDRESS >> ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+  script:
+    - ssh $SSH_USER@$VM_IPADDRESS "bash /usr/local/Webpack/gitpull-firstspirit.sh $CI_COMMIT_SHORT_SHA"
+  only:
+    - main
+  tags:
+    - linux

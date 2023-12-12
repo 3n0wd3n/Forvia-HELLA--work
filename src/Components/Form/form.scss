@@ -1,0 +1,565 @@
+.com-form {
+	width: 100%;
+	&--filter-item {
+		display: flex;
+		padding: 8px 0px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+		align-self: stretch;
+	}
+	.checkbox {
+		cursor: pointer;
+		width: 15px;
+		height: 15px;
+		accent-color: $color-neutral-base-background-light;
+		&--blue {
+			accent-color: $color-primary-default;
+		}
+		&--black {
+			accent-color: black;
+		}
+		&--large {
+			width: 18px;
+			height: 18px;
+		}
+		&--default {
+			accent-color: $color-primary-default;
+		}
+	}
+	@include variant-gutmann(".com-form") {
+		.checkbox {
+			&--default {
+				accent-color: black;
+			}
+		}
+	}
+
+	&__checkbox-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		&--left {
+			flex-direction: row-reverse;
+		}
+	}
+
+	.radio {
+		width: 16.67px;
+		height: 16.67px;
+		cursor: pointer;
+		accent-color: $color-neutral-base-background-light;
+		&--blue {
+			accent-color: $color-primary-default;
+		}
+		&--large {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&__radio-container {
+		display: flex;
+		align-items: end;
+		justify-content: center;
+		gap: 8px;
+		&--left {
+			align-items: end;
+			justify-content: center;
+			flex-direction: row-reverse;
+		}
+	}
+
+	/*Small switch variables*/
+	$small-switch--dimensions: 11.67px;
+	$small-switch-ball--dimensions: 8.33px;
+	$small-switch-ball--margin: 1.67px;
+
+	/*Large switch variables*/
+	$large-switch--dimensions: 14px;
+	$large-switch-ball--dimensions: 10px;
+	$large-switch-ball--margin: 2px;
+
+	.input[type="text"],
+	.date-input[type="date"],
+	.passwd-input[type="password"],
+	.input[type="email"],
+	.input[type="tel"],
+	.text-area,
+	.select,
+	.search[type="search"],
+	.search-group[type="search"] {
+		width: 138px;
+		padding: 12px 9px;
+		margin: 8px 0;
+		box-sizing: border-box;
+		border: 1px solid $color-neutral-line-light;
+		border-radius: 8px;
+		font-size: 16px;
+		line-height: 22px;
+		&.wide {
+			width: 100%;
+		}
+	}
+
+	&__switch {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		&--left {
+			flex-direction: row-reverse;
+		}
+		.switch_container {
+			position: relative;
+			display: inline-block;
+			width: $small-switch--dimensions + 8.33;
+			height: $small-switch--dimensions;
+			&--large {
+				width: $small-switch--dimensions + 8.33;
+				height: $small-switch--dimensions;
+				width: $large-switch--dimensions + 10;
+				height: $large-switch--dimensions;
+			}
+
+			input {
+				visibility: hidden;
+			}
+
+			.slider {
+				position: absolute;
+				cursor: pointer;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: $color-neutral-base-background-light;
+				-webkit-transition: 0.4s;
+				transition: 0.4s;
+			}
+			.slider:before {
+				position: absolute;
+				content: "";
+				height: $small-switch-ball--dimensions;
+				width: $small-switch-ball--dimensions;
+				left: $small-switch-ball--margin;
+				bottom: $small-switch-ball--margin;
+				background-color: white;
+				-webkit-transition: 0.4s;
+				transition: 0.4s;
+			}
+			/* Did not work as nested so I decided to pull it out */
+			.slider--large:before {
+				height: $large-switch-ball--dimensions;
+				width: $large-switch-ball--dimensions;
+				left: $large-switch-ball--margin;
+				bottom: $large-switch-ball--margin;
+			}
+
+			input:checked + .slider {
+				background-color: $color-neutral-base-background-light;
+
+				&--blue {
+					background-color: $color-primary-default;
+				}
+			}
+
+			input:checked + .slider:before {
+				-webkit-transform: translateX($small-switch-ball--dimensions);
+				-ms-transform: translateX($small-switch-ball--dimensions);
+				transform: translateX($small-switch-ball--dimensions);
+			}
+
+			input:checked + .slider--large:before {
+				-webkit-transform: translateX($large-switch-ball--dimensions);
+				-ms-transform: translateX($large-switch-ball--dimensions);
+				transform: translateX($large-switch-ball--dimensions);
+			}
+
+			/* Rounded sliders */
+			.slider.round {
+				border-radius: 34px;
+			}
+
+			.slider.round:before {
+				border-radius: 50%;
+			}
+		}
+	}
+
+	&__input {
+		display: flex;
+		flex-direction: row;
+		gap: 16px;
+		&--column {
+			flex-direction: column;
+			gap: 32px;
+		}
+		.input-container {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 14px;
+			/* 
+			Space in case of change 
+			.input[type="text"] {
+			}
+			*/
+			.input--error[type="text"] {
+				border: 1px solid $color-danger-default;
+			}
+			.input--column[type="text"] {
+				width: 100%;
+			}
+			.input[type="text"]:focus {
+				outline: 2px solid $color-primary-default;
+			}
+			.input--error[type="text"]:focus {
+				outline: 2px solid $color-danger-default;
+			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	&__select {
+		display: flex;
+		flex-direction: row;
+		gap: 16px;
+		&--column {
+			flex-direction: column;
+			gap: 32px;
+		}
+		.select-container {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 14px;
+			.select {
+				line-height: 23px;
+				padding: 13.34px 9px;
+				background-color: $color-neutral-primary-background;
+				cursor: pointer;
+				option {
+					height: 22px;
+				}
+			}
+			.select--column {
+				width: 100%;
+			}
+			.select:focus {
+				outline: 2px solid $color-primary-default;
+			}
+			.select--error {
+				border: 1px solid $color-danger-default;
+			}
+			.select--error:focus {
+				outline: 2px solid $color-danger-default;
+			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	&__passwd-input {
+		display: flex;
+		flex-direction: row;
+		gap: 16px;
+		&--column {
+			flex-direction: column;
+			gap: 32px;
+		}
+		.passwd-input-container {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 14px;
+			/*
+			.passwd-input[type="password"] {
+				background: url("addOutline.svg") no-repeat scroll right 12px center;
+			}
+			.passwd-input::-ms-reveal,
+			.passwd-input::-ms-clear {
+				display: none;
+			}
+			*/
+			.passwd-input--error[type="password"] {
+				border: 1px solid $color-danger-default;
+			}
+			.passwd-input--column[type="password"] {
+				width: 100%;
+			}
+			.passwd-input[type="password"]:focus {
+				outline: 2px solid $color-primary-default;
+			}
+			.passwd-input--error[type="password"]:focus {
+				outline: 2px solid $color-danger-default;
+			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	&__date-input {
+		display: flex;
+		flex-direction: row;
+		gap: 16px;
+		&--column {
+			flex-direction: column;
+			gap: 32px;
+		}
+		.date-input-container {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 14px;
+			.date-input[type="date"] {
+				cursor: pointer;
+				padding: 11px 9px;
+			}
+			.date-input--error[type="date"] {
+				border: 1px solid $color-danger-default;
+			}
+			.date-input--column[type="date"] {
+				width: 100%;
+			}
+			.date-input[type="date"]:focus {
+				outline: 2px solid $color-primary-default;
+			}
+			.date-input--error[type="date"]:focus {
+				outline: 2px solid $color-danger-default;
+			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	&__text-area {
+		display: flex;
+		flex-direction: row;
+		gap: 16px;
+		&--column {
+			flex-direction: column;
+			gap: 32px;
+		}
+		.text-area-container {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 14px;
+			&.wide {
+				width: 100%;
+			}
+			.text-area {
+				width: 300px;
+				height: 80px;
+				padding: 8px 9px 0px 9px;
+				&.wide {
+					width: 100%;
+				}
+			}
+			.text-area--large {
+				height: 120px;
+			}
+			.text-area:focus {
+				outline: 2px solid $color-primary-default;
+			}
+			.text-area--error {
+				border: 1px solid $color-danger-default;
+			}
+			.text-area--error:focus {
+				outline: 2px solid $color-danger-default;
+			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	&__search {
+		/* Will se if this necessary */
+		.search[type="search"] {
+			width: 100%;
+			margin: 0;
+			color: inherit;
+			padding: 12px 9px 12px 40px;
+			background: transparent
+				url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+				no-repeat 13px center;
+		}
+		.search--error[type="search"] {
+			border: 1px solid $color-danger-default;
+		}
+		.search[type="search"]::placeholder {
+			/* Color of text in search */
+			// color: $color-neutral-line-light;
+		}
+		.search[type="search"]:focus {
+			outline: 2px solid $color-primary-default;
+		}
+		.search--error[type="search"]:focus {
+			outline: 2px solid $color-danger-default;
+		}
+	}
+
+	&__search-group {
+		.search-group-container {
+			display: flex;
+			align-items: center;
+			& > .icon-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				height: 47.33px;
+				width: 47.33px;
+				border-radius: 0 8px 8px 0px;
+				background-color: $color-primary-default;
+				@include variant-gutmann(".com-form") {
+					.com-form__search-group .search-group-container > .icon-container {
+						background-color: black;
+					}
+				}
+				cursor: pointer;
+				& > span {
+					background-color: $color-neutral-primary-background;
+				}
+			}
+			.search-group[type="search"] {
+				width: 100%;
+				border-radius: 8px 0 0 8px;
+			}
+			.search-group[type="search"]:focus {
+				outline: 2px solid $color-primary-default;
+			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	&__search-group-df {
+		display: flex;
+		position: relative;
+		.submit-search-container {
+			display: flex;
+			padding: 12px 9px;
+			align-items: center;
+			gap: 8px;
+			cursor: pointer;
+			color: $color-neutral-primary-background-ligth;
+			align-self: stretch;
+			border-radius: 0px 8px 8px 0px;
+			border: 1px solid $color-neutral-line-light;
+			background: $color-neutral-base-background;
+			border-left: none;
+			&:hover {
+				span:nth-child(2) {
+					transition: 0.7s;
+					transform: translateY(5px);
+				}
+			}
+			& > .label {
+				&.thin {
+					font-weight: 400;
+				}
+				&.thick {
+					font-weight: 600;
+				}
+			}
+		}
+		.df-icon {
+			position: absolute;
+			top: 12px;
+			left: 9px;
+		}
+		.search-df[type="search"] {
+			width: 100%;
+			border-radius: 8px 0 0 8px;
+			margin-right: 1px;
+			border: 1px solid $color-neutral-line-light;
+			padding: 12px 9px 12px 41px;
+		}
+		.search-df[type="search"]:focus {
+			outline: 1px solid $color-neutral-primary-background-dark;
+		}
+	}
+
+	&__search-group-basic {
+		font-size: 16px;
+		display: flex;
+		position: relative;
+		.search-icon {
+			position: absolute;
+			top: 10px;
+			right: 9px;
+		}
+		.search-basic[type="search"] {
+			font-size: 16px;
+			width: 100%;
+			border-radius: 8px;
+			border: 1px solid $color-neutral-line-light;
+			padding: 12px 9px;
+		}
+		.search-basic[type="search"]:focus {
+			outline: 1px solid $color-neutral-primary-background-dark;
+		}
+	}
+
+	&__input-label {
+		width: 100%;
+		padding: 4px;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 8px;
+		&--error {
+			background-color: $color-danger-background;
+		}
+		&--success {
+			background-color: $color-success-background;
+		}
+		&--info {
+			background-color: $color-primary-background;
+		}
+	}
+
+	.__submit-button {
+	}
+}

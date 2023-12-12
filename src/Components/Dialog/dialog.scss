@@ -1,0 +1,84 @@
+/* INFO: Be awere that action sheet = dialog for mobile menu */
+
+.com-dialog {
+	border: none;
+	padding: 16px;
+	width: 500px;
+	border-radius: 8px;
+	max-height: 80vh;
+	backdrop-filter: 90%;
+	.com-dialog__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		& > h2 {
+			font-size: $font-h2;
+		}
+		& > span {
+			cursor: pointer;
+		}
+		.header-container {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			gap: 8px;
+			.header-container__icon {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 30px;
+				height: 30px;
+				border-radius: 100%;
+				background-color: $color-primary-background;
+				&--done {
+					background-color: $color-success-background;
+				}
+				&--warning {
+					background-color: $color-warning-background;
+				}
+				&--error {
+					background-color: $color-danger-background;
+				}
+			}
+		}
+	}
+	.com-dialog__content {
+		margin: 24px 0 24px 0;
+		font-weight: 400;
+		color: $color-neutral-base-background-dark;
+	}
+
+	.com-dialog__btns {
+		a {
+			text-decoration: none;
+			color: $color-primary-default;
+		}
+		display: flex;
+		align-items: center;
+		gap: fromPxToRem(8);
+		justify-content: flex-end;
+		& > button {
+			color: $color-primary-default;
+			border: none;
+			padding: 18px 16px 18px 16px;
+			border-radius: 8px;
+			font-weight: 600;
+			cursor: pointer;
+		}
+		& > button:nth-child(1) {
+			background-color: white;
+		}
+		& > button:nth-child(2) {
+			background-color: orange;
+		}
+		@media (max-width: 500px) {
+			flex-direction: column-reverse;
+			& > button {
+				width: 100%;
+			}
+			& > button:nth-child(1) {
+				border: 1px solid $color-neutral-base-background-dark;
+			}
+		}
+	}
+}

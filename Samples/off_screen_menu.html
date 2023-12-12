@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Module Off Screen Menu</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+        <script defer src="vendor.bundle.js"></script>
+        <script defer src="index.bundle.js"></script>
+    </head>
+    <body>
+        <div class="off-screen-menu__main-container">
+            <h1>Off Screen Menu Module</h1>
+            <h2 style="text-align: left; width: 100%;">How does it works</h2>
+            <ul style="text-align: left; width: 100%; text-decoration: underline;">
+                <li>We have two different key components -> Table Of Content & Content Item</li>
+                <li>In code they have specific naming "mod-off-screen-menu__table-of-content" & "mod-off-screen-menu__content-item"</li>
+                <li>If you want to use this of screen menu in site you need to take one Table Of Content and you need to create Content Items according to count of items in Table Of Content</li>
+                <li>Table Of Content is only once on the page and stores content items</li>
+                <li>Each item servers as link to anchor and anchor is each individual created Contant Item on page</li>
+                <li>Each Content Item has also all anchors (content items) inside iteself. And after click on it menu will pops up and you will se same items as in table of content which servers as links.</li>
+                <li>Part of this module is overlay that needs to be taken only once.</li>
+            </ul>
+            <p class="com-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Commodo viverra maecenas
+                accumsan lacus. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl
+                nunc mi ipsum faucibus vitae aliquet nec. Amet nisl purus in mollis nunc
+                sed. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
+                Lorem sed risus ultricies tristique nulla. Commodo sed egestas egestas
+                fringilla phasellus faucibus. Semper eget duis at tellus at urna condimentum
+                mattis pellentesque. Porta lorem mollis aliquam ut porttitor leo a diam. At
+                lectus urna duis convallis convallis tellus id interdum velit. Placerat orci
+                nulla pellentesque dignissim enim sit amet venenatis urna. Rutrum tellus
+                pellentesque eu tincidunt tortor. Nulla facilisi cras fermentum odio eu
+                feugiat. Aliquet risus feugiat in ante metus. Quis imperdiet massa tincidunt
+                nunc pulvinar sapien et. Vel pharetra vel turpis nunc. Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Commodo viverra maecenas
+                accumsan lacus. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl
+                nunc mi ipsum faucibus vitae aliquet nec. Amet nisl purus in mollis nunc
+                sed. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
+                Lorem sed risus ultricies tristique nulla. Commodo sed egestas egestas
+                fringilla phasellus faucibus. Semper eget duis at tellus at urna condimentum
+                mattis pellentesque. Porta lorem mollis aliquam ut porttitor leo a diam. At
+                lectus urna duis convallis convallis tellus id interdum velit. Placerat orci
+                nulla pellentesque dignissim enim sit amet venenatis urna. Rutrum tellus
+                pellentesque eu tincidunt tortor. Nulla facilisi cras fermentum odio eu
+                feugiat. Aliquet risus feugiat in ante metus. Quis imperdiet massa tincidunt
+                nunc pulvinar sapien et. Vel pharetra vel turpis nunc.
+            </p>
+            <div id="overlay-instruction-nav" class="hide"></div>
+            <div class="mod-off-screen-menu table-of-content">
+                <div class="mod-off-screen-menu__title table-of-content">
+                    <span class="com-icon icon-listBulletPoint icon-color--white icon-size--24"></span>
+                    <span>Table Of Content</span>
+                </div>
+                <ul class="mod-off-screen-menu__content table-of-content">
+                    <li class="link-item  table-of-content">
+                        <a href="#1">
+                            1. Good To Know 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item table-of-content">
+                        <a href="#2">
+                            2. Design 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item table-of-content">
+                        <a href="#">
+                            3. Functionality 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item table-of-content">
+                        <a href="#">
+                            4. Practical Advice 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item table-of-content">
+                        <a href="#">
+                            5. Couse Of Failure 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item table-of-content">
+                        <a href="#">
+                            6. Troubleshooting 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item table-of-content">
+                        <a href="#">
+                            7. Regulations 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item table-of-content">
+                        <a href="#">
+                            8. Other Topics 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mod-off-screen-menu content-item sticky">
+                <div class="mod-off-screen-menu__title content-item">
+                    <span class="com-icon icon-listNumbered icon-color--white icon-size--24"></span>
+                    <span>1. Good To Know</span>
+                </div>
+                <ul class="mod-off-screen-menu__content content-item hide">
+                    <div class="content-title">
+                        <div class="content-title__left">
+                            <span class="desktop-color-icon com-icon icon-listBulletPoint icon-color--white icon-size--24"></span>
+                            <span class="mobile-color-icon com-icon icon-listBulletPoint icon-color--info icon-size--24"></span>
+                            <span>Table Of Content</span>
+                        </div>
+                        <span class="desktop-color-icon com-icon icon-close icon-color--white"></span>
+                        <span class="mobile-color-icon com-icon icon-close icon-color--info"></span>
+                    </div>
+                    <li class="link-item">
+                        <a class="anchor" href="#1">
+                            1. Good To Know 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#2">
+                            2. Design 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#3">
+                            3. Functionality 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#4">
+                            4. Practical Advice 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#5">
+                            5. Couse Of Failure 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#6">
+                            6. Troubleshooting 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#7">
+                            7. Regulations <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#8">
+                            8. Other Topics 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="com-text" id="1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Commodo viverra maecenas
+                accumsan lacus. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl
+                nunc mi ipsum faucibus vitae aliquet nec. Amet nisl purus in mollis nunc
+                sed. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
+                Lorem sed risus ultricies tristique nulla. Commodo sed egestas egestas
+                fringilla phasellus faucibus. Semper eget duis at tellus at urna condimentum
+                mattis pellentesque. Porta lorem mollis aliquam ut porttitor leo a diam. At
+                lectus urna duis convallis convallis tellus id interdum velit. Placerat orci
+                nulla pellentesque dignissim enim sit amet venenatis urna. Rutrum tellus
+                pellentesque eu tincidunt tortor. Nulla facilisi cras fermentum odio eu
+                feugiat. Aliquet risus feugiat in ante metus. Quis imperdiet massa tincidunt
+                nunc pulvinar sapien et. Vel pharetra vel turpis nunc. Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Commodo viverra maecenas
+                accumsan lacus. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl
+                nunc mi ipsum faucibus vitae aliquet nec. Amet nisl purus in mollis nunc
+                sed. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
+                Lorem sed risus ultricies tristique nulla. Commodo sed egestas egestas
+                fringilla phasellus faucibus. Semper eget duis at tellus at urna condimentum
+                mattis pellentesque. Porta lorem mollis aliquam ut porttitor leo a diam. At
+                lectus urna duis convallis convallis tellus id interdum velit. Placerat orci
+                nulla pellentesque dignissim enim sit amet venenatis urna. Rutrum tellus
+                pellentesque eu tincidunt tortor. Nulla facilisi cras fermentum odio eu
+                feugiat. Aliquet risus feugiat in ante metus. Quis imperdiet massa tincidunt
+                nunc pulvinar sapien et. Vel pharetra vel turpis nunc.
+            </p>
+            <div class="mod-off-screen-menu content-item sticky">
+                <div class="mod-off-screen-menu__title content-item">
+                    <span class="com-icon icon-listNumbered icon-color--white icon-size--24"></span>
+                    <span>2. Design</span>
+                </div>
+                <ul class="mod-off-screen-menu__content content-item hide">
+                    <div class="content-title">
+                        <div class="content-title__left">
+                            <span class="desktop-color-icon com-icon icon-listBulletPoint icon-color--white icon-size--24"></span>
+                            <span class="mobile-color-icon com-icon icon-listBulletPoint icon-color--info icon-size--24"></span>
+                            <span>Table Of Content</span>
+                        </div>
+                        <span class="desktop-color-icon com-icon icon-close icon-color--white"></span>
+                        <span class="mobile-color-icon com-icon icon-close icon-color--info"></span>
+                    </div>
+                    <li class="link-item">
+                        <a class="anchor" href="#1">
+                            1. Good To Know 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#2">
+                            2. Design 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#3">
+                            3. Functionality 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#4">
+                            4. Practical Advice 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#5">
+                            5. Couse Of Failure 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#6">
+                            6. Troubleshooting 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#7">
+                            7. Regulations <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a class="anchor" href="#8">
+                            8. Other Topics 
+                            <span class="com-icon icon-chevronRight icon-color--info"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="com-text" id="2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Commodo viverra maecenas
+                accumsan lacus. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl
+                nunc mi ipsum faucibus vitae aliquet nec. Amet nisl purus in mollis nunc
+                sed. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
+                Lorem sed risus ultricies tristique nulla. Commodo sed egestas egestas
+                fringilla phasellus faucibus. Semper eget duis at tellus at urna condimentum
+                mattis pellentesque. Porta lorem mollis aliquam ut porttitor leo a diam. At
+                lectus urna duis convallis convallis tellus id interdum velit. Placerat orci
+                nulla pellentesque dignissim enim sit amet venenatis urna. Rutrum tellus
+                pellentesque eu tincidunt tortor. Nulla facilisi cras fermentum odio eu
+                feugiat. Aliquet risus feugiat in ante metus. Quis imperdiet massa tincidunt
+                nunc pulvinar sapien et. Vel pharetra vel turpis nunc. Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Commodo viverra maecenas
+                accumsan lacus. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl
+                nunc mi ipsum faucibus vitae aliquet nec. Amet nisl purus in mollis nunc
+                sed. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
+                Lorem sed risus ultricies tristique nulla. Commodo sed egestas egestas
+                fringilla phasellus faucibus. Semper eget duis at tellus at urna condimentum
+                mattis pellentesque. Porta lorem mollis aliquam ut porttitor leo a diam. At
+                lectus urna duis convallis convallis tellus id interdum velit. Placerat orci
+                nulla pellentesque dignissim enim sit amet venenatis urna. Rutrum tellus
+                pellentesque eu tincidunt tortor. Nulla facilisi cras fermentum odio eu
+                feugiat. Aliquet risus feugiat in ante metus. Quis imperdiet massa tincidunt
+                nunc pulvinar sapien et. Vel pharetra vel turpis nunc.
+            </p>
+        </div>
+    </body>
+</html>

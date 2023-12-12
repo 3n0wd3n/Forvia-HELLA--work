@@ -1,0 +1,14 @@
+# Folders to ignore
+bower_components
+node_modules
+dist
+target/*
+package-lock.json
+copy_to_devel.bat
+.husky/post-commit
+.husky/post-checkout
+.husky/post-merge
+.husky/pre-push
+.vscode/settings.json
+Samples/pdf/default.pdf
+*.mp4
